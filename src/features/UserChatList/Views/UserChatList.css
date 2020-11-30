@@ -1,0 +1,11 @@
+.userchatlist-container{
+  position: absolute;
+  width: 331px;
+  height: -moz-calc(100% - (20px + 30px));
+  height: -webkit-calc(100% - (20px + 30px));
+  height: calc(100% - (20px + 30px));
+  left: 68px;
+  top: 50px;
+  /* background-color: burlywood; */
+  border-right: 1px solid #E6E8EB;
+}
