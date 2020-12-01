@@ -14,7 +14,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"fas gf gd fgdfgdfgdf",
     isGroup:true,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: true
   },
   {
     id:2,
@@ -24,7 +25,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"fas gf gd fgdfgdfgdf",
     isGroup:true,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:3,
@@ -34,7 +36,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"fas gf gd fgdfgdfgdf",
     isGroup:true,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:4,
@@ -44,7 +47,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"fas gf gd fgdfgdfgdf",
     isGroup:false,
     isOnline:false,
-    hasRead:true
+    hasRead:false,
+    isActive: false
   },
   {
     id:5,
@@ -54,7 +58,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"fas gf gd fgdfgdfgdf",
     isGroup:false,
     isOnline:false,
-    hasRead:true
+    hasRead:false,
+    isActive: false
   },
   {
     id:6,
@@ -64,7 +69,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:7,
@@ -74,7 +80,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:8,
@@ -84,7 +91,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:9,
@@ -94,7 +102,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:10,
@@ -104,7 +113,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:11,
@@ -114,7 +124,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
   {
     id:12,
@@ -124,7 +135,8 @@ const listUserChat: UserChatModel[] =[
     contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
     isGroup:false,
     isOnline:true,
-    hasRead:false
+    hasRead:false,
+    isActive: false
   },
 ]
 
@@ -134,8 +146,10 @@ function UserChatListScreen() {
       <HeaderScreen></HeaderScreen>
       <SearchInputScreen></SearchInputScreen>
       {
-        listUserChat.map((userChat:UserChatModel) =><UserChatScreen 
+        listUserChat.map((userChat:UserChatModel , idx:number) =><UserChatScreen
+          key={idx}
           id={userChat.id}
+          isActive={userChat.isActive}
           isGroup={userChat.isGroup}
           isOnline={userChat.isGroup}
           name={userChat.name}

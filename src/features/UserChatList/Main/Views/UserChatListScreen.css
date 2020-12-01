@@ -7,8 +7,10 @@
   left: 68px;
   top: 50px;
   border-right: 1px solid #E6E8EB;
-  padding: 1rem 0.5rem 0;
-  overflow: auto;
+  overflow: hidden;
+}
+.userchatlist-container:hover{
+  overflow: overlay;
 }
 
 .userchatlist-header{

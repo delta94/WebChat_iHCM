@@ -6,5 +6,6 @@ export interface UserChatModel{
     contextOfLastMess: string,
     isOnline: boolean,
     isGroup: boolean,
-    hasRead: boolean
+    hasRead: boolean,
+    isActive: boolean
 }

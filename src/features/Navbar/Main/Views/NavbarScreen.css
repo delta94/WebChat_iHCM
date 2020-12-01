@@ -1,6 +1,6 @@
 .navbar-container{
     position: absolute;
-    width: 5%;
+    width: 68px;
     height: -moz-calc(100% - (3.2rem));
     height: -webkit-calc(100% - (3.2rem));
     height: calc(100% - (3.2rem));

@@ -1,7 +1,9 @@
 .navbar-iconpanel-container{
   padding: 1.2rem;
   cursor: pointer;
-
+}
+.navbar-iconpanel-container:hover{
+  background-color: #0151CD;
 }
 
 .navbar-container .navbar-iconpanel-container:first-child{
@@ -10,7 +12,7 @@
 
 .navbar-container .navbar-iconpanel-container:last-child{
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
 }
 
 .navbar-iconpanel-icon{

@@ -4,7 +4,7 @@ import { UserChatModel } from '../Models/UserChatModel';
 
 function UserChatScreen(props : UserChatModel) {
   return (
-    <div className="userchat-container">
+    <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"}>
       <div className="userchat-image">
         <img src={ props.avatar } alt=""/>
         {
@@ -13,7 +13,7 @@ function UserChatScreen(props : UserChatModel) {
       </div>
       <div className="userchat-context">
         <div className="userchat-context-top">
-          <span className="userchat-username">
+          <span className={ props.hasRead ? "userchat-username" : "userchat-username userchat-unreadcontext" }>
             { props.name }
           </span>
           { props.isGroup && (<span className="userchat-groupchat">Nhóm</span>) }    

@@ -1,6 +1,14 @@
 .userchat-container{
-    /* background-color: tomato; */
     display: flex;
+    cursor: pointer;
+    padding: 0.3rem 0.9rem;
+}
+.userchat-container-active{
+    background-color: #EEF0F7;
+}
+
+.userchat-container:hover{
+    background-color: #EEF0F7;
 }
 
 .userchat-image{
@@ -32,11 +40,11 @@
 .userchat-username{
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
     font-size: 16px;
     line-height: 23px;
     color: #1A2948;
 }
+
 
 .userchat-groupchat{
     padding: 2px;

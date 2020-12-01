@@ -2,7 +2,13 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
+  padding: 1rem 0.9rem 0;
 }
 
-
+.userchatlist-icon-penedit{
+  background-image: url('./Icons/iconpenedit.svg');
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
 

@@ -3,8 +3,8 @@ import './SearchInputScreen.css';
 
 function SearchInputScreen() {
   return (
-    <div className="">
-      Search input
+    <div className="searchinput-container">
+      <input type="text" name="" id="" placeholder="Tìm kiếm cuộc trò chuyện"/>
     </div>
   );
 }
