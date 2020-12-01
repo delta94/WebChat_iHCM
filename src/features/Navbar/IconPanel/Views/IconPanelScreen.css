@@ -13,6 +13,7 @@
 .navbar-container .navbar-iconpanel-container:last-child{
   position: absolute;
   bottom: 0;
+  width: inherit;
 }
 
 .navbar-iconpanel-icon{

@@ -1,0 +1,15 @@
+.nouserchatfound-icon{
+    background-image: url("./Icons/iconnouserchatfound.svg");
+    width:190px;
+    height:183px;
+    background-repeat: no-repeat;
+
+}
+
+.nouserchatfound-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+}

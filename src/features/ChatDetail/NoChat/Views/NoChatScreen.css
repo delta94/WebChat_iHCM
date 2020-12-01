@@ -1,0 +1,15 @@
+.chatdetail-icon-nochat{
+  background-image: url("./Icons/iconnochat.svg");
+  width: 250px;
+  height: 206px;
+}
+
+.chatdetail-text-nochat{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 1rem;
+  color: #4D5971;
+}
