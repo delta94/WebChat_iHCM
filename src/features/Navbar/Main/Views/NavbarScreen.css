@@ -1,0 +1,12 @@
+.navbar-container{
+    position: absolute;
+    width: 5%;
+    height: -moz-calc(100% - (3.2rem));
+    height: -webkit-calc(100% - (3.2rem));
+    height: calc(100% - (3.2rem));
+    left: 0px;
+    top: 3.2rem;
+    
+    background: #115DD3;
+    border-radius: 0px 32px 0px 0px;
+  }

@@ -1,0 +1,41 @@
+.navbar-iconpanel-container{
+  padding: 1.2rem;
+  cursor: pointer;
+
+}
+
+.navbar-container .navbar-iconpanel-container:first-child{
+  margin-top: 32px;
+}
+
+.navbar-container .navbar-iconpanel-container:last-child{
+  position: absolute;
+  bottom: 1rem;
+}
+
+.navbar-iconpanel-icon{
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-iconpanel-icon-friend{
+  background-image: url("./Icons/iconfriend.svg");
+}
+
+.navbar-iconpanel-icon-message{
+  background-image: url("./Icons/iconmessage.svg");
+}
+
+.navbar-iconpanel-icon-noti{
+  background-image: url("./Icons/iconnoti.svg");
+}
+
+.navbar-iconpanel-icon-question{
+  background-image: url("./Icons/iconquestion.svg");
+}
+
+.navbar-iconpanel-container-active{
+  background-color: #0151CD;
+  border-left: 2px solid #FF7F08;
+}

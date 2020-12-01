@@ -1,15 +1,15 @@
 import React from 'react';
 import './BodyScreen.css';
-import NavbarScreen from './../../../features/Navbar/Views/NavbarScreen'
-import UserChatList from '../../../features/UserChatList/Views/UserChatList';
-import ChatDetail from '../../../features/ChatDetail/Views/ChatDetail';
+import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
+import UserChatListScreen from '../../../features/UserChatList/Main/Views/UserChatListScreen';
+import ChatDetailScreen from '../../../features/ChatDetail/Views/ChatDetailScreen';
 
 function BodyScreen() {
   return (
     <div className="body-container">
       <NavbarScreen></NavbarScreen>
-      <UserChatList></UserChatList>
-      <ChatDetail></ChatDetail>
+      <UserChatListScreen></UserChatListScreen>
+      <ChatDetailScreen></ChatDetailScreen>
     </div>
   );
 }

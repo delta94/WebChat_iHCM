@@ -1,0 +1,88 @@
+.userchat-container{
+    /* background-color: tomato; */
+    display: flex;
+}
+
+.userchat-image{
+    width: 17%;
+    padding: 5px;
+    position: relative;
+}
+
+.userchat-image img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.userchat-context{
+    width: 83%;
+}
+
+.userchat-icon-useronline{
+    background-image: url("./Icons/iconuseronline.svg");
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 999;
+}
+
+.userchat-username{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #1A2948;
+}
+
+.userchat-groupchat{
+    padding: 2px;
+    font-size: 10px;
+    color: white;
+    margin-left: 0.5rem;
+    /* Accent/Dodger Blue */
+
+    background: #4080FF;
+    border-radius: 4.5px;
+}
+
+.userchat-timeoflastmess{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    float: right;
+    color: #808999;
+}
+
+.userchat-context-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userchat-contextoflastmess{
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1A2948;
+    overflow:hidden;
+    width: 70%;
+    white-space: nowrap; /* Don't forget this one */
+text-overflow: ellipsis;
+}
+
+.userchat-unreadcontext{
+    font-weight: bold;
+}
+
+.userchat-icon-unread{
+    background-image: url("./Icons/iconunread.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+}
