@@ -5,10 +5,10 @@ const iconnochat = require('./Icons/iconnochat.svg').default;
 
 function NoChatScreen() {
   return (
-    <>
-      <img src={ iconnochat} alt="" className="chatdetail-icon-nochat"/>
-      <h5 className="chatdetail-text-nochat">Vui lòng chọn vào một tin nhắn</h5>
-    </>
+    <div className="nochat-screen">
+      <img src={ iconnochat} alt="" className="nochat-icon"/>
+      <h5 className="nochat-text">Vui lòng chọn vào một tin nhắn</h5>
+    </div>
   );
 }
 
