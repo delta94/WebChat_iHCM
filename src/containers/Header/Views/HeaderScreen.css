@@ -7,8 +7,8 @@
     border-bottom: 1px solid #E6E8EB;
 }
 
-#header-icon-9dots{
-    background-image: url("./Icons/icon9dots.svg");
+.header-icon-9dots{
+
     position: absolute;
     width: 24px;
     left: 22px;
@@ -16,8 +16,7 @@
     bottom: 26%;
 }
 
-#header-icon-main{
-    background-image: url("./Icons/iconmain.svg");
+.header-icon-main{
     position: absolute;
     width: 70px;
     left: 79px;
@@ -25,11 +24,11 @@
     bottom: 16%;
 }
 
-#header-icon-avatar{
-    background-image: url("./Icons/iconavatar.svg");
+.header-icon-avatar{
     position: absolute;
     width: 40px;
     right: 15px;
     top: 10%;
     bottom: 10%;
+    cursor: pointer;
 }

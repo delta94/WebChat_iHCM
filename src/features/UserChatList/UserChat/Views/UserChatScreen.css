@@ -17,7 +17,7 @@
     position: relative;
 }
 
-.userchat-image img{
+.userchat-image img:first-child{
     border-radius: 50%;
     width: 100%;
 }
@@ -27,7 +27,6 @@
 }
 
 .userchat-icon-useronline{
-    background-image: url("./Icons/iconuseronline.svg");
     width: 14px;
     height: 14px;
     background-repeat: no-repeat;
@@ -80,8 +79,9 @@
     color: #1A2948;
     overflow:hidden;
     width: 70%;
-    white-space: nowrap; /* Don't forget this one */
-text-overflow: ellipsis;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    /* word-break: break-all; */
 }
 
 .userchat-unreadcontext{
@@ -89,7 +89,6 @@ text-overflow: ellipsis;
 }
 
 .userchat-icon-unread{
-    background-image: url("./Icons/iconunread.svg");
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;

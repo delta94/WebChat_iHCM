@@ -1,10 +1,12 @@
 import React from 'react';
 import './NoUserChatFound.css';
 
+const iconnouserchatfound = require('./Icons/iconnouserchatfound.svg').default;
+
 function NoUserChatFound() {
   return (
     <div className="nouserchatfound-container">
-      <div className="nouserchatfound-icon"></div>
+      <img src={ iconnouserchatfound } alt="" className="nouserchatfound-icon"/>
       <h4>Không tìm thấy kết quả tìm kiếm</h4>
     </div>
   );

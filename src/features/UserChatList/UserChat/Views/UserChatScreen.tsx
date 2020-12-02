@@ -1,14 +1,17 @@
 import React from 'react';
 import './UserChatScreen.css';
-import { UserChatModel } from '../Models/UserChatModel';
+import { IUserChat } from '../Models/UserChatModel';
 
-function UserChatScreen(props : UserChatModel) {
+const iconuseronline = require('./Icons/iconuseronline.svg').default;
+const iconunread = require('./Icons/iconunread.svg').default;
+
+function UserChatScreen(props : IUserChat) {
   return (
     <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"}>
       <div className="userchat-image">
         <img src={ props.avatar } alt=""/>
         {
-          props.isOnline && (<div className="userchat-icon-useronline"></div>)
+          props.isOnline && (<img className="userchat-icon-useronline" src={ iconuseronline } />)
         }     
       </div>
       <div className="userchat-context">
@@ -31,7 +34,7 @@ function UserChatScreen(props : UserChatModel) {
           (
             <div className="userchat-context-bottom"> 
             <h3 className="userchat-contextoflastmess userchat-unreadcontext">{ props.contextOfLastMess }</h3> 
-            <div className="userchat-icon-unread"></div>
+            <img src={ iconunread } className="userchat-icon-unread" />
           </div>
           )
         }

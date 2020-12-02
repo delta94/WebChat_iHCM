@@ -8,7 +8,7 @@ function IconPanelScreen(props : IconPanelModel) {
       "navbar-iconpanel-container navbar-iconpanel-container-active" : 
       "navbar-iconpanel-container"}
     >
-      <div className={ "navbar-iconpanel-icon " + props.iconClass }></div>
+      <img src={ props.srcImg } alt="" className="navbar-iconpanel-icon"/>
     </div>
   );
 }
