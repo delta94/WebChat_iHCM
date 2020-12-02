@@ -21,20 +21,20 @@ function PopupScreen(){
           };
         }, [ref]);
     }
-    function ScrollEvent(ref: any) {
-        useEffect(() => {
-          // Bind the event listener
-          window.addEventListener("scroll", () => setIsActive(false));
-          return () => {
-            // Unbind the event listener on clean up
-            window.removeEventListener("scroll", () => setIsActive(false));
-          };
-        }, [ref]);
-    }
+    // function ScrollEvent(ref: any) {
+    //     useEffect(() => {
+    //       // Bind the event listener
+    //       window.addEventListener("scroll", () => setIsActive(false));
+    //       return () => {
+    //         // Unbind the event listener on clean up
+    //         window.removeEventListener("scroll", () => setIsActive(false));
+    //       };
+    //     }, [ref]);
+    // }
 
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef);
-    ScrollEvent(wrapperRef);
+    // ScrollEvent(wrapperRef);
 
     if(isActive){
         return (
