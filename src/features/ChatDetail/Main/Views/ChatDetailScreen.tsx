@@ -6,7 +6,7 @@ import ConversionScreen from '../../Conversion/Main/Views/ConversionScreen';
 
 function ChatDetailScreen(props : ChatDetailModel) {
   return (
-    <div>
+    <div className="chatdetail-container">
       { props.hasChat ? 
         <ConversionScreen></ConversionScreen> :
         <NoChatScreen></NoChatScreen>

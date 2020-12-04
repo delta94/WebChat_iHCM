@@ -1,6 +1,10 @@
 .conversion-container{
-    width: 100%;
-    background-color: lawngreen;
     position: absolute;
-    top: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.conversion-header{
+    background-color: olive;
+    padding: 5px 10px;
 }

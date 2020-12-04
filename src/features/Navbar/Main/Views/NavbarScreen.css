@@ -1,12 +1,58 @@
 .navbar-container{
     position: absolute;
-    width: 68px;
-    height: -moz-calc(100% - (3.2rem));
-    height: -webkit-calc(100% - (3.2rem));
-    height: calc(100% - (3.2rem));
+    width: 5%;
+    height: 100%;
     left: 0px;
-    top: 3.2rem;
-    
     background: #115DD3;
     border-radius: 0px 32px 0px 0px;
   }
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+@media (max-width:920px){   
+  .navbar-container{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    border-radius: 0px;
+    justify-content: space-between;
+  }
+}
+
+
+
+@media (min-width:921px) and (max-width:1100px){   
+  .navbar-container{
+    width: 4%;
+  }
+}
+
+@media (min-width:1700px) and (max-width:1999px){   
+  .navbar-container{
+    width: 4%;
+  }
+}
+
+@media (min-width:2000px) and (max-width:2349px){   
+  .navbar-container{
+    width: 3%;
+  }
+}
+
+@media (min-width:2350px){   
+  .navbar-container{
+    width: 2%;
+  }
+}
+
+@media (min-width:4090px){   
+  .navbar-container{
+    width: 2%;
+  }
+}
+
+@media (min-width:5400px){   
+  .navbar-container{
+    width: 1.5%;
+  }
+}
+

@@ -141,6 +141,51 @@ const listUserChat: IUserChat[] =[
     hasRead:false,
     isActive: false
   },
+  {
+    id:13,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:14,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:15,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:16,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  
 ]
 
 function UserChatListScreen() {

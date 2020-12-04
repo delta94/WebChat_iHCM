@@ -1,10 +1,11 @@
 import React from 'react';
 import './ConversionScreen.css';
+import HeaderConversionScreen from '../../Header/Views/HeaderConversionScreen'
 
 function ConversionScreen(){
     return (
         <div className="conversion-container">
-            Conversion
+            <HeaderConversionScreen></HeaderConversionScreen>
         </div>
     )
 }

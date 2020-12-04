@@ -1,34 +1,117 @@
 .header-container{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 50px;
-    left: 0px;
-    top: 0px;
+    height: 10%;
     border-bottom: 1px solid #E6E8EB;
+    display: flex;
+    align-items: center;
 }
 
 .header-icon-9dots{
-
     position: absolute;
-    width: 24px;
-    left: 22px;
-    top: 26%;
-    bottom: 26%;
+    left: 1.5%;
 }
 
 .header-icon-main{
     position: absolute;
-    width: 70px;
-    left: 79px;
-    top: 16%;
-    bottom: 16%;
+    left: 6%;
 }
 
 .header-icon-avatar{
-    position: absolute;
-    width: 40px;
-    right: 15px;
-    top: 10%;
-    bottom: 10%;
     cursor: pointer;
+    position: absolute;
+    right: 1%;
 }
+
+@media only screen and (max-width: 720px){
+    .header-icon-main{
+        display: none;
+    } 
+
+    .header-icon-9dots{
+        height: 18px;
+        width: 18px;
+    }
+}
+
+@media (min-width:721px) and (max-width:920px){   
+    .header-icon-main{
+        height: 20px;
+        width: 40px;
+    } 
+
+    .header-icon-9dots{
+        height: 18px;
+        width: 18px;
+    }
+}
+
+@media (min-width:1700px){   
+    .header-icon-9dots{
+        left: 1.2%;
+    }
+    
+    .header-icon-main{
+        left: 4.4%;
+    }
+
+    .header-container{
+        height: 7%;
+    }
+}
+  
+  @media (min-width:2000px){   
+    .header-icon-9dots{
+        left: 0.9%;
+    }
+    
+    .header-icon-main{
+        left: 3.6%;
+    }
+
+    .header-container{
+        height: 6%;
+    }
+  }
+  
+  @media (min-width:2350px){   
+    .header-icon-9dots{
+        left: 0.6%;
+    }
+    
+    .header-icon-main{
+        left: 2.6%;
+    }
+
+    .header-container{
+        height: 5%;
+    }
+  }
+  
+  @media (min-width:4090px){   
+    .header-icon-9dots{
+        left: 0.7%;
+    }
+    
+    .header-icon-main{
+        left: 2.4%;
+    }
+
+    .header-container{
+        height: 4%;
+    }
+  }
+  
+  @media (min-width:5400px){   
+    .header-icon-9dots{
+        left: 0.6%;
+    }
+    
+    .header-icon-main{
+        left: 1.8%;
+    }
+
+    .header-container{
+        height: 3%;
+    }
+  }

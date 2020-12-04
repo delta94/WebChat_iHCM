@@ -1,18 +1,23 @@
 import React from 'react';
 import './UserChatScreen.css';
 import { IUserChat } from '../Models/UserChatModel';
+import CircleAvatarScreen from '../../../../libraries/CircleAvatar/Views/CircleAvatarScreen';
 
-const iconuseronline = require('./Icons/iconuseronline.svg').default;
+// const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require('./Icons/iconunread.svg').default;
 
 function UserChatScreen(props : IUserChat) {
   return (
     <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"}>
       <div className="userchat-image">
-        <img src={ props.avatar } alt=""/>
-        {
-          props.isOnline && (<img className="userchat-icon-useronline" src={ iconuseronline } />)
-        }     
+        <CircleAvatarScreen 
+          class=""
+          width="48px"
+          height="48px"
+          src={ props.avatar }
+          alt="avatar"
+          isOnline={ props.isOnline }
+        ></CircleAvatarScreen>
       </div>
       <div className="userchat-context">
         <div className="userchat-context-top">

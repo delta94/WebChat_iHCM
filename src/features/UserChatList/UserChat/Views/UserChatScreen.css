@@ -12,28 +12,12 @@
 }
 
 .userchat-image{
-    width: 17%;
-    padding: 5px;
-    position: relative;
-}
-
-.userchat-image img:first-child{
-    border-radius: 50%;
-    width: 100%;
+    width: 18%;
+    padding: 0.1rem;
 }
 
 .userchat-context{
-    width: 83%;
-}
-
-.userchat-icon-useronline{
-    width: 14px;
-    height: 14px;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 999;
+    width: 82%;
 }
 
 .userchat-username{
