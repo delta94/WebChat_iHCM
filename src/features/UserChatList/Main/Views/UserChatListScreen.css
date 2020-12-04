@@ -19,7 +19,44 @@
 
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
-@media (min-width:0px) and (max-width:915px){   
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+  .userchatlist-container{
+    width: 19%;
+    left: 0%;
+    top: 8%;
+    height: 92%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .userchatlist-container{
+    width: 33.33%;
+    left: 0%;
+    top: 8%;
+    height: 92%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .userchatlist-container{
+    width: 31%;
+    left: 4%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* @media (min-width:0px) and (max-width:915px){   
   .userchatlist-container{
     width: 33.33%;
     left: 0%;
@@ -82,4 +119,4 @@
     width: 7.5%;
     left: 1.5%;
   }
-}
+} */

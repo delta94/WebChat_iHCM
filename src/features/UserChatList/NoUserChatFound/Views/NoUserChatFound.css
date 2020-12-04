@@ -12,3 +12,9 @@
     flex-direction: column;
     height: inherit;
 }
+
+@media only screen and (max-width:767px){ 
+    .nouserchatfound-container{
+        display: none;
+    }
+}

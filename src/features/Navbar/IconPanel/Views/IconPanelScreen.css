@@ -36,7 +36,7 @@
 }
 
 
-@media (min-width:0px) and (max-width:915px){   
+@media (min-width:0px) and (max-width:991px){   
   .navbar-container .navbar-iconpanel-container:last-child{
     display: none;
   }

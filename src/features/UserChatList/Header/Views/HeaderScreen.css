@@ -1,4 +1,4 @@
-.userchatlist-header{
+.userchatlist-header-container{
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
@@ -6,9 +6,53 @@
 }
 
 .userchatlist-icon-penedit{
-
   height: 24px;
   width: 24px;
   cursor: pointer;
 }
 
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+  .userchatlist-header-container h5{
+    display: none;
+  }
+
+  .userchatlist-icon-penedit{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: rgb(233 238 247);
+    border-radius: 50%;
+    padding: 0.3rem;
+  }
+
+  .userchatlist-header-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

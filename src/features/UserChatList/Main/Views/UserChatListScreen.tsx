@@ -6,7 +6,7 @@ import './UserChatListScreen.css';
 import { IUserChat } from '../../UserChat/Models/UserChatModel';
 import NoUserChatFound from '../../NoUserChatFound/Views/NoUserChatFound';
 
-// const listUserChat: UserChatModel[] =[];
+// const listUserChat: IUserChat[] =[];
 
 const listUserChat: IUserChat[] =[
   {
@@ -185,6 +185,73 @@ const listUserChat: IUserChat[] =[
     hasRead:false,
     isActive: false
   },
+  {
+    id:17,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:18,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:19,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:20,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:21,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+  {
+    id:22,
+    avatar:'https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg',
+    name: "Huy Quang",
+    timeOfLastMess:"09:00",
+    contextOfLastMess:"Huy đẹp zai thì chắc chắn rồi na nân agagdsg g dfg",
+    isGroup:false,
+    isOnline:true,
+    hasRead:false,
+    isActive: false
+  },
+
   
 ]
 

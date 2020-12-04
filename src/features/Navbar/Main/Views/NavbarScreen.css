@@ -8,7 +8,53 @@
   }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
-@media (max-width:920px){   
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header-icon-main{
+      display: none;
+  } 
+  .header-container{
+      height: 8%;
+  } 
+
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-container{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    border-radius: 0px;
+    justify-content: space-between;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-container{
+    width: 4%;
+  } 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar-container{
+    width: 4%;
+  } 
+}
+
+/* @media (max-width:920px){   
   .navbar-container{
     height: 10%;
     width: 100%;
@@ -55,4 +101,4 @@
     width: 1.5%;
   }
 }
-
+ */

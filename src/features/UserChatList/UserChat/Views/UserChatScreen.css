@@ -1,8 +1,10 @@
 .userchat-container{
     display: flex;
+    align-items: center;
     cursor: pointer;
     padding: 0.3rem 0.9rem;
 }
+
 .userchat-container-active{
     background-color: #EEF0F7;
 }
@@ -12,12 +14,11 @@
 }
 
 .userchat-image{
-    width: 18%;
-    padding: 0.1rem;
+    width: 15%;
 }
 
 .userchat-context{
-    width: 82%;
+    width:85%;
 }
 
 .userchat-username{
@@ -76,4 +77,54 @@
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
+}
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+    .userchat-context{
+        display: none;
+    }
+
+    .userchat-image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userchat-container{
+        padding: 0.3rem 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .userchat-image{
+        width: 24%;
+    }
+    
+    .userchat-context{
+        width:76%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .userchat-image{
+        width: 18%;
+    }
+    
+    .userchat-context{
+        width:82%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

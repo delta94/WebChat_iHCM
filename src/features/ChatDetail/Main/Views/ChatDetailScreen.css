@@ -6,7 +6,47 @@
     left: 33%;
 }
 
-@media (min-width:0px) and (max-width:915px){   
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+  .chatdetail-container{
+    width: 81%;
+    left: 19%;
+    top: 8%;
+    height: 92%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .chatdetail-container{
+    width: 66.67%;
+    left: 33.33%;
+    top: 8%;
+    height: 92%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .chatdetail-container{
+    width: 65%;
+    left: 35%;
+    top: 0%;
+    height: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* @media (min-width:0px) and (max-width:915px){   
   .chatdetail-container{
     width: 66.67%;
     left: 33.33%;
@@ -63,4 +103,4 @@
         left: 9%;
     }
   }
-  
+   */
