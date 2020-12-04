@@ -48,7 +48,7 @@
   .navbar-iconpanel-container-active{
     background-color: #0151CD;
     border-left: none;
-    border-bottom: 1px solid #FF7F08;
+    border-bottom: 2px solid #FF7F08;
   }
 
   .navbar-iconpanel-container{

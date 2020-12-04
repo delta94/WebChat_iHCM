@@ -27,22 +27,28 @@
     .header-icon-main{
         display: none;
     } 
-
-    .header-icon-9dots{
-        height: 18px;
-        width: 18px;
-    }
 }
 
-@media (min-width:721px) and (max-width:920px){   
+@media (min-width:721px) and (max-width:769px){     
+    .header-container{
+        height: 8%;
+    }    
+}
+
+@media (min-width:770px) and (max-width:920px){         
     .header-icon-main{
-        height: 20px;
-        width: 40px;
-    } 
+        height: 30px;
+        width: 60px;
+        left: 7%;
+    }
 
     .header-icon-9dots{
-        height: 18px;
-        width: 18px;
+        height: 26px;
+        width: 26px;
+    }
+
+    .header-container{
+        height: 12%;
     }
 }
 
