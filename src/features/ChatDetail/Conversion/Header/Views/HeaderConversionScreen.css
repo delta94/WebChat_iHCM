@@ -1,4 +1,29 @@
-.conversion-header{
-    background-color: olive;
-    padding: 5px 10px;
+.conversionheader-container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E6E8EB;
+    height: 10%;
+}
+
+.conversionheader-image{
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.conversionheader-context{
+    display: flex;
+    justify-content: space-between;
+    flex: 11;
+}
+
+.conversionheader-context-icons{
+    display: flex;
+    align-items: center;
+}
+
+.conversionheader-context-icons img{
+    padding: 0 0.6rem;
+    cursor: pointer;
 }

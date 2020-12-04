@@ -1,0 +1,17 @@
+.custominput-container input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    /* border-radius: 6px; */
+    /* font-size: 14px; */
+    background-color: white;
+    /* background-image: url('../../../../libraries/Icons/iconsearch.svg');
+    background-position: right; */
+    background-repeat: no-repeat;
+    /* padding: 8px; */
+}
+
+.custominput-container input:focus{
+    outline: none;
+    border: 1px solid #4080FF;
+}

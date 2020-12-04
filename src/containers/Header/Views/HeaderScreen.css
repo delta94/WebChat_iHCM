@@ -6,6 +6,9 @@
     display: flex;
     align-items: center;
 }
+.header-container img{
+    cursor: pointer;
+}
 
 .header-icon-9dots{
     position: absolute;

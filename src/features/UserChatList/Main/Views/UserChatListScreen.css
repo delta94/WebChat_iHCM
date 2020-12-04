@@ -17,6 +17,9 @@
   justify-content: space-between;
 }
 
+.searchinput-container{
+  margin: 1rem;
+}
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
@@ -27,6 +30,10 @@
     top: 8%;
     height: 92%;
   }
+
+  .searchinput-container{
+    display: none;
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -9,7 +9,7 @@ function BodyScreen() {
     <div className="body-container">
       <NavbarScreen></NavbarScreen>
       <UserChatListScreen></UserChatListScreen>
-      <ChatDetailScreen hasChat={ false }></ChatDetailScreen>
+      <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
     </div>
   );
 }

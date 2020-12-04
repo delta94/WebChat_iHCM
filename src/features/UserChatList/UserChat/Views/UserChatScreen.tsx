@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserChatScreen.css';
 import { IUserChat } from '../Models/UserChatModel';
-import CircleAvatarScreen from '../../../../libraries/CircleAvatar/Views/CircleAvatarScreen';
+import CircleAvatarScreen from '../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require('./Icons/iconunread.svg').default;

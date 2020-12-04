@@ -1,12 +1,11 @@
 import React from 'react';
 import HeaderScreen from '../../Header/Views/HeaderScreen';
-import SearchInputScreen from '../../SearchInput/Views/SearchInputScreen';
 import UserChatScreen from '../../UserChat/Views/UserChatScreen';
 import './UserChatListScreen.css';
 import { IUserChat } from '../../UserChat/Models/UserChatModel';
 import NoUserChatFound from '../../NoUserChatFound/Views/NoUserChatFound';
+import CustomInputScreen from '../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 
-// const listUserChat: IUserChat[] =[];
 
 const listUserChat: IUserChat[] =[
   {
@@ -250,10 +249,18 @@ const listUserChat: IUserChat[] =[
     isOnline:true,
     hasRead:false,
     isActive: false
-  },
-
-  
+  }
 ]
+
+const iconsearch = require('../../../../libraries/Icons/iconsearch.svg').default;
+
+const styleCustomInput = {
+  backgroundImage:`url('${ iconsearch }')`,
+  backgroundPosition:'3% 50%',
+  padding:'12px 20px 12px 40px',
+  borderRadius:'0.7rem',
+  fontSize:'1rem',
+}
 
 function UserChatListScreen() {
 
@@ -278,7 +285,7 @@ function UserChatListScreen() {
   return (
     <div className="userchatlist-container">
       <HeaderScreen></HeaderScreen>
-      <SearchInputScreen></SearchInputScreen>
+      <CustomInputScreen style={ styleCustomInput } class="searchinput-container" placeHolder="Tìm kiếm cuộc trò chuyện"></CustomInputScreen>
       {
         showUserChat(listUserChat)
       }

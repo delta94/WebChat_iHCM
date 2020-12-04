@@ -1,5 +1,5 @@
 import React from 'react';
-import CircleAvatarScreen from '../../../libraries/CircleAvatar/Views/CircleAvatarScreen';
+import CircleAvatarScreen from '../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import './HeaderScreen.css';
 
 const icon9dots = require('./Icons/icon9dots.svg').default;

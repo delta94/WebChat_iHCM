@@ -2,7 +2,7 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  padding: 1rem 0.9rem 0;
+  padding: 1rem 1rem 0;
 }
 
 .userchatlist-icon-penedit{
@@ -15,7 +15,7 @@
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
-  .userchatlist-header-container h5{
+  .userchatlist-header-container h3{
     display: none;
   }
 
