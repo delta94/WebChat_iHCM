@@ -1,6 +1,7 @@
 import React from 'react';
 import './IconPanelScreen.css';
 import { IconPanelModel } from '../Models/IconPanelModel';
+import IconImageScreen from '../../../../libraries/Features/IconImage/Views/IconImageScreen';
 
 function IconPanelScreen(props : IconPanelModel) {
   return (
@@ -8,7 +9,7 @@ function IconPanelScreen(props : IconPanelModel) {
       "navbar-iconpanel-container navbar-iconpanel-container-active" : 
       "navbar-iconpanel-container"}
     >
-      <img src={ props.srcImg } alt="" className="navbar-iconpanel-icon"/>
+      <IconImageScreen src={ props.srcImg } alt="" class="navbar-iconpanel-icon"></IconImageScreen>
     </div>
   );
 }

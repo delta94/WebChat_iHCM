@@ -1,5 +1,6 @@
 import React from 'react';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
+import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import './HeaderConversionScreen.css';
 
 const iconcamera = require('./Icons/iconcamera.svg').default;
@@ -25,9 +26,9 @@ function HeaderConversionScreen(){
                     <span>Đang online</span>
                 </div>
                 <div className="conversionheader-context-icons">
-                    <img src={ iconcamera } alt=""/>
-                    <img src={ iconsearch } alt=""/>
-                    <img src={ icon3dots } alt=""/>
+                    <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
+                    <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
+                    <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
                 </div>
             </div>
         </div>
