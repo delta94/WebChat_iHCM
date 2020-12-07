@@ -54,31 +54,14 @@
   } 
 }
 
-/* @media (max-width:920px){   
-  .navbar-container{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    border-radius: 0px;
-    justify-content: space-between;
-  }
-}
 
-
-
-@media (min-width:921px) and (max-width:1100px){   
+@media (min-width:1700px){   
   .navbar-container{
     width: 4%;
   }
 }
 
-@media (min-width:1700px) and (max-width:1999px){   
-  .navbar-container{
-    width: 4%;
-  }
-}
-
-@media (min-width:2000px) and (max-width:2349px){   
+@media (min-width:2000px){   
   .navbar-container{
     width: 3%;
   }
@@ -101,4 +84,4 @@
     width: 1.5%;
   }
 }
- */
+

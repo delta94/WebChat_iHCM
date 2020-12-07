@@ -6,8 +6,7 @@
     padding: 2% 7%;
     overflow-y: auto;
     display: flex;
-    flex-flow: column nowrap;
-
+    flex-flow: column nowrap; 
 }
 
 .chatlist-container > :first-child {
@@ -22,3 +21,44 @@
     font-size: 10px;
     line-height: 24px;
 }
+
+
+@media (min-width:1700px){   
+    .chatlist-container{
+        top: 9%;
+        height: 84%;
+        padding: 2% 6%; 
+    }
+  }
+  
+  @media (min-width:2000px){   
+    .chatlist-container{
+        top: 9%;
+        height: 85%;
+        padding: 2% 5%; 
+    }
+  }
+  
+  @media (min-width:2350px){   
+    .chatlist-container{
+        top: 7%;
+        height: 88%;
+        padding: 1% 4%; 
+    }
+  }
+  
+  @media (min-width:4090px){   
+    .chatlist-container{
+        top: 7%;
+        height: 89%;
+        padding: 1% 3%; 
+    }
+  }
+  
+  @media (min-width:5400px){   
+    .chatlist-container{
+        top: 4%;
+        height: 93%;
+        padding: 1% 2%; 
+    }
+  } 

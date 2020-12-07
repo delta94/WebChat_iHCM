@@ -10,7 +10,7 @@ const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').defa
 function HeaderConversionScreen(props: any){
     return (
         <div className="conversionheader-container">
-            <div className="conversionheader-image">
+            <div className="conversionheader-left">
                 <CircleAvatarScreen
                 isOnline={ props.isOnline }
                 src={ props.avatar }
@@ -19,17 +19,15 @@ function HeaderConversionScreen(props: any){
                 class=""
                 alt=""
                 ></CircleAvatarScreen>
-            </div>
-            <div className="conversionheader-context">
-                <div>
+                <div className="conversionheader-context">
                     <h3>{ props.name }</h3>
                     <span>{ props.isOnline ? "Đang online" : "Đang offline" }</span>
                 </div>
-                <div className="conversionheader-context-icons">
-                    <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
-                    <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
-                    <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
-                </div>
+            </div>
+            <div className="conversionheader-right">
+                <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
+                <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
+                <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
             </div>
         </div>
     )

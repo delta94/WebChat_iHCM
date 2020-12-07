@@ -12,3 +12,35 @@
     flex-grow: 1; /* default 0 */
     margin: 0 1rem;
 }
+
+
+@media (min-width:1700px){   
+    .chatinput-container{
+        height: 7%;
+    }
+}
+  
+  @media (min-width:2000px){   
+    .chatinput-container{
+        height: 6%;
+    }
+  }
+  
+  @media (min-width:2350px){   
+    .chatinput-container{
+        height: 5%;
+    }
+  }
+  
+  @media (min-width:4090px){   
+    .chatinput-container{
+        height: 4%;
+    }
+  }
+  
+  @media (min-width:5400px){   
+    .chatinput-container{
+        height: 3%;
+    }
+  }
+

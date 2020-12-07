@@ -63,39 +63,9 @@
 
 }
 
-/* @media (min-width:0px) and (max-width:915px){   
-  .userchatlist-container{
-    width: 33.33%;
-    left: 0%;
-    top: 10%;
-    height: 86%;
-  }
-}
-
-@media (min-width:916px) and (max-width:1099px){   
-  .userchatlist-container{
-    width: 35%;
-    left: 4%;
-  }
-}
-
-@media (min-width:1100px) and (max-width:1250px){   
-  .userchatlist-container{
-    width: 30%;
-    left: 5%;
-  }
-}
-
-@media (min-width:1251px) and (max-width:1699px){   
-  .userchatlist-container{
-    width: 28%;
-    left: 5%;
-  }
-}
-
 @media (min-width:1700px){   
   .userchatlist-container{
-    width: 22%;
+    width: 25%;
     left: 4%;
   }
 }
@@ -126,4 +96,4 @@
     width: 7.5%;
     left: 1.5%;
   }
-} */
+} 

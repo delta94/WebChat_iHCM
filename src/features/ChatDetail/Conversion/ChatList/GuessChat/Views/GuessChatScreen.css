@@ -1,18 +1,27 @@
 .chatguess-container{
     display: flex;
-    width: 70%;
-    align-items: flex-end;
-    margin: 0.6rem 0;
+    width: 80%;
+    margin: 0.2rem 0;
 }
 
 .chatguess-left{
     /* flex:1 */
     margin-right: 0.3rem;
+    align-self: flex-end;
 }
 
 .chatguess-right{
     flex: 8;
 }
+
+.chatguess-icon-horizontal3dots{
+    height: 21px;
+    width: 21px;
+    align-self: center;
+    padding: 0 0 0 0.6rem;
+    opacity: 0;
+}
+
 
 .chatguess-right p{
     margin: 0 0 0.3rem 1rem;
@@ -33,12 +42,22 @@
     overflow: auto;
 }
 
+.chatguess-right:hover + .chatguess-icon-horizontal3dots,
+.chatguess-icon-horizontal3dots:hover
+{
+    opacity: 1;
+}
+
+
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
     .chatguess-container{
         width: 90%;
+    }
+    .chatguess-icon-horizontal3dots:active{
+        opacity: 1;
     }
     
   }
@@ -61,3 +80,33 @@
   @media only screen and (min-width: 1200px) {
   
   }
+
+  @media (min-width:1700px){   
+    .chatguess-container{
+        width: 65%;
+    }
+  }
+  
+  @media (min-width:2000px){   
+    .chatguess-container{
+        width: 55%;
+    }
+  }
+  
+  @media (min-width:2350px){   
+    .chatguess-container{
+        width: 45%;
+    }
+  }
+  
+  @media (min-width:4090px){   
+    .chatguess-container{
+        width: 35%;
+    }
+  }
+  
+  @media (min-width:5400px){   
+    .chatguess-container{
+        width: 25%;
+    }
+  } 

@@ -1,13 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CurrentChatScreen from '../../CurrentChat/Views/CurrentChatScreen';
-import GuessChatCurrent from '../../GuessChat/Views/GuessChatCurrent';
+import GuessChatScreen from '../../GuessChat/Views/GuessChatScreen';
+import { IMessage, IUser } from '../Models/ChatList';
 import './ChatListScreen.css';
 
 function ChatListScreen(props : any){
-    const [curUserId, setCurUserId] = useState(1);
+    const [userid, setUserid] = useState<number>();
     const { listUser , listMessage } = props;
-
+    
     const chatlistRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() =>{
+        setUserid(2);
+    })
+
+    const findUserById  = (userid: number) :IUser =>{ 
+        return listUser.find((user:IUser) =>user.id === userid) 
+    };
 
     useEffect(() =>{
         if(chatlistRef.current){
@@ -15,10 +24,31 @@ function ChatListScreen(props : any){
         }
     })
 
+    const showAllMessages = () :any =>{
+        return listMessage.map((message:IMessage, index:number) =>{
+            const userTemp = findUserById(message.userid);
+            if(userTemp.id === userid){
+                return <CurrentChatScreen 
+                key={ index }
+                user={ userTemp } 
+                context={ message.context }
+                datetime={ message.datetime }
+                ></CurrentChatScreen>;
+            }
+            return <GuessChatScreen 
+            key={ index }
+            user={ userTemp } 
+            context={ message.context }
+            datetime={ message.datetime }
+            ></GuessChatScreen>;
+        })
+    }
+
     return (
         <div className="chatlist-container" ref={ chatlistRef }>
-            <CurrentChatScreen></CurrentChatScreen>
-            <GuessChatCurrent></GuessChatCurrent>
+            {
+                showAllMessages()
+            }
         </div>
     )
 }

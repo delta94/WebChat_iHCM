@@ -40,12 +40,6 @@
     }
 }
 
-/* @media only screen and (max-width: 915px){
-    .body-container{
-        height: 88%;
-    }
-}
-
 @media (min-width:1700px){   
     .body-container{
         height: 93%;
@@ -74,4 +68,4 @@
     .body-container{
         height: 97%;
     }
-  } */
+  } 

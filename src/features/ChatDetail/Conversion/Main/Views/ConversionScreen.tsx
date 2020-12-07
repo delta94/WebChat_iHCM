@@ -29,37 +29,55 @@ const coversion: IConversion ={
             id:1,
             userid:1,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
         },
         {
             id:2,
             userid:2,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
         },
         {
             id:3,
             userid:2,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
         },
         {
             id:4,
             userid:2,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
         },
         {
             id:5,
             userid:2,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
         },
         {
             id:6,
             userid:2,
             context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
-            datetime:"07/12/20"
+            datetime:"06:30 pm"
+        },
+        {
+            id:7,
+            userid:1,
+            context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
+            datetime:"06:30 pm"
+        },
+        {
+            id:8,
+            userid:1,
+            context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
+            datetime:"06:30 pm"
+        },
+        {
+            id:9,
+            userid:2,
+            context:'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
+            datetime:"06:30 pm"
         },
     ]
 }
@@ -72,10 +90,12 @@ function ConversionScreen(){
             avatar={ coversion.avatar }
             isOnline={ coversion.isOnline }
             ></HeaderConversionScreen>
+
             <ChatListScreen
             listUser={ coversion.listUser }
             listMessage={ coversion.listMessage }
             ></ChatListScreen>
+            
             <ChatInputScreen></ChatInputScreen>
         </div>
     )
