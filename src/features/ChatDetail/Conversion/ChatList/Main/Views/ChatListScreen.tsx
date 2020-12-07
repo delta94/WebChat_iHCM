@@ -2,16 +2,22 @@ import React, { useEffect, useRef, useState } from 'react';
 import CurrentChatScreen from '../../CurrentChat/Views/CurrentChatScreen';
 import GuessChatScreen from '../../GuessChat/Views/GuessChatScreen';
 import { IMessage, IUser } from '../Models/ChatList';
+import LoadingSpinnerScreen from '../../../../../../libraries/Features/LoadingSpinner/Views/LoadingSpinnerScreen';
 import './ChatListScreen.css';
 
 function ChatListScreen(props : any){
+    const [isLoading, setIsLoading] = useState<boolean>(true);
     const [userid, setUserid] = useState<number>();
     const { listUser , listMessage } = props;
     
     const chatlistRef = useRef<HTMLInputElement>(null);
 
     useEffect(() =>{
-        setUserid(2);
+        setTimeout(() => {
+            setUserid(2);
+            setIsLoading(false);
+        }, 2e3);
+
     })
 
     const findUserById  = (userid: number) :IUser =>{ 
@@ -47,8 +53,15 @@ function ChatListScreen(props : any){
     return (
         <div className="chatlist-container" ref={ chatlistRef }>
             {
-                showAllMessages()
+                isLoading ? (
+                    <div className="chatlist-loader">
+                        <LoadingSpinnerScreen></LoadingSpinnerScreen>
+                    </div>
+                ) : (
+                    showAllMessages()
+                )
             }
+
         </div>
     )
 }
