@@ -1,0 +1,63 @@
+.chatguess-container{
+    display: flex;
+    width: 70%;
+    align-items: flex-end;
+    margin: 0.6rem 0;
+}
+
+.chatguess-left{
+    /* flex:1 */
+    margin-right: 0.3rem;
+}
+
+.chatguess-right{
+    flex: 8;
+}
+
+.chatguess-right p{
+    margin: 0 0 0.3rem 1rem;
+}
+
+.chatguess-context{
+    background: #F2F3F4;
+    border-radius: 1rem 1rem 1rem 0;
+    padding: 0.7rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #1A2948;
+    mix-blend-mode: normal;
+    opacity: 0.95;
+    overflow: auto;
+}
+
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+    .chatguess-container{
+        width: 90%;
+    }
+    
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  
+  }

@@ -7,13 +7,13 @@ const iconcamera = require('./Icons/iconcamera.svg').default;
 const icon3dots = require('./Icons/icon3dots.svg').default;
 const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').default;
 
-function HeaderConversionScreen(){
+function HeaderConversionScreen(props: any){
     return (
         <div className="conversionheader-container">
             <div className="conversionheader-image">
                 <CircleAvatarScreen
-                isOnline={true}
-                src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
+                isOnline={ props.isOnline }
+                src={ props.avatar }
                 width="50px"
                 height="50px"
                 class=""
@@ -22,8 +22,8 @@ function HeaderConversionScreen(){
             </div>
             <div className="conversionheader-context">
                 <div>
-                    <h3>Huy Quang</h3>
-                    <span>Đang online</span>
+                    <h3>{ props.name }</h3>
+                    <span>{ props.isOnline ? "Đang online" : "Đang offline" }</span>
                 </div>
                 <div className="conversionheader-context-icons">
                     <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
