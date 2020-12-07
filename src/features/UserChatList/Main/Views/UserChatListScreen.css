@@ -97,3 +97,30 @@
     left: 1.5%;
   }
 } 
+
+
+@media only screen and (min-height: 520px) and (max-height: 600px) {
+
+}
+@media only screen and (min-height: 380px) and (max-height: 519px) {
+  .userchatlist-container{
+    top: 11%;
+    height: 89%;
+  }
+}
+
+@media only screen and (min-height: 300px) and (max-height: 379px) {
+  .userchatlist-container{
+    top: 12%;
+    height: 88%;
+  }
+}
+
+@media only screen and (max-height: 299px) {
+  .userchatlist-container{
+    top: 0%;
+    height: 100%;
+  }
+}
+
+

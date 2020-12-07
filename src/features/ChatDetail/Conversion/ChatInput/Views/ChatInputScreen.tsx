@@ -10,7 +10,7 @@ const iconsubstract = require('./Icons/iconsubstract.svg').default;
 const styleCustomInput = {
     backgroundImage:`url('${ iconsmile }')`,
     backgroundPosition:'99% 50%',
-    padding:'10px',
+    padding:'10px 35px 10px 10px',
     borderRadius:'8px',
     fontSize:'14px',
 }

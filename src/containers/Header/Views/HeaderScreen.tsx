@@ -14,8 +14,8 @@ function HeaderScreen() {
       <CircleAvatarScreen 
       isOnline={false}
       src={"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}
-      width={'40px'}
-      height={'40px'}
+      width={'36px'}
+      height={'36px'}
       alt={"avatar"}
       class={"header-icon-avatar"}
       ></CircleAvatarScreen>

@@ -14,8 +14,8 @@ function HeaderConversionScreen(props: any){
                 <CircleAvatarScreen
                 isOnline={ props.isOnline }
                 src={ props.avatar }
-                width="50px"
-                height="50px"
+                width="48px"
+                height="48px"
                 class=""
                 alt=""
                 ></CircleAvatarScreen>
