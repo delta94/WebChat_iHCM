@@ -6,10 +6,10 @@ import './HeaderScreen.css';
 const icon9dots = require('./Icons/icon9dots.svg').default;
 const iconmain = require('./Icons/iconmain.svg').default;
 
-function HeaderScreen() {
+function HeaderScreen(props : any) {
   return (
     <div className="header-container">
-      <IconImageScreen src={ icon9dots } class="header-icon-9dots" alt="9 dots" ></IconImageScreen>
+      <IconImageScreen src={ icon9dots } class="header-icon-9dots" alt="9 dots" onClick={ props.toggleNavbar }></IconImageScreen>
       <IconImageScreen src={ iconmain } class="header-icon-main" alt="9 dots" ></IconImageScreen>
       <CircleAvatarScreen 
       isOnline={false}

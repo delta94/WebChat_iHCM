@@ -1,5 +1,6 @@
 export interface  IIconImage{
     src: string ,
     alt: string,
-    class?: string
+    class?: string,
+    onClick?:  any
 }

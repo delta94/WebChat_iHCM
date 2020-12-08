@@ -4,12 +4,17 @@ import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
 import UserChatListScreen from '../../../features/UserChatList/Main/Views/UserChatListScreen';
 import ChatDetailScreen from '../../../features/ChatDetail/Main/Views/ChatDetailScreen';
 
-function BodyScreen() {
+function BodyScreen(props : any) {
+  const { hasNavbar } = props;
   return (
     <div className="body-container">
-      <NavbarScreen></NavbarScreen>
-      <UserChatListScreen></UserChatListScreen>
-      <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
+      <div className="body-left">
+        <NavbarScreen></NavbarScreen>
+      </div>
+      <div className="body-right">
+        <UserChatListScreen></UserChatListScreen>
+        <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
+      </div>
     </div>
   );
 }
