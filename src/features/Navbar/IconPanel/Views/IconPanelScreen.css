@@ -1,9 +1,5 @@
 .navbar-iconpanel-container{
-  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;  /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  
+  display: flex;        
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -13,16 +9,16 @@
   background-color: #0151CD;
 }
 
-.navbar-container .navbar-iconpanel-container:first-child{
+/* .navbar-container .navbar-iconpanel-container:first-child{
   margin-top: 1.8rem;
-}
+} */
 
-.navbar-container .navbar-iconpanel-container:last-child{
+/* .navbar-container .navbar-iconpanel-container:last-child{
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-}
+} */
 
 .navbar-iconpanel-icon{
   background-repeat: no-repeat;
@@ -30,29 +26,37 @@
   height: 24px;
 }
 
-.navbar-iconpanel-container-active{
+.navbar-iconpanel-container--active{
   background-color: #0151CD;
   border-left: 2px solid #FF7F08;
 }
 
 
-@media (min-width:0px) and (max-width:991px){   
-  .navbar-container .navbar-iconpanel-container:last-child{
-    display: none;
-  }
+@media only screen and (max-width:768px){   
 
-  .navbar-container .navbar-iconpanel-container:first-child{
-    margin: 0;
-  }
 
-  .navbar-iconpanel-container-active{
+  .navbar-iconpanel-container--active{
     background-color: #0151CD;
     border-left: none;
     border-bottom: 2px solid #FF7F08;
-  }
+  } 
 
   .navbar-iconpanel-container{
     flex: 1;
-    padding: 0rem;
+  }
+}
+
+
+@media only screen and (max-height:440px){   
+
+
+  .navbar-iconpanel-container--active{
+    background-color: #0151CD;
+    border-left: none;
+    border-bottom: 2px solid #FF7F08;
+  } 
+
+  .navbar-iconpanel-container{
+    flex: 1;
   }
 }

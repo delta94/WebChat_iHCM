@@ -7,13 +7,13 @@ import { IConversion } from '../../ChatList/Main/Models/ChatList';
 
 const coversion: IConversion ={
     id:1,
-    name:'Quang Huy',
+    name:'Trung Đức',
     avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
     isOnline:true,
     listUser:[
         {
             id:1,
-            name:'Quang Huy',
+            name:'Trung Đức',
             avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
             isOnline:true
         },

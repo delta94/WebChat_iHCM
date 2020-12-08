@@ -5,6 +5,11 @@
   padding: 1rem 1rem 0;
 }
 
+.userchatlist-header-container h4{
+  font-size: 18px;
+  line-height: 27px;
+}
+
 .userchatlist-icon-penedit{
   height: 24px;
   width: 24px;
@@ -15,7 +20,7 @@
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
-  .userchatlist-header-container h3{
+  .userchatlist-header-container h4{
     display: none;
   }
 

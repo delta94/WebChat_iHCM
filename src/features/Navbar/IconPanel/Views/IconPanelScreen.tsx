@@ -6,7 +6,7 @@ import IconImageScreen from '../../../../libraries/Features/IconImage/Views/Icon
 function IconPanelScreen(props : IconPanelModel) {
   return (
     <div className={ props.isActive ? 
-      "navbar-iconpanel-container navbar-iconpanel-container-active" : 
+      "navbar-iconpanel-container navbar-iconpanel-container--active" : 
       "navbar-iconpanel-container"}
     >
       <IconImageScreen src={ props.srcImg } alt="" class="navbar-iconpanel-icon"></IconImageScreen>

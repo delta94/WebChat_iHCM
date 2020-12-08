@@ -20,7 +20,7 @@ function HeaderConversionScreen(props: any){
                 alt=""
                 ></CircleAvatarScreen>
                 <div className="conversionheader-context">
-                    <h3>{ props.name }</h3>
+                    <h4 className="app-mainfont">{ props.name }</h4>
                     <span>{ props.isOnline ? "Đang online" : "Đang offline" }</span>
                 </div>
             </div>

@@ -18,6 +18,7 @@ function HeaderScreen(props : any) {
       height={'36px'}
       alt={"avatar"}
       class={"header-icon-avatar"}
+      onClick={ props.togglePopup }
       ></CircleAvatarScreen>
     </div>
   );

@@ -21,11 +21,11 @@ function UserChatScreen(props : IUserChat) {
       </div>
       <div className="userchat-context">
         <div className="userchat-context-top">
-          <span className={ props.hasRead ? "userchat-username" : "userchat-username userchat-unreadcontext" }>
+          <span className={ props.hasRead ? "userchat-username app-mainfont" : "userchat-username app-mainfont userchat-unreadcontext" }>
             { props.name }
           </span>
-          { props.isGroup && (<span className="userchat-groupchat">Nhóm</span>) }    
-          <span className="userchat-timeoflastmess">
+          { props.isGroup && (<span className="userchat-groupchat app-mainfont">Nhóm</span>) }    
+          <span className="userchat-timeoflastmess app-mainfont">
             { props.timeOfLastMess }
           </span>
         </div>

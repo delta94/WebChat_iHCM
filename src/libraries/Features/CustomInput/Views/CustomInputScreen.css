@@ -11,7 +11,9 @@
     /* padding: 8px; */
 }
 
-.custominput-container input:focus{
+.custominput-container input:focus,
+.custominput-container input:hover
+{
     outline: none;
     border: 1px solid #4080FF;
 }

@@ -17,14 +17,14 @@ function GuessChatScreen(props : any){
             isOnline={ false }
             ></CircleAvatarScreen>
             <div className="chatguess-right">
-                <p>
+                <p className="app-mainfont">
                     { props.user.name }
                 </p>
-                <div className="chatguess-context">
+                <div className="chatguess-context app-mainfont">
                     <span>
                         { props.context }                   
                     </span>
-                    <span className="chat-time">
+                    <span className="chat-time app-mainfont">
                         { props.datetime }
                     </span>
                 </div>  

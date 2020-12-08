@@ -1,7 +1,7 @@
 import React , { useEffect , useRef , useState} from 'react';
-import './PopupScreen.css';
+import './TooltipScreen.css';
 
-function PopupScreen(props : any){
+function TooltipScreen(props : any){
     const { coordPopup } = props;
 
     function useOutsideAlerter(ref: any) {
@@ -32,7 +32,7 @@ function PopupScreen(props : any){
             }}
             ref={wrapperRef}
             >
-                Popup
+                TooltipScreen
             </div>
         )
     }
@@ -41,4 +41,4 @@ function PopupScreen(props : any){
 
 }
 
-export default PopupScreen;
+export default TooltipScreen;

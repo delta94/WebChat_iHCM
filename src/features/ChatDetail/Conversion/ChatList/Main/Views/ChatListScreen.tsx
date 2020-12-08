@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import CurrentChatScreen from '../../CurrentChat/Views/CurrentChatScreen';
 import GuessChatScreen from '../../GuessChat/Views/GuessChatScreen';
 import { IMessage, IUser } from '../Models/ChatList';
@@ -29,8 +29,8 @@ function ChatListScreen(props : any){
             chatlistRef.current.scrollTop = chatlistRef.current.scrollHeight;
         }
     })
-
-    const showAllMessages = () :any =>{
+    
+    const showAllMessages = useCallback(() :any =>{
         return listMessage.map((message:IMessage, index:number) =>{
             const userTemp = findUserById(message.userid);
             if(userTemp.id === userid){
@@ -48,7 +48,7 @@ function ChatListScreen(props : any){
             datetime={ message.datetime }
             ></GuessChatScreen>;
         })
-    }
+    },[listMessage , userid]);
 
     return (
         <div className="chatlist-container" ref={ chatlistRef }>

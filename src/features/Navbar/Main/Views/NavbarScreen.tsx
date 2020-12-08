@@ -13,7 +13,10 @@ function NavbarScreen() {
       <IconPanelScreen isActive={true} srcImg={ iconmessage }></IconPanelScreen>
       <IconPanelScreen isActive={false} srcImg={ iconfriend }></IconPanelScreen>
       <IconPanelScreen isActive={false} srcImg={ iconnoti }></IconPanelScreen>
-      <IconPanelScreen isActive={false} srcImg={ iconquestion }></IconPanelScreen>
+      <div className="navbar-iconpanel-last">
+        <IconPanelScreen isActive={false} srcImg={ iconquestion }></IconPanelScreen>
+      </div>
+
     </div>
   );
 }

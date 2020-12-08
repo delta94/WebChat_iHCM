@@ -8,10 +8,11 @@ function BodyScreen(props : any) {
   const { hasNavbar } = props;
   return (
     <div className="body-container">
-      <div className="body-left">
+      <div className={ hasNavbar ? "body-left" : "body-left body-left--hide"}>
         <NavbarScreen></NavbarScreen>
       </div>
-      <div className="body-right">
+
+      <div className={ hasNavbar ? "body-right--hasnavbar body-right" : "body-right"}>
         <UserChatListScreen></UserChatListScreen>
         <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
       </div>

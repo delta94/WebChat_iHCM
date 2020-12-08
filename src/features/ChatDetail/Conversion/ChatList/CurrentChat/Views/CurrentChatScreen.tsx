@@ -5,10 +5,10 @@ function CurrentChatScreen(props : any){
     return (
         <div className="chatcurrent-container">
             <div className="chatcurrent-context">
-                <span>
+                <span className="app-mainfont">
                     { props.context }
                 </span>
-                <span className="chat-time">
+                <span className="chat-time app-mainfont">
                     { props.datetime }
                 </span> 
             </div>  

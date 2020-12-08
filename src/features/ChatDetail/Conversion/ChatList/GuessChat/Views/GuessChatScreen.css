@@ -25,18 +25,22 @@
 
 .chatguess-right p{
     margin: 0 0 0.3rem 1rem;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.chatguess-right .chat-time{
+    font-size: 12px;
+    line-height: 18px;
+    color: #757575;
 }
 
 .chatguess-context{
     background: #F2F3F4;
     border-radius: 1rem 1rem 1rem 0;
     padding: 0.7rem;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 21px;
-    color: #1A2948;
     mix-blend-mode: normal;
     opacity: 0.95;
     overflow: auto;

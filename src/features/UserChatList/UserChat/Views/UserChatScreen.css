@@ -22,28 +22,25 @@
 }
 
 .userchat-username{
-    font-family: Roboto;
-    font-style: normal;
     font-size: 16px;
     line-height: 23px;
-    color: #1A2948;
 }
 
 
 .userchat-groupchat{
     padding: 2px;
-    font-size: 10px;
-    color: white;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 19px; 
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
     margin-left: 0.5rem;
-    /* Accent/Dodger Blue */
-
     background: #4080FF;
     border-radius: 4.5px;
 }
 
 .userchat-timeoflastmess{
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
@@ -80,7 +77,7 @@
 }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
-/* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 767px) {
     .userchat-context{
         display: none;
@@ -98,33 +95,53 @@
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
 
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 900px) {
     .userchat-image{
-        width: 24%;
+        width: 28%;
     }
     
     .userchat-context{
-        width:76%;
+        width:72%;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 901px) and (max-width: 991px) {
     .userchat-image{
-        width: 18%;
+        width: 25%;
     }
     
     .userchat-context{
-        width:82%;
+        width:75%;
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1020px) {
+    .userchat-image{
+        width: 22%;
+    }
+    
+    .userchat-context{
+        width:78%;
+    }
+}
+
+@media only screen and (min-width: 1021px) and (max-width: 1199px) {
+    .userchat-image{
+        width: 20%;
+    }
+    
+    .userchat-context{
+        width:80%;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
-
+    .userchat-image{
+        width: 16%;
+    }
+    
+    .userchat-context{
+        width:84%;
+    }
 }
