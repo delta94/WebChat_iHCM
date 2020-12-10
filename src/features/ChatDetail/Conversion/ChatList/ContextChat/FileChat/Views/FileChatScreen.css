@@ -1,0 +1,31 @@
+.filechat-container{
+    background: #EEF0F7;
+    mix-blend-mode: normal;
+    border: 1px solid #B3B8C2;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    display: flex;
+
+}
+
+.filechat-container img{
+    flex-grow: 1;
+}
+
+.filechat-context{
+    flex-grow: 5;
+    /* background-color: darkslateblue; */
+}
+
+.filechat-container h5{
+    font-size: 14px;
+    line-height: 21px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+}
+
+.filechat-iconbutton{
+    display: flex;
+}

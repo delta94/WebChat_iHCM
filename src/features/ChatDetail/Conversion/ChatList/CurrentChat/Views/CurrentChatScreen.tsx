@@ -3,15 +3,16 @@ import './CurrentChatScreen.css';
 
 function CurrentChatScreen(props : any){
     return (
-        <div className="chatcurrent-container">
-            <div className="chatcurrent-context">
+        <div className="currentchat-container">
+            {/* <div className="currentchat-context">
                 <span className="app-mainfont">
                     { props.context }
                 </span>
                 <span className="chat-time app-mainfont">
                     { props.datetime }
                 </span> 
-            </div>  
+            </div>   */}
+            { props.children }
         </div>
     )
 }

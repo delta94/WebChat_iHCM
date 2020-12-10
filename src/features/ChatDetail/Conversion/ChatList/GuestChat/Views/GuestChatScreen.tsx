@@ -1,39 +1,40 @@
 import React from 'react';
 import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconImageScreen from '../../../../../../libraries/Features/IconImage/Views/IconImageScreen';
-import './GuessChatScreen.css';
+import './GuestChatScreen.css';
 
 const iconhorizontal3dots = require('../../../../../../libraries/Icons/iconhorizontal3dots.svg').default;
 
-function GuessChatScreen(props : any){
+function GuestChatScreen(props : any){
     return (
-        <div className="chatguess-container">
+        <div className="guestchat-container">
             <CircleAvatarScreen
             width="30px"
             height="30px"
             src={ props.user.avatar }
             alt={ props.user.name }
-            class="chatguess-left"
+            class="guestchat-left"
             isOnline={ false }
             ></CircleAvatarScreen>
-            <div className="chatguess-right">
+            <div className="guestchat-right">
                 <p className="app-mainfont">
                     { props.user.name }
                 </p>
-                <div className="chatguess-context app-mainfont">
+                {/* <div className="guestchat-context app-mainfont">
                     <span>
                         { props.context }                   
                     </span>
                     <span className="chat-time app-mainfont">
                         { props.datetime }
                     </span>
-                </div>  
+                </div>   */}
+                { props.children }
             </div>
-            <div className="chatguess-icon-horizontal3dots">
+            <div className="guestchat-icon-horizontal3dots">
                 <IconImageScreen src={ iconhorizontal3dots } alt="horizontal 3 dots" class={""}></IconImageScreen>
             </div>
         </div>
     )
 }
 
-export default GuessChatScreen;
+export default GuestChatScreen;

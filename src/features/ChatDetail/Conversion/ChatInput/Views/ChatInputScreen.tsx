@@ -4,7 +4,7 @@ import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/I
 import './ChatInputScreen.css';
 
 const iconsmile = require('./Icons/iconsmile.svg').default;
-const icongim = require('./Icons/icongim.svg').default;
+const icongim = require('../../../../../libraries/Icons/icongim.svg').default;
 const iconsubstract = require('./Icons/iconsubstract.svg').default;
 
 const styleCustomInput = {

@@ -1,20 +1,20 @@
-.chatguess-container{
+.guestchat-container{
     display: flex;
     width: 80%;
     margin: 0.2rem 0;
 }
 
-.chatguess-left{
+.guestchat-left{
     /* flex:1 */
     margin-right: 0.3rem;
     align-self: flex-end;
 }
 
-.chatguess-right{
+.guestchat-right{
     flex: 8;
 }
 
-.chatguess-icon-horizontal3dots{
+.guestchat-icon-horizontal3dots{
     height: 21px;
     width: 21px;
     align-self: center;
@@ -23,19 +23,19 @@
 }
 
 
-.chatguess-right p{
+.guestchat-right p{
     margin: 0 0 0.3rem 1rem;
     font-size: 12px;
     line-height: 18px;
 }
 
-.chatguess-right .chat-time{
+.guestchat-right .chat-time{
     font-size: 12px;
     line-height: 18px;
     color: #757575;
 }
 
-.chatguess-context{
+.guestchat-context{
     background: #F2F3F4;
     border-radius: 1rem 1rem 1rem 0;
     padding: 0.7rem;
@@ -46,8 +46,8 @@
     overflow: auto;
 }
 
-.chatguess-right:hover + .chatguess-icon-horizontal3dots,
-.chatguess-icon-horizontal3dots:hover
+.guestchat-right:hover + .guestchat-icon-horizontal3dots,
+.guestchat-icon-horizontal3dots:hover
 {
     opacity: 1;
 }
@@ -57,10 +57,10 @@
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
-    .chatguess-container{
+    .guestchat-container{
         width: 90%;
     }
-    .chatguess-icon-horizontal3dots:active{
+    .guestchat-icon-horizontal3dots:active{
         opacity: 1;
     }
     
@@ -86,31 +86,31 @@
   }
 
   @media (min-width:1700px){   
-    .chatguess-container{
+    .guestchat-container{
         width: 65%;
     }
   }
   
   @media (min-width:2000px){   
-    .chatguess-container{
+    .guestchat-container{
         width: 55%;
     }
   }
   
   @media (min-width:2350px){   
-    .chatguess-container{
+    .guestchat-container{
         width: 45%;
     }
   }
   
   @media (min-width:4090px){   
-    .chatguess-container{
+    .guestchat-container{
         width: 35%;
     }
   }
   
   @media (min-width:5400px){   
-    .chatguess-container{
+    .guestchat-container{
         width: 25%;
     }
   } 

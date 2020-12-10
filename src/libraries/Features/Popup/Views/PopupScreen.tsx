@@ -2,12 +2,14 @@ import React , { useEffect , useRef , useState} from 'react';
 import './PopupScreen.css';
 
 function PopupScreen(props : any){
-    const { coordPopup } = props;
-
-    function useOutsideAlerter(ref: any) {
+    const { coordPopup , eleRef } = props;
+    
+    // eleRef.current && console.log("Tọa độ điểm :"+ eleRef.current.offsetTop , eleRef.current.offsetLeft);
+    // coordPopup && console.log("Tọa độ popup :" + coordPopup.y , coordPopup.x);
+    function useOutsideAlerter(ref: any , ref2: any) {
         useEffect(() => {
           function handleClickOutside(event: any) {
-            if (ref.current && !ref.current.contains(event.target) && !props.hasPopup) {
+            if (ref.current  && !ref.current.contains(event.target) && !props.hasPopup) {
                 props.togglePopup(ref);
             }
           }
@@ -22,9 +24,10 @@ function PopupScreen(props : any){
     }
 
     const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
+    useOutsideAlerter(wrapperRef , eleRef);
 
     if(props.hasPopup){
+        console.log(wrapperRef);
         return (
             <div className="popup-container" style={{
                 top:`${ coordPopup.y }px`,
@@ -32,7 +35,7 @@ function PopupScreen(props : any){
             }}
             ref={wrapperRef}
             >
-                Popup
+                { props.children }
             </div>
         )
     }

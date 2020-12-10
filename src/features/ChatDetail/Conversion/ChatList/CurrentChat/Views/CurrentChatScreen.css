@@ -1,24 +1,24 @@
-.chatcurrent-container{
+.currentchat-container{
   width: 70%;
   margin: 0.2rem 0;
   align-self: flex-end; 
 }
 
-.chatcurrent-context{
+.currentchat-context{
   background: #4080FF;
   border-radius: 1rem 1rem 0 1rem;
   padding: 0.7rem;
   overflow: auto;
 }
 
-.chatcurrent-context .chat-time{
+.currentchat-context .chat-time{
   font-size: 12px;
   line-height: 18px;
   color: #FFFFFF;
   opacity: 0.6;
 }
 
-.chatcurrent-context span:first-child{
+.currentchat-context span:first-child{
   font-size: 14px;
   line-height: 21px;
   color: #FFFFFF;
@@ -31,7 +31,7 @@
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) { 
-    .chatcurrent-container{
+    .currentchat-container{
         width: 90%;
     }
   }
@@ -57,31 +57,31 @@
 
   
   @media (min-width:1700px){   
-    .chatcurrent-container{
+    .currentchat-container{
         width: 65%;
     }
   }
   
   @media (min-width:2000px){   
-    .chatcurrent-container{
+    .currentchat-container{
         width: 55%;
     }
   }
   
   @media (min-width:2350px){   
-    .chatcurrent-container{
+    .currentchat-container{
         width: 45%;
     }
   }
   
   @media (min-width:4090px){   
-    .chatcurrent-container{
+    .currentchat-container{
         width: 35%;
     }
   }
   
   @media (min-width:5400px){   
-    .chatcurrent-container{
+    .currentchat-container{
         width: 25%;
     }
   } 

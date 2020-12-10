@@ -5,7 +5,7 @@ import './CustomInputScreen.css';
 function CustomInputScreen(props : ICustomInput) {
   return (
     <div className={ "custominput-container " + props.class}>
-      <input type="text" placeholder={ props.placeHolder } style={ props.style }/>
+      <input type="text" multiple={true} placeholder={ props.placeHolder } style={ props.style }/>
     </div>
   );
 }
