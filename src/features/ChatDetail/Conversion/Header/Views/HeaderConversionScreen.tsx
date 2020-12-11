@@ -1,6 +1,7 @@
 import React from 'react';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
+import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
 import './HeaderConversionScreen.css';
 
 const iconcamera = require('./Icons/iconcamera.svg').default;
@@ -25,9 +26,22 @@ function HeaderConversionScreen(props: any){
                 </div>
             </div>
             <div className="conversionheader-right">
-                <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
-                <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
-                <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
+                <TooltipScreen context="Gọi video">
+                    <div>
+                        <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
+                    </div>
+                </TooltipScreen>
+                <TooltipScreen context="Tìm kiếm">
+                    <div>
+                    <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
+                    </div>
+                </TooltipScreen>
+                <TooltipScreen context="Chức năng khác">
+                    <div>
+                    <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
+                    </div>
+                </TooltipScreen>
+
             </div>
         </div>
     )

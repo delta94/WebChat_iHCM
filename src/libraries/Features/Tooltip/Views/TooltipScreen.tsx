@@ -25,7 +25,7 @@ const TooltipScreen = (props: any) =>{
               trigger={
                 props.children
               }
-              position={['right center', 'right top', 'bottom left']}
+              position={['right center', 'bottom center', 'left center', 'top center']}
               on={['hover', 'focus']}
               arrow={true}
             >

@@ -1,11 +1,18 @@
 .userchatlist-container{
-  width: 40%;
+  width: 30%;
   height: 100%;
   border-right: 1px solid #E6E8EB;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.userchatlist-bottom{
+  /* position: absolute; */
   overflow: hidden;
 }
 
-.userchatlist-container:hover{
+.userchatlist-bottom:hover{
   overflow: overlay;
 }
 

@@ -6,7 +6,6 @@ import { IUserChat } from '../../UserChat/Models/UserChatModel';
 import NoUserChatFound from '../../NoUserChatFound/Views/NoUserChatFound';
 import CustomInputScreen from '../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 
-
 const listUserChat: IUserChat[] =[
   {
     id:1,
@@ -284,11 +283,16 @@ function UserChatListScreen() {
 
   return (
     <div className="userchatlist-container">
-      <HeaderScreen></HeaderScreen>
-      <CustomInputScreen style={ styleCustomInput } class="searchinput-container" placeHolder="Tìm kiếm cuộc trò chuyện"></CustomInputScreen>
-      {
-        showUserChat(listUserChat)
-      }
+      <div className="userchatlist-top">
+        <HeaderScreen></HeaderScreen>
+        <CustomInputScreen style={ styleCustomInput } class="searchinput-container" placeHolder="Tìm kiếm cuộc trò chuyện"></CustomInputScreen>
+      </div>
+      <div className="userchatlist-bottom">
+        {
+          showUserChat(listUserChat)
+        }
+      </div>
+
     </div>
   );
 }
