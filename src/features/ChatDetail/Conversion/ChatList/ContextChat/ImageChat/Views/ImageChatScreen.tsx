@@ -1,12 +1,21 @@
 import React from 'react';
+import { getListLinkImages , IImageChat } from '../Models/ImageChat';
 import './ImageChatScreen.css';
 
-const iconhorizontal3dots = require('../../../../../../libraries/Icons/iconhorizontal3dots.svg').default;
+function ImageChatScreen(props : IImageChat){
+    const listLinkImages = getListLinkImages(props.context);
 
-function ImageChatScreen(props : any){
+    const showImages = () =>{
+        return listLinkImages.map((linkImage: string , index: number) =>{
+            return <img src={linkImage} alt="image" key={index}></img>
+        })
+    }
+
     return (
-        <div className="-container">
-            huyuy12312321
+        <div className={ props.isCurrent ? "imagechat-container imagechat-current" : "imagechat-container"}>
+            {
+                showImages()
+            }
         </div>
     )
 }

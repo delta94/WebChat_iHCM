@@ -9,7 +9,8 @@ function IconImageScreen(props : IIconImage) {
       alt={ props.alt } 
       className={"iconimage-container " + props.class} 
       onClick={ props.onClick }
-    />
+    >
+    </img>
   );
 }
 

@@ -1,16 +1,65 @@
 .chatinput-container{
-    position: absolute;
-    bottom: 0;
-    height: 8%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 0.6rem;
+  position: absolute;
+  bottom: 0;
+  height: 8%;
+  width: 100%;
+  padding: 0 0.6rem;
+  display: flex;
+  border-top: 1px solid #E6E8EB;
+  background-color: #fff;
+}
+
+.chatinput-main{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.chatinput-responsetext{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.chatinput-responsetext .app-mainfont{
+  font-size: 12px;
+  line-height: 18px;
+  color: #4D5971;
+}
+
+.chatinput-responsetext-username{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4D5971;
+}
+
+.chatinput-responsetext-context{
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 40%;
+}
+
+
+
+.chatinput--hasresponsetext{
+  height: 18%;
+  padding: 0.6rem;
+  flex-direction: column;
 }
 
 .chatinput-container .custominput-container{
     flex-grow: 1; /* default 0 */
     margin: 0 1rem;
+}
+
+.chatinput-responsetext-icon-cancel{
+  align-self: flex-start;
 }
 
 

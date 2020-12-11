@@ -14,7 +14,7 @@ function HeaderScreen(props : any) {
     <div className="header-container">
       <IconImageScreen src={ icon9dots } class="header-icon-9dots" alt="9 dots" onClick={ props.toggleNavbar }></IconImageScreen>
       <IconImageScreen src={ iconmain } class="header-icon-main" alt="9 dots" ></IconImageScreen>
-      <div onClick={ () =>{props.togglePopup(eleRef)} } ref={ eleRef } className="header-icon-avatar">
+      <div onClick={ () =>{ props.togglePopup(eleRef)} } ref={ eleRef } className="header-icon-avatar">
         <CircleAvatarScreen 
           isOnline={false}
           src={"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}

@@ -1,7 +1,11 @@
-.popup-container{
-    position: fixed;
-    /* top: 200px;
-    left: 200px; */
-    background-color: lawngreen;
+.tooltip-container{
+    background-color: #1A2948;
+    padding: 0.5rem;
+    color: #E5E9F2;
+    border-radius: 6px;
+}
+
+.popup-arrow {
+    color: #1A2948;
 
 }

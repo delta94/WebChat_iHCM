@@ -1,4 +1,5 @@
 export interface IconPanelModel{
     isActive: boolean,
-    srcImg: string
+    srcImg: string,
+    contextToolTip: string,
 }

@@ -1,12 +1,13 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect , useRef, useState } from 'react';
 import CurrentChatScreen from '../../CurrentChat/Views/CurrentChatScreen';
 import GuestChatScreen from '../../GuestChat/Views/GuestChatScreen';
-import { IMessage, IUser } from '../Models/ChatList';
+import { findUserById, IMessage, IUser } from '../Models/ChatList';
 import LoadingSpinnerScreen from '../../../../../../libraries/Features/LoadingSpinner/Views/LoadingSpinnerScreen';
 import './ChatListScreen.css';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import FileChatScreen from '../../ContextChat/FileChat/Views/FileChatScreen';
 import TextChatScreen from '../../ContextChat/TextChat/Views/TextChatScreen';
+import ImageChatScreen from '../../ContextChat/ImageChat/Views/ImageChatScreen';
 
 
 function ChatListScreen(props : any){
@@ -21,13 +22,10 @@ function ChatListScreen(props : any){
             setUserid(2);
             setIsLoading(false);
 
-        }, 2e3);
+        }, 1e3);
 
     })
 
-    const findUserById  = (userid: number) :IUser =>{ 
-        return listUser.find((user:IUser) =>user.id === userid) 
-    };
 
     useEffect(() =>{
         if(chatlistRef.current){
@@ -36,8 +34,9 @@ function ChatListScreen(props : any){
     },[isLoading])
     
     const showAllMessages = useCallback(() :any =>{
-        return listMessage.map((message:IMessage, index:number) =>{
-            const userTemp: IUser = findUserById(message.userid);
+        
+        return listMessage.map((message: IMessage, index: number) =>{
+            const userTemp: IUser = findUserById(listUser,message.userid);
             const isCurrent: boolean = userTemp.id === userid;
 
             let eleChildren: JSX.Element = <div></div>;
@@ -61,12 +60,17 @@ function ChatListScreen(props : any){
                         context={ message.context }
                         datetime={ message.datetime }
                         ></FileChatScreen>
-
                     )
 
                     break;
                 case ENUM_KIND_OF_MESSAGE.IMAGE:
-
+                    eleChildren = (
+                        <ImageChatScreen
+                        isCurrent={ isCurrent }
+                        context={ message.context }
+                        datetime={ message.datetime }
+                        ></ImageChatScreen>
+                    )
 
                     break;
                 case ENUM_KIND_OF_MESSAGE.LINK:
@@ -81,17 +85,20 @@ function ChatListScreen(props : any){
                     break;
             
                 default:
-                    return <div></div>
+                    return <div></div>;
                     break;
             }
 
             if(isCurrent){
-                return <CurrentChatScreen>
+                return <CurrentChatScreen key={ index }>
                     { eleChildren }
                 </CurrentChatScreen>
             } else{
                 return <GuestChatScreen
+                kindOfMess={ message.kindOfMess }
+                key={ index }
                 user={ userTemp } 
+                context={ message.context }
                 >
                     { eleChildren }
                 </GuestChatScreen>

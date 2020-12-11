@@ -44,9 +44,14 @@
     mix-blend-mode: normal;
     opacity: 0.95;
     overflow: auto;
+    width: 100%;
 }
 
-.guestchat-right:hover + .guestchat-icon-horizontal3dots,
+.guestchat-maincontext{
+    display: flex;
+}
+
+.guestchat-maincontext:hover .guestchat-icon-horizontal3dots,
 .guestchat-icon-horizontal3dots:hover
 {
     opacity: 1;

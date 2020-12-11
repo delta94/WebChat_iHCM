@@ -10,6 +10,12 @@
   padding: 0.7rem;
   overflow: auto;
 }
+/* 
+.currentchat-container .filechat-container{
+  background: #4080FF;
+  color: #fff !important;
+} */
+
 
 .currentchat-context .chat-time{
   font-size: 12px;

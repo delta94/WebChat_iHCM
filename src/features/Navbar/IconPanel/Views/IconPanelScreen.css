@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 1rem;
+  height: 100%;
+  padding: 0.8rem;
 }
 .navbar-iconpanel-container:hover{
   background-color: #0151CD;
@@ -29,6 +30,10 @@
 .navbar-iconpanel-container--active{
   background-color: #0151CD;
   border-left: 2px solid #FF7F08;
+}
+
+.navbar-container .example-warper{
+  flex: 1;
 }
 
 

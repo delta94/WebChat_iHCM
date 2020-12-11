@@ -6,26 +6,30 @@
     border-radius: 6px;
     padding: 0.4rem 0.7rem;
     display: flex;
-
+    width: 100%;
 }
 
-.filechat-container img{
-    flex-grow: 1;
+.filechat-maincontext{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0.5rem;
 }
 
-.filechat-context{
-    flex-grow: 5;
-    /* background-color: darkslateblue; */
-}
-
-.filechat-container h5{
+.filechat-context h5{
+    width: 80px;
     font-size: 14px;
     line-height: 21px;
+    /* text-indent: 100%; */
+    white-space: nowrap;
     overflow: hidden;
-    /* white-space: nowrap; */
     text-overflow: ellipsis;
 }
 
 .filechat-iconbutton{
     display: flex;
+    padding: 0.5rem;
+
+    background-color: #d4d8e6;
+    border-radius: 4px;
 }

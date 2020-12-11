@@ -31,3 +31,17 @@ export interface IGroup{
     listUser: IUser[],
     listConversion: IConversion[]
 }
+
+
+export const findUserById  = (listUser: IUser[] ,userid: number) :IUser  =>{ 
+    let user =  listUser.find((user:IUser) =>user.id === userid);
+    if(user === undefined){
+        user={
+            id:0,
+            name:'huy',
+            avatar:'',
+            isOnline:false
+        }
+    }
+    return user;
+};

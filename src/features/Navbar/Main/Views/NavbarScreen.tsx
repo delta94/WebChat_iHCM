@@ -10,11 +10,11 @@ const iconquestion = require('./Icons/iconquestion.svg').default;
 function NavbarScreen() {
   return (
     <div className="navbar-container">
-      <IconPanelScreen isActive={true} srcImg={ iconmessage }></IconPanelScreen>
-      <IconPanelScreen isActive={false} srcImg={ iconfriend }></IconPanelScreen>
-      <IconPanelScreen isActive={false} srcImg={ iconnoti }></IconPanelScreen>
+      <IconPanelScreen isActive={true} srcImg={ iconmessage } contextToolTip={"Trò chuyện"}></IconPanelScreen>
+      <IconPanelScreen isActive={false} srcImg={ iconfriend } contextToolTip={"Bạn bè"}></IconPanelScreen>
+      <IconPanelScreen isActive={false} srcImg={ iconnoti } contextToolTip={"Thông báo"}></IconPanelScreen>
       <div className="navbar-iconpanel-last">
-        <IconPanelScreen isActive={false} srcImg={ iconquestion }></IconPanelScreen>
+        <IconPanelScreen isActive={false} srcImg={ iconquestion } contextToolTip={"Giải đáp"}></IconPanelScreen>
       </div>
 
     </div>
