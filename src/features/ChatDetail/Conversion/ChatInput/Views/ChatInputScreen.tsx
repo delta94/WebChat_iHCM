@@ -3,7 +3,7 @@ import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Vie
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import './ChatInputScreen.css';
 import { connect   } from "react-redux";
-import { unactiveResponseText } from "../../../../../redux/Actions/ResponseText.action";
+import { unactiveResponseText } from "../../../../../redux/Actions/States/ResponseText.action";
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../libraries/Constants/KindOfMessage';
 
 const iconsmile = require('./Icons/iconsmile.svg').default;

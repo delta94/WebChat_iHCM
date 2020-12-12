@@ -1,4 +1,4 @@
-import { ACTIVE_RESPONSETEXT , UNACTIVE_RESPONSETEXT } from '../Types/ResponseText.type';
+import { ACTIVE_RESPONSETEXT , UNACTIVE_RESPONSETEXT } from '../../Types/States/ResponseText.type';
 
 
 export const setResponseText = (name: string , context: string , kindOfMess: number) => {

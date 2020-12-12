@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import responseTextReducer from '../Reducers/ResponseText.reducer';
+import responseTextReducer from '../Reducers/States/ResponseText.reducer';
 
 const rootReducer = combineReducers({
 

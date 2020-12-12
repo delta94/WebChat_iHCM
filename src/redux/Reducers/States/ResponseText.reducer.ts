@@ -1,11 +1,7 @@
-import { ACTIVE_RESPONSETEXT , UNACTIVE_RESPONSETEXT } from '../Types/ResponseText.type';
+import { IResponseText } from '../../Models/States/ResponseMess.model';
+import { ACTIVE_RESPONSETEXT , UNACTIVE_RESPONSETEXT } from '../../Types/States/ResponseText.type';
 
-interface IResponseText{
-    isActive:boolean,
-    name:string,
-    context:string,
-    kindOfMess:number
-}
+
 
 const INITIAL_STATE: IResponseText = {
     isActive:false,
