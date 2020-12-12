@@ -3,7 +3,7 @@ import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Vie
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import './ChatInputScreen.css';
 import { connect   } from "react-redux";
-import { unactiveResponseText } from "../../../../../redux/Actions/States/ResponseText.action";
+import { unactiveResponseMess } from "../../../../../redux/Actions/States/ResponseMess.action";
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../libraries/Constants/KindOfMessage';
 
 const iconsmile = require('./Icons/iconsmile.svg').default;
@@ -19,9 +19,9 @@ const styleCustomInput = {
     fontSize:'14px',
 }
 function ChatInputScreen(props: any){
-    const { responseText } = props;
+    const { responseMess } = props;
 
-    const showContextResponseText = (kindOfMess: number , context: string) =>{
+    const showContextResponseMess = (kindOfMess: number , context: string) =>{
         let eleResult = "";
         switch (kindOfMess) {
             case ENUM_KIND_OF_MESSAGE.TEXT:
@@ -42,21 +42,21 @@ function ChatInputScreen(props: any){
         return eleResult;
     }
     return (
-        <div className={ responseText.isActive ? "chatinput-container chatinput--hasresponsetext" : "chatinput-container"}>
+        <div className={ responseMess.isActive ? "chatinput-container chatinput--hasresponseMess" : "chatinput-container"}>
 
             {
-                responseText.isActive && (
-                    <div className="chatinput-responsetext">
+                responseMess.isActive && (
+                    <div className="chatinput-responseMess">
                         <div>
                             <span className="app-mainfont">
                                 Trả lời 
-                                <span className="chatinput-responsetext-username"> { responseText.name } </span>
+                                <span className="chatinput-responseMess-username"> { responseMess.name } </span>
                             </span>
-                            <p className="chatinput-responsetext-context">
-                                { showContextResponseText(responseText.kindOfMess , responseText.context) }
+                            <p className="chatinput-responseMess-context">
+                                { showContextResponseMess(responseMess.kindOfMess , responseMess.context) }
                             </p>
                         </div>
-                        <IconImageScreen src={ iconcancel } alt="gim" onClick={ props.unactiveResponseText } class="chatinput-responsetext-icon-cancel"></IconImageScreen>
+                        <IconImageScreen src={ iconcancel } alt="gim" onClick={ props.unactiveResponseMess } class="chatinput-responseMess-icon-cancel"></IconImageScreen>
                     </div>
                 )
             }
@@ -71,13 +71,13 @@ function ChatInputScreen(props: any){
 
 const mapStateToProps = (state: any) => {
     return {
-        responseText: state.responseText,
+        responseMess: state.responseMess,
     }
 }
   
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        unactiveResponseText: () => dispatch(unactiveResponseText()),
+        unactiveResponseMess: () => dispatch(unactiveResponseMess()),
     }
 }
 

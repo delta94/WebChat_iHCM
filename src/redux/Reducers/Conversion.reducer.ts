@@ -1,13 +1,13 @@
 import { SHOW_CONVERSION } from './../Types/Conversion.type';
 
-interface IResponseText{
+interface IResponseMess{
     isActive:boolean,
     name:string,
     context:string,
     kindOfMess:number
 }
 
-const INITIAL_STATE: IResponseText = {
+const INITIAL_STATE: IResponseMess = {
     isActive:false,
     name:'',
     context:'',

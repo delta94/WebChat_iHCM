@@ -1,18 +1,16 @@
-import { IResponseText } from '../../Models/States/ResponseMess.model';
-import { ACTIVE_RESPONSETEXT , UNACTIVE_RESPONSETEXT } from '../../Types/States/ResponseText.type';
+import { IResponseMess } from '../../Models/States/ResponseMess.model';
+import { ACTIVE_RESPONSEMESS , UNACTIVE_RESPONSEMESS } from '../../Types/States/ResponseMess.type';
 
-
-
-const INITIAL_STATE: IResponseText = {
+const INITIAL_STATE: IResponseMess = {
     isActive:false,
     name:'',
     context:'',
     kindOfMess:0,
 };
 
-const responseTextReducer = (state = INITIAL_STATE, action:any) => {
+const responseMessReducer = (state = INITIAL_STATE, action:any) => {
     switch (action.type) {
-        case ACTIVE_RESPONSETEXT:
+        case ACTIVE_RESPONSEMESS:
             return {
                 ...state,
                 isActive:true,
@@ -20,7 +18,7 @@ const responseTextReducer = (state = INITIAL_STATE, action:any) => {
                 context:action.payload.context,
                 kindOfMess:action.payload.kindOfMess,
             };
-        case UNACTIVE_RESPONSETEXT:
+        case UNACTIVE_RESPONSEMESS:
             return {
                 ...state,
                 isActive:false
@@ -33,4 +31,4 @@ const responseTextReducer = (state = INITIAL_STATE, action:any) => {
 
 };
 
-export default responseTextReducer;
+export default responseMessReducer;

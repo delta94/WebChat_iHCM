@@ -1,4 +1,4 @@
-export interface IResponseText {
+export interface IResponseMess {
     kindOfMess: number,
     context: string,
     

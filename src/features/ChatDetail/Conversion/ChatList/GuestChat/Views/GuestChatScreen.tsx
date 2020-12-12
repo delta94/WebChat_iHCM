@@ -4,7 +4,7 @@ import IconImageScreen from '../../../../../../libraries/Features/IconImage/View
 import { IGuessChat } from '../Models/GuessChat';
 import './GuestChatScreen.css';
 import { connect   } from "react-redux";
-import { setResponseText } from "../../../../../../redux/Actions/States/ResponseText.action";
+import { setResponseMess } from "../../../../../../redux/Actions/States/ResponseMess.action";
 import MainPopupScreen from '../../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import DetailPopupScreen from '../../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
@@ -18,7 +18,7 @@ function GuestChatScreen(props : IGuessChat){
 
     const listEles = [
         {
-            onClick: () => props.setResponseText(props.user.name , props.context , props.kindOfMess),
+            onClick: () => props.setResponseMess(props.user.name , props.context , props.kindOfMess),
             icon: iconreplay,
             text: "Trả lời"
         },
@@ -64,13 +64,13 @@ function GuestChatScreen(props : IGuessChat){
 
 const mapStateToProps = (state: any) => {
     return {
-        responseText: state.responseText,
+        responseMess: state.responseMess,
     }
 }
   
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        setResponseText: (name:string , context: string , kindOfMess: number) => dispatch(setResponseText(name , context , kindOfMess)),
+        setResponseMess: (name:string , context: string , kindOfMess: number) => dispatch(setResponseMess(name , context , kindOfMess)),
     }
 }
 

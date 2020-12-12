@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import responseTextReducer from '../Reducers/States/ResponseText.reducer';
+import responseMessReducer from '../Reducers/States/ResponseMess.reducer';
 
 const rootReducer = combineReducers({
 
-    responseText: responseTextReducer,
+    responseMess: responseMessReducer,
 
 });
 

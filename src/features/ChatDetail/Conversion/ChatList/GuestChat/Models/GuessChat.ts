@@ -1,4 +1,4 @@
-import { IResponseText } from './../../../Main/Models/Conversion';
+import { IResponseMess } from './../../../Main/Models/Conversion';
 import { IUser } from "../../Main/Models/ChatList";
 
 export interface IGuessChat{
@@ -6,6 +6,6 @@ export interface IGuessChat{
     kindOfMess: number,
     context: string,
     children: React.ReactNode,
-    responseText: IResponseText,
-    setResponseText:any
+    responseMess: IResponseMess,
+    setResponseMess:any
 }

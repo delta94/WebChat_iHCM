@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.chatinput-responsetext{
+.chatinput-responseMess{
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,20 +24,20 @@
   position: relative;
 }
 
-.chatinput-responsetext .app-mainfont{
+.chatinput-responseMess .app-mainfont{
   font-size: 12px;
   line-height: 18px;
   color: #4D5971;
 }
 
-.chatinput-responsetext-username{
+.chatinput-responseMess-username{
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #4D5971;
 }
 
-.chatinput-responsetext-context{
+.chatinput-responseMess-context{
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
@@ -47,7 +47,7 @@
 
 
 
-.chatinput--hasresponsetext{
+.chatinput--hasresponseMess{
   height: 18%;
   padding: 0.6rem;
   flex-direction: column;
@@ -58,7 +58,7 @@
     margin: 0 1rem;
 }
 
-.chatinput-responsetext-icon-cancel{
+.chatinput-responseMess-icon-cancel{
   align-self: flex-start;
 }
 
