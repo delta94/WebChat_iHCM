@@ -12,14 +12,13 @@ import ImageChatScreen from '../../ContextChat/ImageChat/Views/ImageChatScreen';
 
 function ChatListScreen(props : any){
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [userid, setUserid] = useState<number>();
+    const [userid, setUserid] = useState<number>(1);
     const { listUser , listMessage } = props;
     
     const chatlistRef = useRef<HTMLInputElement>(null);
 
     useEffect(() =>{
         setTimeout(() => {
-            setUserid(2);
             setIsLoading(false);
 
         }, 1e3);

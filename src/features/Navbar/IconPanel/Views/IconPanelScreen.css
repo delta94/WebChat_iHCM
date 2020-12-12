@@ -32,7 +32,7 @@
   border-left: 2px solid #FF7F08;
 }
 
-.navbar-container .example-warper{
+.navbar-container div{
   flex: 1;
 }
 

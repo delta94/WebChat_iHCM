@@ -3,13 +3,10 @@ import './ConversionScreen.css';
 import HeaderConversionScreen from '../../Header/Views/HeaderConversionScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
 import ChatInputScreen from '../../ChatInput/Views/ChatInputScreen';
-import { IConversion } from '../../ChatList/Main/Models/ChatList';
+import { IConversion } from '../Models/Conversion';
 
 const coversion: IConversion ={
     id:1,
-    name:'Trung Đức',
-    avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-    isOnline:true,
     listUser:[
         {
             id:1,
@@ -170,12 +167,13 @@ const coversion: IConversion ={
 }
 
 function ConversionScreen(props: any){
+    const currentId = 1
     return (
         <div className="conversion-container">
             <HeaderConversionScreen
-            name={ coversion.name }
-            avatar={ coversion.avatar }
-            isOnline={ coversion.isOnline }
+            name={ "coversion.name" }
+            avatar={ "coversion.avatar" }
+            isOnline={ true }
             ></HeaderConversionScreen>
 
             <ChatListScreen
