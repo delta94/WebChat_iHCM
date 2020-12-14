@@ -1,5 +1,5 @@
-import { IResponseMess } from '../../Models/States/ResponseMess.model';
-import { ACTIVE_RESPONSEMESS , UNACTIVE_RESPONSEMESS } from '../../Types/States/ResponseMess.type';
+import { IResponseMess } from '../Models/ResponseMess.model';
+import { ACTIVE_RESPONSEMESS , UNACTIVE_RESPONSEMESS } from '../Types/ResponseMess.type';
 
 const INITIAL_STATE: IResponseMess = {
     isActive:false,

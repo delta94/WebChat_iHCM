@@ -4,7 +4,7 @@ import IconImageScreen from '../../../../../../libraries/Features/IconImage/View
 import { IGuessChat } from '../Models/GuessChat';
 import './GuestChatScreen.css';
 import { connect   } from "react-redux";
-import { setResponseMess } from "../../../../../../redux/Actions/States/ResponseMess.action";
+import { setResponseMess } from "../../../../../../redux/Actions/ResponseMess.action";
 import MainPopupScreen from '../../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import DetailPopupScreen from '../../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';

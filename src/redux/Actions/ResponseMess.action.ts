@@ -1,4 +1,4 @@
-import { ACTIVE_RESPONSEMESS , UNACTIVE_RESPONSEMESS } from '../../Types/States/ResponseMess.type';
+import { ACTIVE_RESPONSEMESS , UNACTIVE_RESPONSEMESS } from '../Types/ResponseMess.type';
 
 
 export const setResponseMess = (name: string , context: string , kindOfMess: number) => {

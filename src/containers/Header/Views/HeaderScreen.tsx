@@ -1,9 +1,11 @@
-import React , { useRef , useEffect, Fragment, RefObject, HtmlHTMLAttributes, useCallback, useState} from 'react';
+import React , { useEffect, useRef } from 'react';
 import CircleAvatarScreen from '../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconImageScreen from '../../../libraries/Features/IconImage/Views/IconImageScreen';
 import DetailPopupScreen from '../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
 import MainPopupScreen from '../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import './HeaderScreen.css';
+import { connect } from "react-redux";
+import { getCurrentUser } from '../../../redux/Actions/CurrentUser.action';
 
 const iconnoti = require('./Icons/iconnoti.svg').default;
 const iconquestion = require('./Icons/iconquestion.svg').default;
@@ -14,6 +16,14 @@ const iconmain = require('./Icons/iconmain.svg').default;
 
 function HeaderScreen(props : any) {
   const eleRef = useRef<HTMLDivElement>(null);
+  const { currentUser } = props;
+  console.log(currentUser);
+  useEffect(() => {
+    const id = 1;
+    props.getCurrentUser(id);
+    return () => { 
+    }
+  }, [])
 
   const listEles = [
     {
@@ -42,15 +52,23 @@ function HeaderScreen(props : any) {
     <div className="detailpopup-header">
       <CircleAvatarScreen 
         isOnline={false}
-        src={"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}
+        src={currentUser.avatar}
         width={'36px'}
         height={'36px'}
         alt={"avatar"}
         class={""}
       ></CircleAvatarScreen>
       <div className="detailpopup-header-right app-mainfont">
-        <p>Trung Đức</p>
-        <span>iHcm</span>
+        <p>
+          {
+            currentUser.name
+          }
+        </p>
+        <span>
+          {
+            currentUser.description
+          }
+        </span>
       </div>
     </div>
   )
@@ -80,5 +98,17 @@ function HeaderScreen(props : any) {
     </div>
   );
 }
+const mapStateToProps = (state: any) => {
+  return {
+    currentUser: state.currentUser,
+  }
+}
 
-export default HeaderScreen;
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    getCurrentUser: (id: number) => dispatch(getCurrentUser(id)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderScreen)
+

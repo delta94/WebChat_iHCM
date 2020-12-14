@@ -2,8 +2,8 @@ import React from 'react';
 import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import './ChatInputScreen.css';
-import { connect   } from "react-redux";
-import { unactiveResponseMess } from "../../../../../redux/Actions/States/ResponseMess.action";
+import { connect } from "react-redux";
+import { unactiveResponseMess } from "../../../../../redux/Actions/ResponseMess.action";
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../libraries/Constants/KindOfMessage';
 
 const iconsmile = require('./Icons/iconsmile.svg').default;
