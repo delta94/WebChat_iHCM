@@ -1,4 +1,4 @@
-.conversionheader-container{
+.conversationheader-container{
     display: flex;
     align-items: center;
     border-bottom: 1px solid #E6E8EB;
@@ -8,21 +8,21 @@
 }
 
 
-.conversionheader-left{
+.conversationheader-left{
     display: flex;
     justify-content: center;
 }
 
-.conversionheader-context{
+.conversationheader-context{
     margin-left: 0.6rem;
 }
 
-.conversionheader-context h4{
+.conversationheader-context h4{
     font-size: 18px;
     line-height: 27px;  
 }
 
-.conversionheader-context span{
+.conversationheader-context span{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -31,24 +31,24 @@
     color: #667085;
 }
 
-.conversionheader-right{
+.conversationheader-right{
     display: flex;
     justify-content: center;
 }
 
-.conversionheader-right img{
+.conversationheader-right img{
     margin: 0 0.3rem;
 }
 
 
 @media only screen and (max-width: 600px) {
-    .conversionheader-context{
+    .conversationheader-context{
         display: none;
     }
 }
 
 @media (min-width:1700px){   
-    .conversionheader-container{
+    .conversationheader-container{
         height: 9%;
     }
 }
@@ -58,44 +58,44 @@
 }
   
 @media (min-width:2350px){   
-    .conversionheader-container{
+    .conversationheader-container{
         height: 7%;
     }
 }
   
 @media (min-width:4090px){   
-    .conversionheader-container{
+    .conversationheader-container{
         height: 5%;
     }
 }
   
 @media (min-width:5400px){   
-    .conversionheader-container{
+    .conversationheader-container{
         height: 4%;
     }
 } 
   
   
 @media only screen and (min-height: 520px) and (max-height: 600px) {
-    .conversionheader-container{
+    .conversationheader-container{
         height: 12%;
     }
 }
 
 @media only screen and (min-height: 370px) and (max-height: 519px) {
-    .conversionheader-container{
+    .conversationheader-container{
         height: 18%;
     }
 }
 
 @media only screen and (min-height: 300px) and (max-height: 369px) {
-    .conversionheader-container{
+    .conversationheader-container{
         height: 20%;
     }
 }
 
 @media only screen and (max-height: 299px) {
-    .conversionheader-container{
+    .conversationheader-container{
         display: none;
     }
 }

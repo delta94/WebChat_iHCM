@@ -1,4 +1,4 @@
-import { SHOW_CONVERSION } from './../Types/Conversion.type';
+import { SHOW_CONVERSATION } from './../Types/Conversation.type';
 
 interface IResponseMess{
     isActive:boolean,
@@ -14,9 +14,9 @@ const INITIAL_STATE: IResponseMess = {
     kindOfMess:0,
 };
 
-const conversionReducer = (state = INITIAL_STATE, action:any) => {
+const conversationReducer = (state = INITIAL_STATE, action:any) => {
     switch (action.type) {
-        case SHOW_CONVERSION:
+        case SHOW_CONVERSATION:
             return {
                 ...state,
                 isActive:true,
@@ -30,4 +30,4 @@ const conversionReducer = (state = INITIAL_STATE, action:any) => {
     }
 };
 
-export default conversionReducer;
+export default conversationReducer;

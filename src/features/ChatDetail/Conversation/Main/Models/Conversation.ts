@@ -8,7 +8,7 @@ import { IUser } from "../../ChatList/Main/Models/ChatList";
 import { IMessage } from "../../ChatList/Main/Models/ChatList";
 
 
-export interface IConversion{
+export interface IConversation{
     id: number,
     listUser: IUser[],
     listMessage: IMessage[]

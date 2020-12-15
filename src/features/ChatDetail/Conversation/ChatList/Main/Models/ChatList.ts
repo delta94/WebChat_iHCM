@@ -14,7 +14,7 @@ export interface IMessage{
     datetime: string,
 }
 
-export interface IConversion{
+export interface IConversation{
     id: number,
     name: string,
     avatar: string,
@@ -29,7 +29,7 @@ export interface IGroup{
     avatar: string,
     isOnline: boolean,
     listUser: IUser[],
-    listConversion: IConversion[]
+    listConversation: IConversation[]
 }
 
 

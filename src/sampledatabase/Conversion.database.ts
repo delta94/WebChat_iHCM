@@ -1,10 +1,10 @@
-export interface IConversion{
+export interface IConversationDatabase{
     id: number,
     listUserId: number[],
     listMessageId: number[]
 }
 
-export const user: IConversion[] = [
+export const user: IConversationDatabase[] = [
     {
         id:1,
         listUserId:[1,2],

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './ConversionScreen.css';
-import HeaderConversionScreen from '../../Header/Views/HeaderConversionScreen'
+import './ConversationScreen.css';
+import HeaderConversationScreen from '../../Header/Views/HeaderConversationScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
 import ChatInputScreen from '../../ChatInput/Views/ChatInputScreen';
-import { IConversion } from '../Models/Conversion';
+import { IConversation } from '../Models/Conversation';
 
-const coversion: IConversion ={
+const coversion: IConversation ={
     id:1,
     listUser:[
         {
@@ -166,15 +166,15 @@ const coversion: IConversion ={
     ]
 }
 
-function ConversionScreen(props: any){
+function ConversationScreen(props: any){
     const currentId = 1
     return (
-        <div className="conversion-container">
-            <HeaderConversionScreen
+        <div className="conversation-container">
+            <HeaderConversationScreen
             name={ "coversion.name" }
             avatar={ "coversion.avatar" }
             isOnline={ true }
-            ></HeaderConversionScreen>
+            ></HeaderConversationScreen>
 
             <ChatListScreen
             listUser={ coversion.listUser }
@@ -186,4 +186,4 @@ function ConversionScreen(props: any){
     )
 }
 
-export default ConversionScreen;
+export default ConversationScreen;

@@ -3,7 +3,7 @@ import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvata
 import IconImageScreen from '../../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import { IGuessChat } from '../Models/GuessChat';
 import './GuestChatScreen.css';
-import { connect   } from "react-redux";
+import { connect } from "react-redux";
 import { setResponseMess } from "../../../../../../redux/Actions/ResponseMess.action";
 import MainPopupScreen from '../../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';

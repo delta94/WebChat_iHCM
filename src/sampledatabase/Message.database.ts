@@ -1,22 +1,22 @@
-export interface IMessage{
+export interface IMessageDatabase{
     id: number,
     userid: number,
     context: string,
     datetime: string,
     kindOfMess: number,
-    listUsersHaveRead: number[],
+    userHasReadList: number[],
     isResponseMess: boolean,
     responseMess?: number
 }
 
-export const messageDatabase: IMessage[] = [
+export const messageDatabase: IMessageDatabase[] = [
     {
         id:1,
         userid:1,
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:00 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -25,7 +25,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:01 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -34,7 +34,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:02 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -43,7 +43,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:03 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -52,7 +52,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:04 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -61,7 +61,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:05 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -70,7 +70,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:06 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -79,7 +79,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:08 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
     {
@@ -88,7 +88,7 @@ export const messageDatabase: IMessage[] = [
         context:"Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
         datetime:"09:09 pm",
         kindOfMess:0,
-        listUsersHaveRead:[],
+        userHasReadList:[],
         isResponseMess:false,
     },
 ]

@@ -1,4 +1,4 @@
-export interface IUser{
+export interface IUserDatabase{
     id: number,
     name: string,
     avatar: string,
@@ -6,7 +6,7 @@ export interface IUser{
     description: string,
 }
 
-export const userDatabase: IUser[] = [
+export const userDatabase: IUserDatabase[] = [
     {
         id:1,
         name:"huy quang",

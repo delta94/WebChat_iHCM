@@ -2,13 +2,13 @@ import React from 'react';
 import NoChatScreen from '../../NoChat/Views/NoChatScreen';
 import './ChatDetailScreen.css';
 import {ChatDetailModel} from '../Models/ChatDetailModel';
-import ConversionScreen from '../../Conversion/Main/Views/ConversionScreen';
+import ConversationScreen from '../../Conversation/Main/Views/ConversationScreen';
 
 function ChatDetailScreen(props : ChatDetailModel) {
   return (
     <div className="chatdetail-container">
       { props.hasChat ? 
-        <ConversionScreen></ConversionScreen> :
+        <ConversationScreen></ConversationScreen> :
         <NoChatScreen></NoChatScreen>
       }  
     </div>

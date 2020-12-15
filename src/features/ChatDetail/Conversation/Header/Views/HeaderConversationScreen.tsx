@@ -4,7 +4,7 @@ import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/I
 import DetailPopupScreen from '../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
 import MainPopupScreen from '../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
-import './HeaderConversionScreen.css';
+import './HeaderConversationScreen.css';
 
 const iconcamera = require('./Icons/iconcamera.svg').default;
 const iconoffvolume = require('./Icons/iconoffvolume.svg').default;
@@ -12,7 +12,7 @@ const icon3dots = require('./Icons/icon3dots.svg').default;
 const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').default;
 const icontrash = require('../../../../../libraries/Icons/icontrash.svg').default;
 
-function HeaderConversionScreen(props: any){
+function HeaderConversationScreen(props: any){
 
     const listEles = [
         {
@@ -33,8 +33,8 @@ function HeaderConversionScreen(props: any){
       ];
 
     return (
-        <div className="conversionheader-container">
-            <div className="conversionheader-left">
+        <div className="conversationheader-container">
+            <div className="conversationheader-left">
                 <CircleAvatarScreen
                 isOnline={ props.isOnline }
                 src={ props.avatar }
@@ -43,12 +43,12 @@ function HeaderConversionScreen(props: any){
                 class=""
                 alt=""
                 ></CircleAvatarScreen>
-                <div className="conversionheader-context">
+                <div className="conversationheader-context">
                     <h4 className="app-mainfont">{ props.name }</h4>
                     <span>{ props.isOnline ? "Đang online" : "Đang offline" }</span>
                 </div>
             </div>
-            <div className="conversionheader-right">
+            <div className="conversationheader-right">
                 <TooltipScreen context="Gọi video">
                     <div>
                         <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
@@ -73,4 +73,4 @@ function HeaderConversionScreen(props: any){
     )
 }
 
-export default HeaderConversionScreen;
+export default HeaderConversationScreen;

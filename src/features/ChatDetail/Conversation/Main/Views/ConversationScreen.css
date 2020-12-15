@@ -1,9 +1,9 @@
-.conversion-container{
+.conversation-container{
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.conversion-header{
+.conversation-header{
     padding: 5px 10px;
 }

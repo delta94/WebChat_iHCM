@@ -1,17 +1,17 @@
-export interface IGroup{
+export interface IGroupDatabase{
     id: number,
     name: string,
     avatar: string,
-    listUserId: number[],
-    listMessageId: number[]
+    userIdList: number[],
+    messageIdList: number[]
 }
 
-export const user: IGroup[] = [
+export const user: IGroupDatabase[] = [
     {
         id:1,
         name:"Hội người yêu chim",
         avatar:'https://www.w3schools.com/w3images/avatar2.png',
-        listUserId:[1,2],
-        listMessageId:[8,9],
+        userIdList:[1,2],
+        messageIdList:[8,9],
     },
 ]
