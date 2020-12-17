@@ -19,7 +19,7 @@ function HeaderScreen(props : any) {
   const { currentUser } = props;
   console.log(currentUser);
   useEffect(() => {
-    const id = 1;
+    const id = 2;
     props.getCurrentUser(id);
     return () => { 
     }

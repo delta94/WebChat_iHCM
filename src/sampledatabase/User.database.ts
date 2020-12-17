@@ -16,7 +16,7 @@ export const userDatabase: IUserDatabase[] = [
     },
     {
         id:2,
-        name:"huy quang",
+        name:"huy quang123",
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,
         description:"iHcm"
