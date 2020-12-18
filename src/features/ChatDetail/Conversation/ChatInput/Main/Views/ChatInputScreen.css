@@ -45,12 +45,13 @@
   width: 40%;
 }
 
-
-
 .chatinput--hasresponseMess{
-  height: 18%;
-  padding: 0.6rem;
   flex-direction: column;
+}
+
+.chatinput-extension{
+  height: 20%;
+  padding: 0.6rem;
 }
 
 .chatinput-container .custominput-container{
@@ -60,6 +61,20 @@
 
 .chatinput-responseMess-icon-cancel{
   align-self: flex-start;
+}
+
+.chatinput-uploadimages{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow: auto;
+  flex-wrap: wrap;
+
+}
+
+.chatinput-uploadimages div{
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -120,7 +135,7 @@
   
   @media only screen and (max-height: 299px) {
     .chatinput-container{
-      height: 30%;
+      height: 36%;
   }
   }
 

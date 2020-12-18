@@ -52,7 +52,7 @@
 }
 
 
-@media only screen and (max-height:440px){   
+@media only screen and (max-height:510px){   
 
 
   .navbar-iconpanel-container--active{
@@ -64,4 +64,8 @@
   .navbar-iconpanel-container{
     flex: 1;
   }
+
+  .navbar-container div{
+    height: 100%;
+   }
 }

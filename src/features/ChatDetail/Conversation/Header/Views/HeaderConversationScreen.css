@@ -84,7 +84,7 @@
 
 @media only screen and (min-height: 370px) and (max-height: 519px) {
     .conversationheader-container{
-        height: 18%;
+        height: 16%;
     }
 }
 

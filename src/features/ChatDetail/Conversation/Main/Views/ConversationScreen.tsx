@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ConversationScreen.css';
 import HeaderConversationScreen from '../../Header/Views/HeaderConversationScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
-import ChatInputScreen from '../../ChatInput/Views/ChatInputScreen';
+import ChatInputScreen from '../../ChatInput/Main/Views/ChatInputScreen';
 import { IConversation } from '../Models/Conversation';
 
 const coversion: IConversation ={

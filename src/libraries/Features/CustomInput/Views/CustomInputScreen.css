@@ -1,4 +1,20 @@
-.custominput-container input {
+/* .custominput-container input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.custominput-container input:focus,
+.custominput-container input:hover
+{
+    outline: none;
+    border: 1px solid #4080FF;
+} */
+
+.custominput-container textarea {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -8,12 +24,47 @@
     /* background-image: url('../../../../libraries/Icons/iconsearch.svg');
     background-position: right; */
     background-repeat: no-repeat;
-    /* padding: 8px; */
+    padding: 8px;
 }
 
-.custominput-container input:focus,
-.custominput-container input:hover
+
+.custominput-container textarea {
+    resize: none; /* user can resize vertically, but width is fixed */
+}
+
+.custominput-container textarea:focus,
+.custominput-container textarea:hover
 {
     outline: none;
     border: 1px solid #4080FF;
 }
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.custominput-container textarea::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* Internet Explorer 10-11 */
+.custominput-container textarea:-ms-input-placeholder  {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* Microsoft Edge */
+.custominput-container textarea::-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+}
+  
+
+

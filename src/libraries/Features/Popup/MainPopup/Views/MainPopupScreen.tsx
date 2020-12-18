@@ -9,9 +9,9 @@ const MainPopupScreen = (props: any) =>{
 
   function ClosePopupWhenScroll(ref: any) {
     useEffect(() => {
-      document.addEventListener("wheel", () =>ref && ref.current.close());
+      document.addEventListener("wheel", () =>ref.current && ref.current.close());
       return () => {
-        document.removeEventListener("wheel", () =>ref && ref.current.close());
+        document.removeEventListener("wheel", () =>ref.current && ref.current.close());
       };
     }, [ref]);
   }

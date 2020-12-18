@@ -6,6 +6,8 @@ export interface  ICustomInput{
         backgroundPosition: string,
         padding: string,
         borderRadius: string,
-        fontSize: string
-    }
+        fontSize: string,
+    },
+    setIsMultiline?: any
+
 }

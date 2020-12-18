@@ -77,7 +77,7 @@
 
 }
 
-@media only screen and (min-height: 370px) and (max-height: 440px) {
+@media only screen and (min-height: 370px) and (max-height: 510px) {
   .navbar-container{
     /* position: absolute; */
     background: #115DD3;
