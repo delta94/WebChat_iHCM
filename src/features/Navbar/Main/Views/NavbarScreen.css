@@ -16,6 +16,25 @@
   left: 0;
 }
 
+.brownnoti-container{
+  /* Neutral/ Porcelain */
+  padding: 0.7rem;
+  background: #F2F3F4;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.noti-context{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noti-context .app-mainfont{
+  margin-right: 5rem;
+}
+
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 
@@ -41,6 +60,10 @@
   .navbar-iconpanel-last{
     display: none;
   }
+
+  .example-warper{
+    height: 100%;
+}
 }
 
 @media only screen and (min-width: 992px) {

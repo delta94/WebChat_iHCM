@@ -10,6 +10,6 @@ import { IMessage } from "../../ChatList/Main/Models/ChatList";
 
 export interface IConversation{
     id: number,
-    listUser: IUser[],
-    listMessage: IMessage[]
+    userList: IUser[],
+    messageList: IMessage[]
 }

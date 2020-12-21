@@ -7,7 +7,7 @@ import { IConversation } from '../Models/Conversation';
 
 const coversion: IConversation ={
     id:1,
-    listUser:[
+    userList:[
         {
             id:1,
             name:'Trung Đức',
@@ -21,7 +21,7 @@ const coversion: IConversation ={
             isOnline:true
         },
     ],
-    listMessage:[
+    messageList:[
         {
             id:1,
             userid:1,
@@ -171,14 +171,12 @@ function ConversationScreen(props: any){
     return (
         <div className="conversation-container">
             <HeaderConversationScreen
-            name={ coversion.listUser[0].name }
-            avatar={ coversion.listUser[0].avatar }
+            name={ coversion.userList[0].name }
+            avatar={ coversion.userList[0].avatar }
             isOnline={ true }
             ></HeaderConversationScreen>
 
             <ChatListScreen
-            listUser={ coversion.listUser }
-            listMessage={ coversion.listMessage }
             ></ChatListScreen>
             
             <ChatInputScreen></ChatInputScreen>
