@@ -171,8 +171,8 @@ function ConversationScreen(props: any){
     return (
         <div className="conversation-container">
             <HeaderConversationScreen
-            name={ "coversion.name" }
-            avatar={ "coversion.avatar" }
+            name={ coversion.listUser[0].name }
+            avatar={ coversion.listUser[0].avatar }
             isOnline={ true }
             ></HeaderConversationScreen>
 
