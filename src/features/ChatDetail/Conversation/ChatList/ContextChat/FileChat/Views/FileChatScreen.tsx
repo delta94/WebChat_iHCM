@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import IconImageScreen from '../../../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import { IFileChat } from '../Models/FileChat';
 import './FileChatScreen.css';
+import {getLinkPreview} from 'link-preview-js';
 
 const iconlink = require('./Icons/iconlink.svg').default;
 const icondownload = require('./Icons/icondownload.svg').default;
@@ -11,12 +12,21 @@ const icongim = require('../../../../../../../libraries/Icons/icongim.svg').defa
 function FileChatScreen(props : IFileChat){
 
     const redirectWeb = (link: string) =>{
-        // window.location.href = link;
         window.open(
             link,
             '_blank' // <- This is what makes it open in a new window.
           );
     }
+
+    // useEffect(() =>{
+    //     (() => {
+    //         getLinkPreview('https://www.youtube.com/watch?v=MejbOFk7H6c')
+    //         .then((data) => console.debug(data));
+    //     })();
+    // })
+
+
+
     return (
         <div className="filechat-container">
             <IconImageScreen src={ props.isFile ? icongim : iconlink } alt="link" class=""></IconImageScreen>
