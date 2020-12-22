@@ -1,4 +1,4 @@
-import { IResponseMess } from './../../../Main/Models/Conversation';
+import { IResponseMess } from '../../../Main/Models/Conversation';
 import { IUser } from "../../Main/Models/ChatList";
 
 export interface IGuessChat{

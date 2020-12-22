@@ -8,6 +8,7 @@ import { setResponseMess } from "../../../../../../redux/Actions/ResponseMess.ac
 import MainPopupScreen from '../../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import DetailPopupScreen from '../../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
+import { useHistory } from 'react-router-dom';
 
 const iconhorizontal3dots = require('../../../../../../libraries/Icons/iconhorizontal3dots.svg').default;
 const iconreplay = require('./Icons/iconreplay.svg').default;
@@ -15,7 +16,7 @@ const iconcopy = require('./Icons/iconcopy.svg').default;
 const icontrash = require('../../../../../../libraries/Icons/icontrash.svg').default;
 
 function GuestChatScreen(props : IGuessChat){
-
+    const history = useHistory();
     const listEles = [
         {
             onClick: () => props.setResponseMess(props.user.name , props.context , props.kindOfMess),
@@ -32,7 +33,11 @@ function GuestChatScreen(props : IGuessChat){
             icon: icontrash,
             text: "Xóa"
         },
-    ]
+    ];
+
+    const redirectToDetailUser = () =>{
+        history.push("/conversation/1");
+    }
 
     return (
         <div className="guestchat-container">
@@ -43,6 +48,7 @@ function GuestChatScreen(props : IGuessChat){
             alt={ props.user.name }
             class="guestchat-left"
             isOnline={ false }
+            onClick={ redirectToDetailUser }
             ></CircleAvatarScreen>
             <div className="guestchat-right">
                 <p className="app-mainfont">

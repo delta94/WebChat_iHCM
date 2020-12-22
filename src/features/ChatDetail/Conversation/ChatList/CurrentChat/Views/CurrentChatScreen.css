@@ -1,7 +1,7 @@
 .currentchat-container{
   width: 70%;
   margin: 0.2rem 0;
-  align-self: flex-end; 
+  margin-left: auto;
 }
 
 .currentchat-context{

@@ -10,8 +10,9 @@ function CircleAvatarScreen(props : ICircleAvatar) {
       <div 
       className={"circleavatar-container " + props.class} 
       style={{ backgroundImage : `url(${props.src})` , width: props.width , height: props.height}}
+      onClick={ props.onClick && props.onClick }
       >
-        { props.isOnline && <img className="circleavatar-online" src={ iconuseronline } /> }
+        { props.isOnline && <img className="circleavatar-online" src={ iconuseronline } alt="" /> }
       </div> 
     </>
   );
