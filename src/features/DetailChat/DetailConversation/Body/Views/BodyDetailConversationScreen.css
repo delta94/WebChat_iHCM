@@ -1,0 +1,7 @@
+.bodydetailconversation-container{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: calc(100% - 250px);
+    background-color: #F5F8FB;
+}

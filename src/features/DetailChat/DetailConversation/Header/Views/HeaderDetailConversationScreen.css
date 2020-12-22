@@ -1,0 +1,63 @@
+.headerdetailconversation-container{
+    position: relative;
+    width: 100%;
+    height: 250px;
+
+    padding: 0.5rem;
+}
+
+.headerdetailconversation-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerdetailconversation-back{
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.headerdetailconversation-avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerdetailconversation-avatar-image{
+    margin: 1rem 0;
+}
+
+.headerdetailconversation-option{
+    display: flex;
+}
+
+.headerdetailconversation-option div{
+    padding: 0.9rem;
+    border-radius: 50%;
+    background-color: #EEF0F7;
+    display: flex;
+    cursor: pointer;
+    margin: 0 1.7rem;
+}
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+/* WIDTH */
+
+@media only screen and (max-width: 600px) {
+    .headerdetailconversation-avatar{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+}
+

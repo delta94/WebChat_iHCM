@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import DetailConversationScreen from '../../DetailConversation/Main/Views/DetailConversationScreen';
 
 function DetailChatScreen(props : ChatDetailModel) {
   return (
@@ -22,7 +23,7 @@ function DetailChatScreen(props : ChatDetailModel) {
             } 
           </Route>
           <Route path="/conversation/detail/:id">
-            <NoChatScreen></NoChatScreen>
+            <DetailConversationScreen></DetailConversationScreen>
           </Route>
         </Switch>
       </Router>

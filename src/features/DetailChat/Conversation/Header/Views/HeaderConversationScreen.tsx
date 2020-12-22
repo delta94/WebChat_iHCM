@@ -33,8 +33,8 @@ function HeaderConversationScreen(props: any){
       ];
 
     return (
-        <div className="conversationheader-container">
-            <div className="conversationheader-left">
+        <div className="headerconversation-container">
+            <div className="headerconversation-left">
                 <CircleAvatarScreen
                 isOnline={ props.isOnline }
                 src={ props.avatar }
@@ -43,12 +43,12 @@ function HeaderConversationScreen(props: any){
                 class=""
                 alt=""
                 ></CircleAvatarScreen>
-                <div className="conversationheader-context">
+                <div className="headerconversation-context">
                     <h4 className="app-mainfont">{ props.name }</h4>
                     <span>{ props.isOnline ? "Đang online" : "Đang offline" }</span>
                 </div>
             </div>
-            <div className="conversationheader-right">
+            <div className="headerconversation-right">
                 <TooltipScreen context="Gọi video">
                     <div>
                         <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>

@@ -7,7 +7,7 @@ import './NavbarScreen.css';
 const iconfriend = require('./Icons/iconfriend.svg').default;
 const iconmessage = require('./Icons/iconmessage.svg').default;
 const iconwhitenoti = require('./Icons/iconwhitenoti.svg').default;
-const iconbrownnoti = require('./Icons/iconbrownnoti.svg').default;
+const iconbrownnoti = require('../../../../libraries/Icons/iconbrownnoti.svg').default;
 const iconquestion = require('../../../../libraries/Icons/iconquestion.svg').default;
 
 function NavbarScreen() {
