@@ -38,8 +38,8 @@
   padding: 0.6rem 0.8rem;
 }
 
-.popup-overlay {
-  background-color: rgb(32 34 54 / 75%);
+.modal-overlay{
+  background-color: rgb(32 34 54 / 75%) !important;
 }
 
 /* .modal-container > .header {

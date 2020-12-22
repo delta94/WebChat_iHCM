@@ -9,6 +9,7 @@ const ModalScreen = (props: any) => (
     trigger={props.children}
     modal
     nested
+    className="modal"
   >
     {(close:any) => (
       <div className="modal-container">

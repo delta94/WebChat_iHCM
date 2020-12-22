@@ -40,7 +40,7 @@ function UserChatScreen(props : IConversationState) {
           (
             <div className="userchat-context-bottom"> 
             <h3 className="userchat-contextoflastmess userchat-unreadcontext">{ props.lastMess }</h3> 
-            <img src={ iconunread } className="userchat-icon-unread" />
+            <img src={ iconunread } className="userchat-icon-unread" alt="" />
           </div>
           )
         }

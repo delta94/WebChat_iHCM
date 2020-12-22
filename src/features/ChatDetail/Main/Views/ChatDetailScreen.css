@@ -1,23 +1,29 @@
 .chatdetail-container{
   position: relative;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 380px);
   left: 0;
 }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
-/* 
-@media only screen and (max-width: 767px) {
-.chatdetail-container{
-  width: 81%;
-  left: 19%;
-  top: 8%;
-  height: 92%;
-}
+
+@media only screen and (max-width: 768px) {
+  .chatdetail-container{
+    width: 88%;
+  }
 }
 
-@media only screen and (min-width: 600px) {
 
+@media only screen and (max-width: 300px) {
+  .chatdetail-container{
+    width: 78%;
+  }
+}
+ /*
+@media only screen and (max-width: 600px) {
+  .chatdetail-container{
+    width: 88%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -76,42 +82,38 @@
       left: 9%;
   }
 }
+*/
+
 
 @media only screen and (min-height: 520px) and (max-height: 600px) {
 
 }
 @media only screen and (min-height: 380px) and (max-height: 519px) {
-  .chatdetail-container{
+  /* .chatdetail-container{
     width: 66.67%;
     left: 33.33%;
     top: 11%;
     height: 89%;
-  }
+  } */
 }
 
 @media only screen and (min-height: 330px) and (max-height: 379px) {
   .chatdetail-container {
-    width: 66.67%;
-    left: 33.33%;
-    top: 12%;
-    height: 88%;
-}
+    width: 88%;
+  }
 }
 
 @media only screen and (min-height: 300px) and (max-height: 329px) {
   .chatdetail-container {
-    width: 81%;
-    left: 19%;
-    top: 12%;
-    height: 88%;
-}
+    width: 90%;
+  }
 }
 
 @media only screen and (max-height: 299px) {
-  .chatdetail-container{
+  /* .chatdetail-container{
     width: 81%;
     left: 19%;
     top: 0%;
     height: 100%;
-  }
-} */
+  } */
+} 

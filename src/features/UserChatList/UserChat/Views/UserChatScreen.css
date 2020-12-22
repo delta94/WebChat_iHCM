@@ -14,11 +14,11 @@
 }
 
 .userchat-image{
-    width: 15%;
+    width: 16%;
 }
 
 .userchat-context{
-    width:85%;
+    width:84%;
 }
 
 .userchat-username{
@@ -78,7 +78,7 @@
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .userchat-context{
         display: none;
     }
@@ -95,7 +95,7 @@
     }
 }
 
-
+/* 
 @media only screen and (min-width: 768px) and (max-width: 900px) {
     .userchat-image{
         width: 28%;
@@ -144,4 +144,4 @@
     .userchat-context{
         width:84%;
     }
-}
+} */
