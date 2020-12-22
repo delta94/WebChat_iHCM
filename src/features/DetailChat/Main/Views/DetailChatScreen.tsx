@@ -1,6 +1,6 @@
 import React from 'react';
 import NoChatScreen from '../../NoChat/Views/NoChatScreen';
-import './ChatDetailScreen.css';
+import './DetailChatScreen.css';
 import {ChatDetailModel} from '../Models/ChatDetailModel';
 import ConversationScreen from '../../Conversation/Main/Views/ConversationScreen';
 import {
@@ -10,9 +10,9 @@ import {
   Link
 } from "react-router-dom";
 
-function ChatDetailScreen(props : ChatDetailModel) {
+function DetailChatScreen(props : ChatDetailModel) {
   return (
-    <div className="chatdetail-container">
+    <div className="detailchat-container">
       <Router>
         <Switch>
           <Route path="/" exact>
@@ -21,7 +21,7 @@ function ChatDetailScreen(props : ChatDetailModel) {
               <NoChatScreen></NoChatScreen>
             } 
           </Route>
-          <Route path="/conversation/:id">
+          <Route path="/conversation/detail/:id">
             <NoChatScreen></NoChatScreen>
           </Route>
         </Switch>
@@ -30,4 +30,4 @@ function ChatDetailScreen(props : ChatDetailModel) {
   );
 }
 
-export default ChatDetailScreen;
+export default DetailChatScreen;

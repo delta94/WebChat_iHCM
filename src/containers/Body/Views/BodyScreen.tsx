@@ -2,7 +2,7 @@ import React from 'react';
 import './BodyScreen.css';
 import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
 import UserChatListScreen from '../../../features/UserChatList/Main/Views/UserChatListScreen';
-import ChatDetailScreen from '../../../features/ChatDetail/Main/Views/ChatDetailScreen';
+import DetailChatScreen from '../../../features/DetailChat/Main/Views/DetailChatScreen';
 
 function BodyScreen(props : any) {
   const { hasNavbar } = props;
@@ -14,7 +14,7 @@ function BodyScreen(props : any) {
 
       <div className={ hasNavbar ? "body-right--hasnavbar body-right" : "body-right"}>
         <UserChatListScreen></UserChatListScreen>
-        <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
+        <DetailChatScreen hasChat={ true }></DetailChatScreen>
       </div>
     </div>
   );

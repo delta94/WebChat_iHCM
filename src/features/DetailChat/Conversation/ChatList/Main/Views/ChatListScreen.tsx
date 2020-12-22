@@ -268,43 +268,23 @@ function ChatListScreen(){
             
                 default:
                     return <div></div>;
-                    break;
             }
 
             if(isCurrent){
-                if (index === 0) {
-                    return <CurrentChatScreen key={ index } ref={ lastMessageRef }>
-                        { eleChildren }
-                    </CurrentChatScreen>
-                }else{
-                    return <CurrentChatScreen key={ index }>
-                        { eleChildren }
-                    </CurrentChatScreen>
-                }
+                return <CurrentChatScreen key={ index } ref={ index === 0 ? lastMessageRef : null }>
+                    { eleChildren }
+                </CurrentChatScreen>
 
             } else{
-                if (index === 0) {
-                    return <div ref={ lastMessageRef }>
-                        <GuestChatScreen
-                            kindOfMess={ message.kindOfMess }
-                            key={ index }
-                            user={ userTemp } 
-                            context={ message.context }
-                        >
-                            { eleChildren }
-                        </GuestChatScreen>
-                    </div>
-
-                }else{
-                    return <GuestChatScreen
-                    kindOfMess={ message.kindOfMess }
-                    key={ index }
-                    user={ userTemp } 
-                    context={ message.context }
+                return <div ref={ index === 0 ? lastMessageRef : null } key={ index }>
+                    <GuestChatScreen
+                        kindOfMess={ message.kindOfMess }
+                        user={ userTemp } 
+                        context={ message.context }
                     >
                         { eleChildren }
                     </GuestChatScreen>
-                }
+                </div>
 
             }
         })

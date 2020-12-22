@@ -17,7 +17,7 @@ const iconmain = require('./Icons/iconmain.svg').default;
 function HeaderScreen(props : any) {
   const eleRef = useRef<HTMLDivElement>(null);
   const { currentUser } = props;
-  console.log(currentUser);
+
   useEffect(() => {
     const id = 2;
     props.getCurrentUser(id);

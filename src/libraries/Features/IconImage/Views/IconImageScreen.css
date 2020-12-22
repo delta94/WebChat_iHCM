@@ -4,35 +4,35 @@
 
 
 @media (max-height:540px){   
-    .chatdetail-container{
+    .DetailChat-container{
         width: 71%;
         left: 29%;
     }
 }
   
   @media (min-width:2000px){   
-    .chatdetail-container{
+    .DetailChat-container{
         width: 79%;
         left: 21%;
     }
   }
   
   @media (min-width:2350px){   
-    .chatdetail-container{
+    .DetailChat-container{
         width: 84%;
         left: 16%;
     }
   }
   
   @media (min-width:4090px){   
-    .chatdetail-container{
+    .DetailChat-container{
         width: 88%;
         left: 12%;
     }
   }
   
   @media (min-width:5400px){   
-    .chatdetail-container{
+    .DetailChat-container{
         width: 91%;
         left: 9%;
     }
