@@ -29,7 +29,7 @@ function FileChatScreen(props : IFileChat){
 
     return (
         <div className="filechat-container">
-            <IconImageScreen src={ props.isFile ? icongim : iconlink } alt="link" class=""></IconImageScreen>
+            <IconImageScreen src={ props.isFile ? icongim : iconlink } alt="link" class="filechat-container-image"></IconImageScreen>
             <div className="filechat-maincontext">
                 <div className="filechat-context">
                     <h5 className="app-mainfont">

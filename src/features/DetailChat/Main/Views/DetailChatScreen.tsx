@@ -4,17 +4,15 @@ import './DetailChatScreen.css';
 import {ChatDetailModel} from '../Models/ChatDetailModel';
 import ConversationScreen from '../../Conversation/Main/Views/ConversationScreen';
 import {
-  BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import DetailConversationScreen from '../../DetailConversation/Main/Views/DetailConversationScreen';
+import CreateGroupScreen from '../../Group/Create/Main/Views/CreateGroupScreen';
 
 function DetailChatScreen(props : ChatDetailModel) {
   return (
     <div className="detailchat-container">
-      <Router>
         <Switch>
           <Route path="/" exact>
             { props.hasChat ? 
@@ -25,8 +23,10 @@ function DetailChatScreen(props : ChatDetailModel) {
           <Route path="/conversation/detail/:id">
             <DetailConversationScreen></DetailConversationScreen>
           </Route>
+          <Route path="/group/create">
+            <CreateGroupScreen></CreateGroupScreen>
+          </Route>
         </Switch>
-      </Router>
     </div>
   );
 }

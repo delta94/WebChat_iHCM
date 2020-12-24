@@ -6,7 +6,7 @@ import './DetailConversationScreen.css';
 
 
 function DetailConversationScreen(props : any) {
-  let { id } : any = useParams();
+  // let { id } : any = useParams();
 
   return (
     <div className="detailconversation-container">

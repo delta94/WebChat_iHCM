@@ -17,7 +17,7 @@
 }
 
 .filechat-context h5{
-    width: 80px;
+    width: 200px;
     font-size: 14px;
     line-height: 21px;
     /* text-indent: 100%; */
@@ -32,4 +32,35 @@
 
     background-color: #d4d8e6;
     border-radius: 4px;
+}
+
+
+
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+/* WIDTH */
+
+
+@media only screen and (max-width: 600px) {
+    .filechat-container-image{
+        display: none;
+    }
+
+    .filechat-context h5{
+        width: 80px;
+    }
+}
+
+/* HEIGHT */
+
+
+@media only screen and (max-height: 500px) {
+    .filechat-container-image{
+        display: none;
+    }
+
+    .filechat-context h5{
+        width: 80px;
+    }
 }
