@@ -14,7 +14,12 @@
 .headerdetailconversation-back{
     display: flex;
     align-items: flex-start;
+}
+
+.headerdetailconversation-back div{
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .headerdetailconversation-avatar{
@@ -33,12 +38,12 @@
 }
 
 .headerdetailconversation-option div{
-    padding: 0.9rem;
+    padding: 0.8rem;
     border-radius: 50%;
     background-color: #EEF0F7;
     display: flex;
     cursor: pointer;
-    margin: 0 1.7rem;
+    margin: 0 1rem;
 }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
@@ -48,12 +53,9 @@
 @media only screen and (max-width: 600px) {
     .headerdetailconversation-avatar{
         position: absolute;
-        top: 0%;
+        top: 16%;
         left: 0%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
     }
 }
 

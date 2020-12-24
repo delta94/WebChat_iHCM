@@ -20,17 +20,19 @@ function HeaderDetailConversationScreen(props : any) {
   return (
     <div className="headerdetailconversation-container app-mainfont">
       <div className="headerdetailconversation-top">
-        <div className="headerdetailconversation-back" onClick={ redirectToConversation }>
-          <img src={ iconleftarrow } alt="" ></img>
-          Quay lại
+        <div className="headerdetailconversation-back">
+          <div onClick={ redirectToConversation }>
+            <img src={ iconleftarrow } alt="" ></img>
+            Quay lại
+          </div>
         </div>
         <div className="headerdetailconversation-avatar">
           <h4>Quang Huy</h4>
           <span>iSoft</span>
           <CircleAvatarScreen
             src={"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}
-            width={"100px"}
-            height={"100px"}
+            width={"75px"}
+            height={"75px"}
             isOnline={false}
             class={"headerdetailconversation-avatar-image"}
             alt={""}

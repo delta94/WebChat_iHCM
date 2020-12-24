@@ -84,13 +84,13 @@
 
 @media only screen and (min-height: 370px) and (max-height: 519px) {
     .headerconversation-container{
-        height: 16%;
+        height: 18%;
     }
 }
 
 @media only screen and (min-height: 300px) and (max-height: 369px) {
     .headerconversation-container{
-        height: 20%;
+        height: 24%;
     }
 }
 
