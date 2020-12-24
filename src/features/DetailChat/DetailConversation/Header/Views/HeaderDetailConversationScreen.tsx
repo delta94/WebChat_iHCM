@@ -26,7 +26,11 @@ function HeaderDetailConversationScreen(props : any) {
             Quay lại
           </div>
         </div>
-        <div className="headerdetailconversation-avatar">
+        <div>
+          <img src={ iconsearch } alt="" ></img>
+        </div>
+      </div>
+      <div className="headerdetailconversation-avatar">
           <h4>Quang Huy</h4>
           <span>iSoft</span>
           <CircleAvatarScreen
@@ -49,12 +53,6 @@ function HeaderDetailConversationScreen(props : any) {
             </div>
           </div>
         </div>
-        <div>
-          <img src={ iconsearch } alt="" ></img>
-        </div>
-      </div>
-
-
     </div>
   );
 }

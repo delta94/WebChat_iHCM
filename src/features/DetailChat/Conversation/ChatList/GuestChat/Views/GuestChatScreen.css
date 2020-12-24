@@ -63,7 +63,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
     .guestchat-container{
-        width: 90%;
+        width: 100%;
     }
     .guestchat-icon-horizontal3dots:active{
         opacity: 1;

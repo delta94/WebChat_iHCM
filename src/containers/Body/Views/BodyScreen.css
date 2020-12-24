@@ -105,13 +105,23 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (width: 1024px) {
     .body-container{
         height: 93%;
     }
 
     .body-left{
         width: 6%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .body-container{
+        height: 93%;
+    }
+
+    .body-left{
+        width: 4%;
     }
 }
 
@@ -161,7 +171,7 @@
 
 @media only screen and (min-height: 520px) and (max-height: 600px) {
     .body-container{
-        height: 89%;
+        height: 92%;
 
     }
 }
