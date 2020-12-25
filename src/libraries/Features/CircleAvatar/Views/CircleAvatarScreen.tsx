@@ -3,6 +3,7 @@ import './CircleAvatarScreen.css';
 import { ICircleAvatar } from '../Models/CircleAvatar';
 
 const iconuseronline = require('./Icons/iconuseronline.svg').default;
+const iconcancel = require('../../../Icons/iconcancel.svg').default;
 
 function CircleAvatarScreen(props : ICircleAvatar) {
   return (
@@ -13,6 +14,10 @@ function CircleAvatarScreen(props : ICircleAvatar) {
       onClick={ props.onClick && props.onClick }
       >
         { props.isOnline && <img className="circleavatar-online" src={ iconuseronline } alt="" /> }
+        { props.canRomove && <div className="circleavatar-remove">
+                                <img src={ iconcancel } alt="" />
+                              </div>  
+        }
       </div> 
     </>
   );

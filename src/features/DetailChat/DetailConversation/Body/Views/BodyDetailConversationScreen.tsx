@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../libraries/Constants/KindOfMessage';
+import BodyPanelScreen from '../../../../../libraries/Features/BodyPanel/Views/BodyPanelScreen';
 import FileChatScreen from '../../../Conversation/ChatList/ContextChat/FileChat/Views/FileChatScreen';
 import './BodyDetailConversationScreen.css';
 
@@ -56,7 +57,7 @@ function BodyDetailConversationScreen(props : any) {
   }
 
   return (
-    <div className="bodydetailconversation-container">
+    <BodyPanelScreen class="bodydetailconversation-container">
       <div className="bodydetailconversation-main">
         <div className="bodydetailconversation-main-header app-mainfont">
           <ul>
@@ -87,7 +88,7 @@ function BodyDetailConversationScreen(props : any) {
           }
         </div>
       </div>
-    </div>
+    </BodyPanelScreen>
   );
 }
 

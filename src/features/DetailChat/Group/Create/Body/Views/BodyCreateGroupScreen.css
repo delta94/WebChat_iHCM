@@ -1,10 +1,5 @@
 .bodycreategroup-container{
-    background-color: #F5F8FB;
-    position: absolute;
-    width: 100%;
-    padding: 1rem 18rem  0;
-
-    height: calc(100% - 160px);
+    height: calc(100% - 140px);
 }
 
 .bodycreategroup-main{
@@ -17,6 +12,10 @@
     border-top-right-radius: 8px;
 }
 
+.bodycreategroup-main--hasfooter{
+    height: 89% !important;
+}
+
 .bodycreategroup-main h4{
     padding: 1rem 1.4rem;
     border-bottom: 1px solid #E6E8EB;
@@ -27,21 +26,71 @@
 
 }
 
-.bodycreategroup-main-body-chooseuser{
+.bodycreategroup-main-body-selecteduser{
     position: absolute;
     overflow-y: auto;
     height: calc(100% - 115px);
     width: calc(100% - 2.6rem);
 }
 
-.bodycreategroup-main-body-chooseuserpanel{
+.bodycreategroup-main-body-selecteduserpanel{
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
 }
+
+.bodycreategroup-main-body-selecteduserpanel p{
+    font-size: 16px;
+    line-height: 23px;    
+    color: #1A2948;
+    margin-left: 0.5rem;
+}
+
 .bodycreategroup-main-body-separate{
     height: 1px;
     background-color: #E6E8EB;
     width: 100%;
+}
+
+.bodycreategroup-main-body-checkbox{
+    transform: scale(1.6);
+    margin-left: auto;
+    margin-right: 1.2rem;
+}
+
+.bodycreategroup-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 11%;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    background-color: white;
+}
+
+.bodycreategroup-footer-selecteduserpanel{
+    width: 85%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+}
+
+.bodycreategroup-footer-selecteduserpanel .circleavatar-container{
+    margin-right: 0.5rem;
+}
+
+.bodycreategroup-footer button{
+    margin-left: auto;
+    background: #115DD3;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 1.2rem;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
 }
 

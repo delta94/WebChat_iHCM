@@ -17,15 +17,14 @@
 
 @media only screen and (max-width: 768px) {
     .bodypanel-container{
-        padding: 0;
+        padding: 0 !important;
     }
-
 }
 
 
 @media only screen and (width: 1024px) {
     .bodypanel-container{
-        padding: 1rem 1rem  0;
+        padding: 1rem 1rem  0 !important;
     }
 }
 

@@ -40,8 +40,8 @@ function HeaderCreateGroupScreen() {
                     <img src={ iconleftarrow } alt="" ></img>
                     Quay lại
                 </div>
-                <h4>Tạo nhóm trò chuyện</h4>
             </div>
+            <h4>Tạo nhóm trò chuyện</h4>
             <div className="headercreategroup-addavatarandname">
                 <IconCirclePanel srcIcon={ pathFileList.length > 0 ? pathFileList[0] : iconaddavatar } width="70px" height="70px" padding={ pathFileList.length > 0 ? "" : "1rem" } class="" onClick={ handleFileSelect }></IconCirclePanel>
                 <CustomInputScreen placeHolder="Nhập tên nhóm trò chuyện" class="" style={ styleCustomInput } isMultiline={ false }></CustomInputScreen>

@@ -1,10 +1,6 @@
 .bodydetailconversation-container{
-    position: absolute;
     top: 220px;
-    width: 100%;
     height: calc(100% - 220px);
-    background-color: #F5F8FB;
-    padding: 1rem 18rem  0;
 }
 
 .bodydetailconversation-main{
@@ -101,73 +97,9 @@
 
 
 @media only screen and (max-width: 768px) {
-    .bodydetailconversation-container{
-        padding: 0;
-    }
-
     .bodydetailconversation-main{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
 }
 
-
-@media only screen and (width: 1024px) {
-    .bodydetailconversation-container{
-        padding: 1rem 1rem  0;
-    }
-}
-
-@media (max-width:1300px){   
-    .bodydetailconversation-container{
-        padding: 1rem 10rem  0;
-    }
-}
-
-@media (max-width:1160px){   
-    .bodydetailconversation-container{
-        padding: 1rem 6rem  0;
-    }
-}
-
-@media (max-width:920px){   
-    .bodydetailconversation-container{
-        padding: 1rem 2rem  0;
-    }
-}
-
-@media (min-width:1700px){   
-    .bodydetailconversation-container{
-        padding: 1rem 20rem  0;
-    }
-}
-  
-@media (min-width:2000px){   
-    .bodydetailconversation-container{
-        padding: 1rem 28rem  0;
-    }
-}
-  
-@media (min-width:2300px){   
-    .bodydetailconversation-container{
-        padding: 1rem 36rem  0;
-    }
-}
-  
-@media (min-width:3000px){   
-    .bodydetailconversation-container{
-        padding: 1rem 50rem  0;
-    }
-}
-  
-@media (min-width:4090px){   
-    .bodydetailconversation-container{
-        padding: 1rem 90rem  0;
-    }
-}
-  
-@media (min-width:5400px){   
-    .bodydetailconversation-container{
-        padding: 1rem 140rem  0;
-    }
-} 

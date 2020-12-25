@@ -11,3 +11,23 @@
     bottom: 3%;
     right: 1%;
 }
+
+.circleavatar-remove{
+    position: absolute;
+    top: 2%;
+    right: -2%;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.circleavatar-remove img{
+    width: 10px !important;
+    height: 10px !important;
+}
