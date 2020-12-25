@@ -7,6 +7,7 @@ import { unactiveResponseMess } from "../../../../../../redux/Actions/ResponseMe
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import { useState } from 'react';
 import UploadImageScreen from '../../UploadImage/Views/UploadImageScreen';
+import { buildFileSelector } from '../../../../../../libraries/Functions/BuildFileSelector';
 
 const iconsmile = require('./Icons/iconsmile.svg').default;
 const icongim = require('../../../../../../libraries/Icons/icongim.svg').default;
@@ -23,32 +24,18 @@ const styleCustomInput = {
 
 function ChatInputScreen(props: any){
     const { responseMess } = props;
-    const fileSelector = buildFileSelector();
+
     const [pathFileList , setPathFileList] = useState<string[]>([]);
     const [hasImage , setHasImage] = useState<Boolean>(false);
-    
-    function buildFileSelector(){
-        const fileSelector = document.createElement('input');
-        fileSelector.setAttribute('type', 'file');
-        fileSelector.setAttribute('multiple', 'multiple');
-        fileSelector.addEventListener("change", function fileDialogChanged (e: any){
-            const fileList = e.path[0].files;
+    const [isMultilineText, setIsMultilineText] = useState<Boolean>(false);
 
-            if(fileList.length > 0){
-                let pathFileListTemp: string[] = [];
-
-                for (let index = 0; index < fileList.length; index++) {
-                    const pathFile = URL.createObjectURL(fileList[index]); 
-                    pathFileListTemp.push(pathFile);
-                }
-                setPathFileList(pathFileListTemp);
-                setHasImage(true);
-            }
-        });
-        return fileSelector;
+    function cb (pathFileListTemp: string[]){
+        setPathFileList(pathFileListTemp);
+        setHasImage(true);
     }
 
-    const [isMultiline, setIsMultiline] = useState(false);
+    const fileSelector = buildFileSelector(true , cb)
+
 
     const handleFileSelect = (e: any) => {
         e.preventDefault();
@@ -94,7 +81,7 @@ function ChatInputScreen(props: any){
         if(responseMess.isActive || hasImage){
             result += space + extensionClass + space + hasResponseMessClass
         }else{
-            if(isMultiline){
+            if(isMultilineText){
                 result += space + extensionClass 
             }
         }
@@ -130,7 +117,7 @@ function ChatInputScreen(props: any){
             }
             <div className="chatinput-main">
                 <IconImageScreen src={ icongim } alt="gim" onClick={ handleFileSelect }></IconImageScreen>
-                <CustomInputScreen placeHolder="Nhập nội dung bình luận" class="" style={ styleCustomInput } setIsMultiline={ setIsMultiline }></CustomInputScreen>
+                <CustomInputScreen placeHolder="Nhập nội dung bình luận" class="" style={ styleCustomInput } setIsMultiline={ setIsMultilineText }  isMultiline={ true }></CustomInputScreen>
                 <IconImageScreen src={ iconsubstract } alt="send data"></IconImageScreen>
             </div>
         </div>

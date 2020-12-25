@@ -12,7 +12,7 @@
 
 .headerdetailconversation-back{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .headerdetailconversation-back div{
@@ -42,11 +42,6 @@
 }
 
 .headerdetailconversation-option div{
-    padding: 0.8rem;
-    border-radius: 50%;
-    background-color: #EEF0F7;
-    display: flex;
-    cursor: pointer;
     margin: 0 1rem;
 }
 

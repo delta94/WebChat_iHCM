@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
+import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
 import './HeaderDetailConversationScreen.css';
 
 const iconleftarrow = require("../../../../../libraries/Icons/iconleftarrow.svg").default;
@@ -42,15 +43,9 @@ function HeaderDetailConversationScreen(props : any) {
             alt={""}
           ></CircleAvatarScreen>
           <div className="headerdetailconversation-option">
-            <div>
-              <img src={ iconbrownmessage } alt=""></img>
-            </div>
-            <div>
-              <img src={ iconvideocall } alt=""></img>
-            </div>
-            <div>
-              <img src={ iconbrownnoti } alt=""></img>
-            </div>
+            <IconCirclePanel srcIcon={ iconbrownmessage } class="" padding="0.8rem"></IconCirclePanel>
+            <IconCirclePanel srcIcon={ iconvideocall } class="" padding="0.8rem"></IconCirclePanel>
+            <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
           </div>
         </div>
     </div>

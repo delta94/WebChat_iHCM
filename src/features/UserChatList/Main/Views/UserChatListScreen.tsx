@@ -52,7 +52,7 @@ function UserChatListScreen(props: any) {
     <div className="userchatlist-container">
       <div className="userchatlist-top">
         <HeaderScreen></HeaderScreen>
-        <CustomInputScreen style={ styleCustomInput } class="searchinput-container" placeHolder="Tìm kiếm cuộc trò chuyện"></CustomInputScreen>
+        <CustomInputScreen style={ styleCustomInput } class="searchinput-container" placeHolder="Tìm kiếm cuộc trò chuyện" isMultiline={ false }></CustomInputScreen>
       </div>
       <div className="userchatlist-bottom">
         {

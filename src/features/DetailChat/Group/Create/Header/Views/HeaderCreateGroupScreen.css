@@ -1,7 +1,17 @@
 .headercreategroup-container{
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 160px;
     padding: 0.5rem;
-    background-color: goldenrod;
+}
+
+.headercreategroup-addavatarandname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.headercreategroup-addavatarandname div{
+    margin-right: 1rem;
 }
