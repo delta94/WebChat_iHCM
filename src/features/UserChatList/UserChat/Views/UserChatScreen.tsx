@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './UserChatScreen.css';
 import { IUserChat } from '../Models/UserChatModel';
 import CircleAvatarScreen from '../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import { IConversationState } from '../../../../redux/Reducers/ConversationList.reducer';
+import { useHistory } from 'react-router-dom';
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require('./Icons/iconunread.svg').default;
 
 function UserChatScreen(props : IConversationState) {
+  const history = useHistory();
+
+  const redirectToChatDetail = () =>{
+    let kind = "conversation";
+    if(props.isGroup){
+      kind = "group";
+    }
+    history.push(`/${kind}/${props.id}`);
+
+    props.setIsActive(props.isGroup , props.id);
+  }
+
   return (
-    <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"}>
+    <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"} onClick={ redirectToChatDetail }>
       <div className="userchat-image">
         <CircleAvatarScreen 
           class=""

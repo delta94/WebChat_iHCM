@@ -6,8 +6,6 @@ import './ConversationDetailScreen.css';
 
 
 function ConversationDetailScreen(props : any) {
-  // let { id } : any = useParams();
-
   return (
     <div className="conversationdetail-container">
       <HeaderConversationDetailScreen></HeaderConversationDetailScreen>

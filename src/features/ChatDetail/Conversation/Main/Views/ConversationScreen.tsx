@@ -4,6 +4,7 @@ import HeaderConversationScreen from '../../Header/Views/HeaderConversationScree
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
 import ChatInputScreen from '../../ChatInput/Main/Views/ChatInputScreen';
 import { IConversation } from '../Models/Conversation';
+import { useParams } from 'react-router-dom';
 
 const coversion: IConversation ={
     id:1,
@@ -167,7 +168,7 @@ const coversion: IConversation ={
 }
 
 function ConversationScreen(props: any){
-    const currentId = 1
+    
     return (
         <div className="conversation-container">
             <HeaderConversationScreen

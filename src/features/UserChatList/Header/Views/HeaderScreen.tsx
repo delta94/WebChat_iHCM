@@ -7,10 +7,11 @@ const iconpenedit = require('./Icons/iconpenedit.svg').default;
 
 function HeaderScreen() {
   const history = useHistory();
-  console.log(history);
+
   const redirectToCreateGroup = () =>{
     history.push("/group/create");
   }
+  
   return (
     <div className="userchatlist-header-container">
       <h4 className="app-mainfont">Trò chuyện</h4>

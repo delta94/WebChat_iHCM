@@ -15,7 +15,7 @@ function HeaderConversationDetailScreen(props : any) {
   const history = useHistory();
 
   const redirectToConversation = () =>{
-    history.push("/");
+    history.push("/conversation/" + id);
   }
 
   return (

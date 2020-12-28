@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderScreen from '../../Header/Views/HeaderScreen';
 import UserChatScreen from '../../UserChat/Views/UserChatScreen';
 import './UserChatListScreen.css';
@@ -24,11 +24,23 @@ function UserChatListScreen(props: any) {
 
   const { conversationList } = props;
 
+  const [activedUserChat , setActivedUserChat] = useState({
+    isGroup:false,
+    id: -1
+  })
+
   useEffect(() => {
     const id = 3;
     props.getConversationList(id);
 
   }, [])
+
+  const setUserChatIsAcTive = (isGroup:boolean , id:number) =>{
+    setActivedUserChat({
+      isGroup,
+      id
+    })
+  }
 
   const ShowConversationList = (conversationList: IConversationState[]) =>{
     if(conversationList.length === 0){
@@ -44,7 +56,8 @@ function UserChatListScreen(props: any) {
       lastMess={conversationState.lastMess}
       timeToReadLastMess={conversationState.timeToReadLastMess}
       avatar={conversationState.avatar}
-      isActive={conversationState.isActive}
+      isActive={conversationState.isGroup === activedUserChat.isGroup && conversationState.id === activedUserChat.id}
+      setIsActive={ setUserChatIsAcTive }
     ></UserChatScreen>)
   }
 

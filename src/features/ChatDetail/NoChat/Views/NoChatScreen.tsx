@@ -7,7 +7,7 @@ function NoChatScreen() {
   return (
     <div className="nochat-container">
       <img src={ iconnochat} alt="" className="nochat-icon"/>
-      <h5 className="nochat-text">Vui lòng chọn vào một tin nhắn</h5>
+      <p className="nochat-text app-mainfont">Vui lòng chọn vào một tin nhắn</p>
     </div>
   );
 }

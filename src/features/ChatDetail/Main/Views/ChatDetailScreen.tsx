@@ -15,15 +15,18 @@ function ChatDetailScreen(props : ChatDetailModel) {
     <div className="chatdetail-container">
         <Switch>
           <Route path="/" exact>
-            { props.hasChat ? 
-              <ConversationScreen></ConversationScreen> :
-              <NoChatScreen></NoChatScreen>
-            } 
+            <NoChatScreen></NoChatScreen>
           </Route>
           <Route path="/conversation/detail/:id">
             <ConversationDetailScreen></ConversationDetailScreen>
           </Route>
+          <Route path="/conversation/:id">
+            <ConversationScreen></ConversationScreen>
+          </Route>
           <Route path="/group/create">
+            <CreateGroupScreen></CreateGroupScreen>
+          </Route>
+          <Route path="/group/:id">
             <CreateGroupScreen></CreateGroupScreen>
           </Route>
         </Switch>

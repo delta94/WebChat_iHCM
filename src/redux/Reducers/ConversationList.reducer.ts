@@ -13,7 +13,8 @@ export interface IConversationState{
     hasReadLastMess:boolean,
     isGroup:boolean,
     timeToReadLastMess:string,
-    isActive:boolean
+    isActive:boolean,
+    setIsActive:any
 }
 
 const INITIAL_STATE: any[] = [];
@@ -54,7 +55,8 @@ const conversationListReducer = (state = INITIAL_STATE, action:any) => {
                             hasReadLastMess: hasReadLastMess,
                             avatar: group.avatar,
                             timeToReadLastMess:lastMess.datetime,
-                            isActive:false
+                            isActive:false,
+                            setIsActive: null
                         }
                         return tempConversation;
                     }
@@ -97,7 +99,8 @@ const conversationListReducer = (state = INITIAL_STATE, action:any) => {
                             hasReadLastMess: hasReadLastMess,
                             avatar: restUser.avatar,
                             timeToReadLastMess:lastMess.datetime,
-                            isActive:false
+                            isActive:false,
+                            setIsActive:null
                         }
                         return tempConversation;
                     }
