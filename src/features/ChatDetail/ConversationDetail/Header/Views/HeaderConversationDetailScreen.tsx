@@ -42,10 +42,19 @@ function HeaderConversationDetailScreen(props : any) {
             class={"headerconversationdetail-avatar-image"}
             alt={""}
           ></CircleAvatarScreen>
-          <div className="headerconversationdetail-option">
-            <IconCirclePanel srcIcon={ iconbrownmessage } class="" padding="0.8rem"></IconCirclePanel>
-            <IconCirclePanel srcIcon={ iconvideocall } class="" padding="0.8rem"></IconCirclePanel>
+          <div className="headerconversationdetail-option app-mainfont">
+            <div>
+              <IconCirclePanel srcIcon={ iconbrownmessage } class="" padding="0.8rem"></IconCirclePanel>
+              <p>Tin nhắn</p>
+            </div>
+            <div>
+              <IconCirclePanel srcIcon={ iconvideocall } class="" padding="0.8rem"></IconCirclePanel>
+              <p>Gọi video</p>
+            </div>
+            <div>
             <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
+            <p>Thông báo</p>
+            </div>
           </div>
         </div>
     </div>

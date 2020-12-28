@@ -42,7 +42,12 @@
 }
 
 .headerconversationdetail-option div{
-    margin: 0 1rem;
+    margin: 0 1rem; 
+}
+
+.headerconversationdetail-option div p{
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
@@ -92,13 +97,21 @@
         top: 16%;
     }
 
-    .headerconversationdetail-option .iconcirclepanel-container img{
-        width: 24px;
-    }
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
+    .headerconversationdetail-option div p{
+        display: none;
+    }
+
+    .headerconversationdetail-option .iconcirclepanel-container img{
+        width: 24px;
+    }
+
+    .headerconversationdetail-option div{
+        margin: 0 0.6rem;
+    }
 }
 
 
