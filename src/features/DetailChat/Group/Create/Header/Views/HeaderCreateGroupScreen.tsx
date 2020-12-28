@@ -33,6 +33,8 @@ function HeaderCreateGroupScreen() {
     const redirectToConversation = () =>{
       history.push("/");
     }
+
+    const srcIcon = pathFileList.length > 0 ? pathFileList[0] : iconaddavatar;
     return (
         <div className="headercreategroup-container app-mainfont">
             <div className="headerdetailconversation-back">
@@ -43,8 +45,20 @@ function HeaderCreateGroupScreen() {
             </div>
             <h4>Tạo nhóm trò chuyện</h4>
             <div className="headercreategroup-addavatarandname">
-                <IconCirclePanel srcIcon={ pathFileList.length > 0 ? pathFileList[0] : iconaddavatar } width="70px" height="70px" padding={ pathFileList.length > 0 ? "" : "1rem" } class="" onClick={ handleFileSelect }></IconCirclePanel>
-                <CustomInputScreen placeHolder="Nhập tên nhóm trò chuyện" class="" style={ styleCustomInput } isMultiline={ false }></CustomInputScreen>
+                <IconCirclePanel 
+                srcIcon={ srcIcon } 
+                width="60px" 
+                height="60px" 
+                padding={ pathFileList.length > 0 ? "" : "1rem" } 
+                class={ pathFileList.length > 0 ? "headercreategroup-addedavatar" : "" } 
+                onClick={ handleFileSelect }
+
+                ></IconCirclePanel>
+                <CustomInputScreen 
+                placeHolder="Nhập tên nhóm trò chuyện" 
+                class="" 
+                style={ styleCustomInput } 
+                isMultiline={ false }></CustomInputScreen>
             </div>
         </div>
     );

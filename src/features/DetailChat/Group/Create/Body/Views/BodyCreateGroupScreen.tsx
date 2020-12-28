@@ -28,7 +28,7 @@ function BodyCreateGroupScreen() {
         setHasFooter(true);
         setSelectedUserList([...selectedUserList , idSelectedUser]);
       }else{
-        if(!selectedUserList.some((id: number) => id === parseInt(name))){
+        if(!selectedUserList.some((id: number) => id === idSelectedUser)){
           setSelectedUserList([...selectedUserList , idSelectedUser]);
         }
       }
@@ -37,9 +37,20 @@ function BodyCreateGroupScreen() {
         setHasFooter(false);
         setSelectedUserList([]);
       }else{
-        if(selectedUserList.some((id: number) => id === parseInt(name))){
+        if(selectedUserList.some((id: number) => id === idSelectedUser)){
           setSelectedUserList(selectedUserList.filter((id: number) => id !== idSelectedUser));
         }
+      }
+    }
+  }
+
+  const removeSelectedUser = (idSelectedUser:number) =>{
+    if(selectedUserList.length === 1){
+      setHasFooter(false);
+      setSelectedUserList([]);
+    }else{
+      if(selectedUserList.some((id: number) => id === idSelectedUser)){
+        setSelectedUserList(selectedUserList.filter((id: number) => id !== idSelectedUser));
       }
     }
   }
@@ -60,7 +71,19 @@ function BodyCreateGroupScreen() {
               height="44px"
               ></CircleAvatarScreen>
               <p>Trung Đức</p>
-              <input type="checkbox" name="1" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
+              <input type="checkbox" name="1" className="bodycreategroup-main-body-checkbox" checked={ selectedUserList.some((id: number) => id === 1) } onChange={ setSelectedUser }></input>
+            </div>
+            <div className="bodycreategroup-main-body-separate"></div>
+            <div className="bodycreategroup-main-body-selecteduserpanel">
+              <CircleAvatarScreen src="https://www.w3schools.com/w3images/avatar2.png"
+              isOnline={ true }
+              alt=""
+              class=""
+              width="44px"
+              height="44px"
+              ></CircleAvatarScreen>
+              <p>Trung Đức</p>
+              <input type="checkbox" name="2" className="bodycreategroup-main-body-checkbox"  checked={ selectedUserList.some((id: number) => id === 2) } onChange={ setSelectedUser }></input>
             </div>
             <div className="bodycreategroup-main-body-separate"></div>
             <div className="bodycreategroup-main-body-selecteduserpanel">
@@ -72,7 +95,7 @@ function BodyCreateGroupScreen() {
               height="44px"
               ></CircleAvatarScreen>
               <p>Trung Đức</p>
-              <input type="checkbox" name="2" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
+              <input type="checkbox" name="3" className="bodycreategroup-main-body-checkbox"  checked={ selectedUserList.some((id: number) => id === 3) } onChange={ setSelectedUser }></input>
             </div>
             <div className="bodycreategroup-main-body-separate"></div>
             <div className="bodycreategroup-main-body-selecteduserpanel">
@@ -84,7 +107,7 @@ function BodyCreateGroupScreen() {
               height="44px"
               ></CircleAvatarScreen>
               <p>Trung Đức</p>
-              <input type="checkbox" name="3" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
+              <input type="checkbox" name="4" className="bodycreategroup-main-body-checkbox"  checked={ selectedUserList.some((id: number) => id === 4) } onChange={ setSelectedUser }></input>
             </div>
             <div className="bodycreategroup-main-body-separate"></div>
             <div className="bodycreategroup-main-body-selecteduserpanel">
@@ -96,67 +119,7 @@ function BodyCreateGroupScreen() {
               height="44px"
               ></CircleAvatarScreen>
               <p>Trung Đức</p>
-              <input type="checkbox" name="4" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
-            </div>
-            <div className="bodycreategroup-main-body-separate"></div>
-            <div className="bodycreategroup-main-body-selecteduserpanel">
-              <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
-              isOnline={ true }
-              alt=""
-              class=""
-              width="44px"
-              height="44px"
-              ></CircleAvatarScreen>
-              <p>Trung Đức</p>
-              <input type="checkbox" name="5" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
-            </div>
-            <div className="bodycreategroup-main-body-separate"></div>
-            <div className="bodycreategroup-main-body-selecteduserpanel">
-              <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
-              isOnline={ true }
-              alt=""
-              class=""
-              width="44px"
-              height="44px"
-              ></CircleAvatarScreen>
-              <p>Trung Đức</p>
-              <input type="checkbox" name="6" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
-            </div>
-            <div className="bodycreategroup-main-body-separate"></div>
-            <div className="bodycreategroup-main-body-selecteduserpanel">
-              <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
-              isOnline={ true }
-              alt=""
-              class=""
-              width="44px"
-              height="44px"
-              ></CircleAvatarScreen>
-              <p>Trung Đức</p>
-              <input type="checkbox" name="7" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
-            </div>
-            <div className="bodycreategroup-main-body-separate"></div>
-            <div className="bodycreategroup-main-body-selecteduserpanel">
-              <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
-              isOnline={ true }
-              alt=""
-              class=""
-              width="44px"
-              height="44px"
-              ></CircleAvatarScreen>
-              <p>Trung Đức</p>
-              <input type="checkbox" name="8" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
-            </div>
-            <div className="bodycreategroup-main-body-separate"></div>
-            <div className="bodycreategroup-main-body-selecteduserpanel">
-              <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"
-              isOnline={ true }
-              alt=""
-              class=""
-              width="44px"
-              height="44px"
-              ></CircleAvatarScreen>
-              <p>Trung Đức</p>
-              <input type="checkbox" name="9" className="bodycreategroup-main-body-checkbox" onChange={ setSelectedUser }></input>
+              <input type="checkbox" name="5" className="bodycreategroup-main-body-checkbox"  checked={ selectedUserList.some((id: number) => id === 5) } onChange={ setSelectedUser }></input>
             </div>
             <div className="bodycreategroup-main-body-separate"></div>
           </div>
@@ -174,6 +137,7 @@ function BodyCreateGroupScreen() {
                 class=""
                 width="42px"
                 height="42px"
+                onRemove={ () =>{ removeSelectedUser(id)}}
                 ></CircleAvatarScreen>)
               }
             </div>

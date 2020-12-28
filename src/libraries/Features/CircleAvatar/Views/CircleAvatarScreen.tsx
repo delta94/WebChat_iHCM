@@ -14,7 +14,7 @@ function CircleAvatarScreen(props : ICircleAvatar) {
       onClick={ props.onClick && props.onClick }
       >
         { props.isOnline && <img className="circleavatar-online" src={ iconuseronline } alt="" /> }
-        { props.canRomove && <div className="circleavatar-remove">
+        { props.canRomove && <div className="circleavatar-remove" onClick={ props.onRemove }>
                                 <img src={ iconcancel } alt="" />
                               </div>  
         }

@@ -6,6 +6,7 @@ export interface ICircleAvatar{
     class: string,
     isOnline: boolean,
     canRomove?:boolean,
+    onRemove?:any,
     onClick?:any,
     ref?:any
 }

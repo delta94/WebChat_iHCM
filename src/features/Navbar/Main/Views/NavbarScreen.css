@@ -40,10 +40,6 @@
 
 /* WIDTH */
 
-@media only screen and (max-width: 600px) {
-
-}
-
 
 @media only screen and (max-width: 768px) {
   .navbar-container{
@@ -63,6 +59,16 @@
 
   .example-warper{
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+  .noti-context .app-mainfont{
+    margin-right: 1rem;
   }
 }
 
@@ -114,93 +120,3 @@
     display: none;
   }
 }
-
-
-/* ------------------------------------------------ RESPONSIVE ----------------------- */
-/* 
-@media only screen and (max-width: 600px) {
-}
-
-@media only screen and (min-width: 600px) {
-
-}
-
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (max-width: 991px) {
-  .navbar-container{
-    height: 8%;
-    width: 100%;
-    display: flex;
-    border-radius: 0px;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar-container{
-    width: 4%;
-  } 
-}
- 
-@media only screen and (min-width: 1200px) {
-  .navbar-container{
-    width: 4%;
-  } 
-}
-
-
-@media (min-width:1700px){   
-  .navbar-container{
-    width: 4%;
-  }
-}
-
-@media (min-width:2000px){   
-  .navbar-container{
-    width: 3%;
-  }
-}
-
-@media (min-width:2350px){   
-  .navbar-container{
-    width: 2%;
-  }
-}
-
-@media (min-width:4090px){   
-  .navbar-container{
-    width: 2%;
-  }
-}
-
-@media (min-width:5400px){   
-  .navbar-container{
-    width: 1.5%;
-  }
-}
-
-
-@media only screen and (min-height: 520px) and (max-height: 600px) {
-
-}
-@media only screen and (min-height: 380px) and (max-height: 519px) {
-  .navbar-container{
-    height: 11%;
-  } 
-}
-
-@media only screen and (min-height: 300px) and (max-height: 379px) {
-  .navbar-container{
-    height: 12%;
-  } 
-}
-
-@media only screen and (max-height: 299px) {
-  .navbar-container{
-    display: none;
-  } 
-}
-  */

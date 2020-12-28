@@ -21,5 +21,9 @@
     top: 7%;
     left: 50%;
     transform: translate(-50%, -7%);
-  
+    white-space: nowrap;
+}
+
+.headercreategroup-addedavatar img{
+    border-radius: 50%;
 }

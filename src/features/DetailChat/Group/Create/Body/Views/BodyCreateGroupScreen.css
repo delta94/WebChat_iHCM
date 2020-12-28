@@ -19,6 +19,7 @@
 .bodycreategroup-main h4{
     padding: 1rem 1.4rem;
     border-bottom: 1px solid #E6E8EB;
+
 }
 
 .bodycreategroup-main-body{
@@ -70,10 +71,12 @@
 }
 
 .bodycreategroup-footer-selecteduserpanel{
-    width: 85%;
+    width: 80%;
     /* background-color: blueviolet; */
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: overlay;
 }
 
 .bodycreategroup-footer-selecteduserpanel .circleavatar-container{
@@ -93,4 +96,142 @@
     font-size: 14px;
     line-height: 21px;
 }
+
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+/* WIDTH */
+
+@media only screen and (max-width: 320px) {
+    .bodycreategroup-main--hasfooter{
+        height: 82% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 18%;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 449px) {
+    .bodycreategroup-main--hasfooter{
+        height: 87% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 13%;
+    }
+}
+
+@media only screen and (max-width: 449px) {
+    .headercreategroup-container h4 {
+        top: 30%;
+        transform: translate(-50% , -30%);
+    }
+
+    .headercreategroup-addavatarandname {
+        margin-top: 2.5rem;
+    }
+    
+    .headercreategroup-addavatarandname div {
+        margin-right: 0.1rem;
+    }
+
+    .headercreategroup-addavatarandname .iconcirclepanel-container{
+        width: 55px !important;
+        height: 55px !important;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+
+    .bodycreategroup-main--hasfooter{
+        height: 83% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 17%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .bodycreategroup-main--hasfooter{
+        height: 90% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 10%;
+    }
+}
+
+/* @media (max-width:768px){   
+    .bodycreategroup-main{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+} */
+
+@media only screen and (width: 1024px) {
+    .bodycreategroup-main--hasfooter{
+        height: 93% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 7%;
+    }
+}
+
+
+@media (min-width:1700px){   
+    .bodycreategroup-main--hasfooter{
+        height: 91% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 9%;
+    }
+}
+  
+@media (min-width:2000px){   
+
+}
+  
+@media (min-width:2300px){   
+    .bodycreategroup-main--hasfooter{
+        height: 92% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 8%;
+    }
+}
+  
+@media (min-width:3000px){   
+    .bodycreategroup-main--hasfooter{
+        height: 94% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 6%;
+    }
+}
+  
+@media (min-width:4090px){   
+    .bodycreategroup-main--hasfooter{
+        height: 96% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 4%;
+    }
+}
+  
+@media (min-width:5400px){   
+    .bodycreategroup-main--hasfooter{
+        height: 97% !important;
+    }
+
+    .bodycreategroup-footer{
+        height: 3%;
+    }
+} 
 
