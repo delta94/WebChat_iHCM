@@ -37,7 +37,7 @@ function HeaderCreateGroupScreen() {
     const srcIcon = pathFileList.length > 0 ? pathFileList[0] : iconaddavatar;
     return (
         <div className="headercreategroup-container app-mainfont">
-            <div className="headerdetailconversation-back">
+            <div className="headerconversationdetail-back">
                 <div onClick={ redirectToConversation }>
                     <img src={ iconleftarrow } alt="" ></img>
                     Quay lại

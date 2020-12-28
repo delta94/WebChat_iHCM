@@ -1,18 +1,18 @@
 import React from 'react';
 import NoChatScreen from '../../NoChat/Views/NoChatScreen';
-import './DetailChatScreen.css';
+import './ChatDetailScreen.css';
 import {ChatDetailModel} from '../Models/ChatDetailModel';
 import ConversationScreen from '../../Conversation/Main/Views/ConversationScreen';
 import {
   Switch,
   Route
 } from "react-router-dom";
-import DetailConversationScreen from '../../DetailConversation/Main/Views/DetailConversationScreen';
+import ConversationDetailScreen from '../../ConversationDetail/Main/Views/ConversationDetailScreen';
 import CreateGroupScreen from '../../Group/Create/Main/Views/CreateGroupScreen';
 
-function DetailChatScreen(props : ChatDetailModel) {
+function ChatDetailScreen(props : ChatDetailModel) {
   return (
-    <div className="detailchat-container">
+    <div className="chatdetail-container">
         <Switch>
           <Route path="/" exact>
             { props.hasChat ? 
@@ -21,7 +21,7 @@ function DetailChatScreen(props : ChatDetailModel) {
             } 
           </Route>
           <Route path="/conversation/detail/:id">
-            <DetailConversationScreen></DetailConversationScreen>
+            <ConversationDetailScreen></ConversationDetailScreen>
           </Route>
           <Route path="/group/create">
             <CreateGroupScreen></CreateGroupScreen>
@@ -31,4 +31,4 @@ function DetailChatScreen(props : ChatDetailModel) {
   );
 }
 
-export default DetailChatScreen;
+export default ChatDetailScreen;

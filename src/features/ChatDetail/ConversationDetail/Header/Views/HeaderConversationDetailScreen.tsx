@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
-import './HeaderDetailConversationScreen.css';
+import './HeaderConversationDetailScreen.css';
 
 const iconleftarrow = require("../../../../../libraries/Icons/iconleftarrow.svg").default;
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
@@ -10,7 +10,7 @@ const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg"
 const iconvideocall = require("../../../../../libraries/Icons/iconvideocall.svg").default;
 const iconbrownmessage = require("../../../../../libraries/Icons/iconbrownmessage.svg").default;
 
-function HeaderDetailConversationScreen(props : any) {
+function HeaderConversationDetailScreen(props : any) {
   let { id } : any = useParams();
   const history = useHistory();
 
@@ -19,9 +19,9 @@ function HeaderDetailConversationScreen(props : any) {
   }
 
   return (
-    <div className="headerdetailconversation-container app-mainfont">
-      <div className="headerdetailconversation-top">
-        <div className="headerdetailconversation-back">
+    <div className="headerconversationdetail-container app-mainfont">
+      <div className="headerconversationdetail-top">
+        <div className="headerconversationdetail-back">
           <div onClick={ redirectToConversation }>
             <img src={ iconleftarrow } alt="" ></img>
             Quay lại
@@ -31,7 +31,7 @@ function HeaderDetailConversationScreen(props : any) {
           <img src={ iconsearch } alt="" ></img>
         </div>
       </div>
-      <div className="headerdetailconversation-avatar">
+      <div className="headerconversationdetail-avatar">
           <h4>Quang Huy</h4>
           <span>iSoft</span>
           <CircleAvatarScreen
@@ -39,10 +39,10 @@ function HeaderDetailConversationScreen(props : any) {
             width={"75px"}
             height={"75px"}
             isOnline={false}
-            class={"headerdetailconversation-avatar-image"}
+            class={"headerconversationdetail-avatar-image"}
             alt={""}
           ></CircleAvatarScreen>
-          <div className="headerdetailconversation-option">
+          <div className="headerconversationdetail-option">
             <IconCirclePanel srcIcon={ iconbrownmessage } class="" padding="0.8rem"></IconCirclePanel>
             <IconCirclePanel srcIcon={ iconvideocall } class="" padding="0.8rem"></IconCirclePanel>
             <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
@@ -52,4 +52,4 @@ function HeaderDetailConversationScreen(props : any) {
   );
 }
 
-export default HeaderDetailConversationScreen;
+export default HeaderConversationDetailScreen;

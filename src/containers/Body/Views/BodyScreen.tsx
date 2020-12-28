@@ -2,7 +2,7 @@ import React from 'react';
 import './BodyScreen.css';
 import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
 import UserChatListScreen from '../../../features/UserChatList/Main/Views/UserChatListScreen';
-import DetailChatScreen from '../../../features/DetailChat/Main/Views/DetailChatScreen';
+import ChatDetailScreen from '../../../features/ChatDetail/Main/Views/ChatDetailScreen';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -17,7 +17,7 @@ function BodyScreen(props : any) {
         </div>
         <div className={ hasNavbar ? "body-right--hasnavbar body-right" : "body-right"}>
           <UserChatListScreen></UserChatListScreen>
-          <DetailChatScreen hasChat={ true }></DetailChatScreen>
+          <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
         </div>
       </div>
     </Router>
