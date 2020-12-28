@@ -40,9 +40,7 @@ function BodyConversationDetailScreen(props : any) {
             <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
             <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
             <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
-            <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
-            <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
-          </div>
+            <FileChatScreen isFile={ true } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>          </div>
         )
       case ENUM_KIND_OF_MESSAGE.LINK:
         return (
