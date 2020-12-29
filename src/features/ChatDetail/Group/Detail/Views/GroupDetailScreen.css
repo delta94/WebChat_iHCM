@@ -1,0 +1,15 @@
+.popupsignoutgroup-text{
+    padding: 1.2rem;
+    font-size: 16px;
+line-height: 21px;
+/* identical to box height, or 131% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Neutral/ Fiord */
+
+color: #4D5971;
+border-bottom: 1px solid #E6E8EB;
+}

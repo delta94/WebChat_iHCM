@@ -1,10 +1,11 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
+import { IModal } from '../Models/Modal';
 import './ModalScreen.css';
 
 const icondelete = require("../../../../libraries/Icons/icondelete.svg").default;
 
-const ModalScreen = (props: any) => (
+const ModalScreen = (props: IModal) => (
   <Popup
     trigger={props.children}
     modal
@@ -16,11 +17,11 @@ const ModalScreen = (props: any) => (
         <div className="modal-header-container modal-header-bottomborder">
           <h4 className="app-mainfont modal-header-content">
             {
-              props.contentheader
+              props.headerContent
             }
           </h4>
           <div className="modal-header-close" onClick={close}>
-            <img src={ icondelete } ></img>
+            <img src={ icondelete } alt=""></img>
           </div>
         </div>
         <div className="modal-content-container">

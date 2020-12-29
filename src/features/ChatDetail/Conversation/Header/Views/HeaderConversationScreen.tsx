@@ -8,7 +8,7 @@ import './HeaderConversationScreen.css';
 
 const iconcamera = require('./Icons/iconcamera.svg').default;
 const iconoffvolume = require('./Icons/iconoffvolume.svg').default;
-const icon3dots = require('./Icons/icon3dots.svg').default;
+const iconvertical3dots = require('../../../../../libraries/Icons/iconvertical3dots.svg').default;
 const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').default;
 const icontrash = require('../../../../../libraries/Icons/icontrash.svg').default;
 
@@ -63,7 +63,7 @@ function HeaderConversationScreen(props: any){
                     <div>
                         <TooltipScreen context="Chức năng khác">
                             <div>
-                                <IconImageScreen src={ icon3dots } alt="3 dots"></IconImageScreen>
+                                <IconImageScreen src={ iconvertical3dots } alt="3 dots"></IconImageScreen>
                             </div>
                         </TooltipScreen>
                     </div>

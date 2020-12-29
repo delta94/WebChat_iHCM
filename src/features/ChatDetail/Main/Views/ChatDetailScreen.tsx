@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ConversationDetailScreen from '../../ConversationDetail/Main/Views/ConversationDetailScreen';
 import CreateGroupScreen from '../../Group/Create/Main/Views/CreateGroupScreen';
+import GroupDetailScreen from '../../Group/Detail/Views/GroupDetailScreen';
 
 function ChatDetailScreen(props : ChatDetailModel) {
   return (
@@ -18,7 +19,7 @@ function ChatDetailScreen(props : ChatDetailModel) {
             <NoChatScreen></NoChatScreen>
           </Route>
           <Route path="/conversation/detail/:id">
-            <ConversationDetailScreen></ConversationDetailScreen>
+            {/* <ConversationDetailScreen></ConversationDetailScreen> */}
           </Route>
           <Route path="/conversation/:id">
             <ConversationScreen></ConversationScreen>
@@ -26,8 +27,8 @@ function ChatDetailScreen(props : ChatDetailModel) {
           <Route path="/group/create">
             <CreateGroupScreen></CreateGroupScreen>
           </Route>
-          <Route path="/group/:id">
-            <CreateGroupScreen></CreateGroupScreen>
+          <Route path="/group/detail/:id">
+            <GroupDetailScreen></GroupDetailScreen>
           </Route>
         </Switch>
     </div>

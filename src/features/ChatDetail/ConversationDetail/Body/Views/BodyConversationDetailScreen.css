@@ -13,13 +13,13 @@
 }
 
 .bodyconversationdetail-main-header{
-    border-bottom: 1px solid #E6E8EB;
     height: 55px;
 }
 
 .bodyconversationdetail-main-header ul{
     display: flex;
     list-style: none;
+    border-bottom: 1px solid #E6E8EB;
 }
 
 .bodyconversationdetail-main-header ul li{
@@ -82,6 +82,7 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -99,6 +100,12 @@
     .bodyconversationdetail-container{
         top: 240px;
         height: calc(100% - 240px);
+    }
+
+    
+    .bodyconversationdetail-main-header-li--small li{
+        font-size: 12px !important;
+        line-height: 10px !important;
     }
 }
 

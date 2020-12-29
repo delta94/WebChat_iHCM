@@ -1,0 +1,22 @@
+.custombutton-container{
+  border-radius: 8px;
+  outline: none;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.primary{
+  background: #115DD3;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.default{
+  background: white;
+  color: #808999;;
+  border: 1px solid #808999;;
+}

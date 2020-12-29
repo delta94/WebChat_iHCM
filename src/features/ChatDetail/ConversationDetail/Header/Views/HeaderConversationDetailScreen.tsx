@@ -2,20 +2,19 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
+import { IHeaderConversationDetail } from '../Models/HeaderConversationDetail';
 import './HeaderConversationDetailScreen.css';
 
 const iconleftarrow = require("../../../../../libraries/Icons/iconleftarrow.svg").default;
-const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
-const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
-const iconvideocall = require("../../../../../libraries/Icons/iconvideocall.svg").default;
-const iconbrownmessage = require("../../../../../libraries/Icons/iconbrownmessage.svg").default;
+// const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
-function HeaderConversationDetailScreen(props : any) {
+function HeaderConversationDetailScreen(props : IHeaderConversationDetail) {
+  console.log(props);
   let { id } : any = useParams();
   const history = useHistory();
 
   const redirectToConversation = () =>{
-    history.push("/conversation/" + id);
+    history.push(props.backPage);
   }
 
   return (
@@ -28,33 +27,36 @@ function HeaderConversationDetailScreen(props : any) {
           </div>
         </div>
         <div>
-          <img src={ iconsearch } alt="" ></img>
+          {
+            props.eleSearch
+          }
         </div>
       </div>
       <div className="headerconversationdetail-avatar">
-          <h4>Quang Huy</h4>
-          <span>iSoft</span>
+          <h4>
+            {
+              props.name
+            }
+          </h4>
+          <span>
+            {
+              props.title
+            }
+          </span>
+
           <CircleAvatarScreen
-            src={"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"}
+            src={ props.srcImage }
             width={"75px"}
             height={"75px"}
             isOnline={false}
             class={"headerconversationdetail-avatar-image"}
             alt={""}
           ></CircleAvatarScreen>
+
           <div className="headerconversationdetail-option app-mainfont">
-            <div>
-              <IconCirclePanel srcIcon={ iconbrownmessage } class="" padding="0.8rem"></IconCirclePanel>
-              <p>Tin nhắn</p>
-            </div>
-            <div>
-              <IconCirclePanel srcIcon={ iconvideocall } class="" padding="0.8rem"></IconCirclePanel>
-              <p>Gọi video</p>
-            </div>
-            <div>
-            <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
-            <p>Thông báo</p>
-            </div>
+            {
+              props.eleOption
+            }
           </div>
         </div>
     </div>

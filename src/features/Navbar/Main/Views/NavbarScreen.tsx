@@ -28,7 +28,7 @@ function NavbarScreen() {
     <div className="navbar-container">
       <IconPanelScreen isActive={true} srcImg={ iconmessage } contextToolTip={"Trò chuyện"}></IconPanelScreen>
       <IconPanelScreen isActive={false} srcImg={ iconfriend } contextToolTip={"Bạn bè"}></IconPanelScreen>
-      <ModalScreen contentheader={ "Cài đặt thông báo" } context={ eleContext }>
+      <ModalScreen headerContent={ "Cài đặt thông báo" } context={ eleContext }>
         <div>
           <IconPanelScreen isActive={false} srcImg={ iconwhitenoti } contextToolTip={"Thông báo"}></IconPanelScreen>
         </div>

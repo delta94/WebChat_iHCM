@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BodyPanelScreen from '../../../../../../libraries/Features/BodyPanel/Views/BodyPanelScreen';
 import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import CustomInputScreen from '../../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
+import CustomButtonScreen from '../../../../../../libraries/Features/CustomButton/Views/CustomButtonScreen';
 import './BodyCreateGroupScreen.css';
 
 const iconsearch = require('../../../../../../libraries/Icons/iconsearch.svg').default;
@@ -142,7 +143,7 @@ function BodyCreateGroupScreen() {
               }
             </div>
 
-            <button>Tạo nhóm</button>
+            <CustomButtonScreen onClick={ null } text={"Tạo nhóm"} class="primary"></CustomButtonScreen>
           </div>
         )
       }

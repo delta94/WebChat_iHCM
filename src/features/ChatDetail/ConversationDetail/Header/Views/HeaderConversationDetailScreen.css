@@ -33,8 +33,22 @@
     /* z-index: -1; */
 }
 
+.headerconversationdetail-avatar h4{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #1A2948;
+}
+
+.headerconversationdetail-avatar span{
+    font-size: 12px;
+    line-height: 18px;
+    color: #667085;
+}
+
 .headerconversationdetail-avatar-image{
-    margin: 1rem 0;
+    margin: 0.6rem 0;
 }
 
 .headerconversationdetail-option{
@@ -42,13 +56,25 @@
 }
 
 .headerconversationdetail-option div{
-    margin: 0 1rem; 
+    margin: 0 0.5rem; 
 }
 
 .headerconversationdetail-option div p{
     text-align: center;
     white-space: nowrap;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #4D5971;
 }
+
+.headerconversationdetail-option .iconcirclepanel-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 48px;
+    padding: 0.8rem;
+}
+
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 
@@ -103,10 +129,6 @@
 @media only screen and (max-width: 1024px) {
     .headerconversationdetail-option div p{
         display: none;
-    }
-
-    .headerconversationdetail-option .iconcirclepanel-container img{
-        width: 24px;
     }
 
     .headerconversationdetail-option div{
