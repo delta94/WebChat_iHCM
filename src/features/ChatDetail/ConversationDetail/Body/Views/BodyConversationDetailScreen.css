@@ -48,7 +48,6 @@
     height: 100%;
     width: 100%;
     display: grid;
-
     align-content: flex-start;  
 }
 
@@ -62,6 +61,7 @@
 
 .bodyconversationdetail-main-body-image img{
     width: 100%;
+    cursor: pointer;
 }
 
 .bodyconversationdetail-main-body-fileandlink {

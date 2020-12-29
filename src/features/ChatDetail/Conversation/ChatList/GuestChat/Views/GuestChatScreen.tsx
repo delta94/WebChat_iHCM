@@ -36,7 +36,7 @@ function GuestChatScreen(props : IGuessChat){
     ];
 
     const redirectToDetailUser = () =>{
-        history.push("/conversation/detail/1");
+        history.push("/personal/detail/1");
     }
 
     return (

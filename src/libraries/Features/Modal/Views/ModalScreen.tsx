@@ -24,7 +24,10 @@ const ModalScreen = (props: IModal) => (
             <img src={ icondelete } alt=""></img>
           </div>
         </div>
-        <div className="modal-content-container">
+        <div className={ props.hasPadding ? "modal-content-container" : ""}>
+          {
+            props.contextHasClose && props.contextHasClose(close)
+          }
           {
             props.context
           }

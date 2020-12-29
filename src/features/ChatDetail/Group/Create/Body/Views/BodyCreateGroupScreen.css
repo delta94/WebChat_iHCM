@@ -47,6 +47,14 @@
     margin-left: 0.5rem;
 }
 
+.bodycreategroup-main-body-selecteduserpanel img{
+    margin-left: auto;
+}
+
+.bodycreategroup-main-body-selecteduserpanel span{
+    margin-left: 0.5rem;
+}
+
 .bodycreategroup-main-body-separate{
     height: 1px;
     background-color: #E6E8EB;

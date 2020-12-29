@@ -1,0 +1,11 @@
+.custombadge-container{
+    padding: 2px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 19px; 
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #4080FF;
+    border-radius: 4.5px;
+}

@@ -4,6 +4,7 @@ import { IUserChat } from '../Models/UserChatModel';
 import CircleAvatarScreen from '../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import { IConversationState } from '../../../../redux/Reducers/ConversationList.reducer';
 import { useHistory } from 'react-router-dom';
+import CustomBadgeScreen from '../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen';
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require('./Icons/iconunread.svg').default;
@@ -12,7 +13,7 @@ function UserChatScreen(props : IConversationState) {
   const history = useHistory();
 
   const redirectToChatDetail = () =>{
-    let kind = "conversation";
+    let kind = "personal";
     if(props.isGroup){
       kind = "group";
     }
@@ -38,7 +39,7 @@ function UserChatScreen(props : IConversationState) {
           <span className={ props.hasReadLastMess ? "userchat-username app-mainfont" : "userchat-username app-mainfont userchat-unreadcontext" }>
             { props.name }
           </span>
-          { props.isGroup && (<span className="userchat-groupchat app-mainfont">Nhóm</span>) }    
+          { props.isGroup && (<CustomBadgeScreen text="Nhóm" class="userchat-groupchat"></CustomBadgeScreen>) }    
           <span className="userchat-timeoflastmess app-mainfont">
             { props.timeToReadLastMess }
           </span>
