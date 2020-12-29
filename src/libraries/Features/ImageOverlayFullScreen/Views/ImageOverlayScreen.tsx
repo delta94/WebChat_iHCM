@@ -86,7 +86,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
 
     useEffect(() =>{
         setMainImage(mainMiniImage)
-    },[])
+    },[mainMiniImage])
 
     const setMiniImage = (isPrev : boolean) =>{
         if(mainImage.id){
