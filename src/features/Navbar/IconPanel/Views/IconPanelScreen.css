@@ -29,7 +29,7 @@
 
 .navbar-iconpanel-container--active{
   background-color: #0151CD;
-  border-left: 2px solid #FF7F08;
+  border-left: 3px solid #FF7F08;
 }
 
 .navbar-container div{
@@ -43,7 +43,7 @@
   .navbar-iconpanel-container--active{
     background-color: #0151CD;
     border-left: none;
-    border-bottom: 2px solid #FF7F08;
+    border-bottom: 3px solid #FF7F08;
   } 
 
   .navbar-iconpanel-container{
@@ -58,7 +58,7 @@
   .navbar-iconpanel-container--active{
     background-color: #0151CD;
     border-left: none;
-    border-bottom: 2px solid #FF7F08;
+    border-bottom: 3px solid #FF7F08;
   } 
 
   .navbar-iconpanel-container{
