@@ -76,6 +76,8 @@ const iconrightarrow = require("../../../Icons/iconrightarrow2.svg").default;
 // ]
 
 function ImageOverlayScreen(props : IImageOverlay) {
+    const [amountOfMiniImages , setAmountOfMiniImages] = useState<number>(12);
+    const [numPage , setNumPage] = useState<number>(1);
     const [mainImage , setMainImage] = useState<IMiniImage>({
         id:-1,
         author:"",
@@ -85,16 +87,47 @@ function ImageOverlayScreen(props : IImageOverlay) {
     const { miniImageList , mainMiniImage } = props;
 
     useEffect(() =>{
-        setMainImage(mainMiniImage)
+        setMainImage(mainMiniImage);
     },[mainMiniImage])
+
+    useEffect(() =>{
+        const windowWidth = window.innerWidth;
+        if(windowWidth <= 1024){
+            setAmountOfMiniImages(5)
+        } else{
+            setAmountOfMiniImages(12)
+        }
+    },[])
+
+    useEffect(() =>{
+        window.addEventListener('resize', () =>{
+            const windowWidth = window.innerWidth;
+            if(windowWidth <= 1024){
+                setAmountOfMiniImages(5)
+            } else{
+                setAmountOfMiniImages(12)
+            }
+        });
+
+        return () => window.addEventListener('resize', () =>{
+            const windowWidth = window.innerWidth;
+            if(windowWidth <= 1024){
+                setAmountOfMiniImages(5)
+            } else{
+                setAmountOfMiniImages(12)
+            }
+            });
+    },[])
 
     const setMiniImage = (isPrev : boolean) =>{
         if(mainImage.id){
             let tempid = 0;
             if(isPrev){
                 tempid = mainImage.id - 1;
+                tempid <= (numPage - 1) * amountOfMiniImages && setNumPage(prev => prev - 1);
             } else{
                 tempid = mainImage.id + 1;
+                tempid > numPage * amountOfMiniImages && setNumPage(prev => prev + 1);
             }
 
             const tempMiniImage: IMiniImage = miniImageList.find((miniImage: IMiniImage) => miniImage.id === tempid) || {
@@ -128,6 +161,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
                 mainImage.id > 1 && (
                     <div className="imageoverlay-leftarrow imageoverlay-arrow" onClick={ () =>{ setMiniImage(true) } }>
                         <img src={ iconleftarrow } alt="" />
+                        <div></div>
                     </div>
                 )
             }
@@ -135,6 +169,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
                 mainImage.id < miniImageList[miniImageList.length - 1].id && (
                     <div className="imageoverlay-rightarrow imageoverlay-arrow"  onClick={ () =>{ setMiniImage(false) } }>
                         <img src={ iconrightarrow } alt="" />
+                        <div></div>
                     </div>
                 )
             }
@@ -144,7 +179,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
             <div className="imageoverlay-miniimages">
                 {
                     miniImageList.map((miniImage:IMiniImage , index:number) =>(
-                        <img alt="" src={ miniImage.srcImage } key={ index } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
+                        (index + 1 > (numPage - 1) * amountOfMiniImages && index + 1 <= numPage * amountOfMiniImages) && <img alt="" src={ miniImage.srcImage } key={ index } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
                     ))
                 }
             </div>

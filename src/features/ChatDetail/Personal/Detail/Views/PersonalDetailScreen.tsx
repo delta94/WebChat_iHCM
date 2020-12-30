@@ -82,6 +82,11 @@ const miniImageList :IMiniImage[] =[
       author:"Chi Chi556",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
+  {
+      id:14,
+      author:"Chi Chi556",
+      srcImage:"https://wallpaperaccess.com/full/629735.jpg",
+  },
 ]
 
 
