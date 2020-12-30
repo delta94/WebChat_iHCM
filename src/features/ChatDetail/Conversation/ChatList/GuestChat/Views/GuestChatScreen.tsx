@@ -8,7 +8,7 @@ import { setResponseMess } from "../../../../../../redux/Actions/ResponseMess.ac
 import MainPopupScreen from '../../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
 import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/KindOfMessage';
 import DetailPopupScreen from '../../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 const iconhorizontal3dots = require('../../../../../../libraries/Icons/iconhorizontal3dots.svg').default;
 const iconreplay = require('./Icons/iconreplay.svg').default;
@@ -17,6 +17,7 @@ const icontrash = require('../../../../../../libraries/Icons/icontrash.svg').def
 
 function GuestChatScreen(props : IGuessChat){
     const history = useHistory();
+
     const listEles = [
         {
             onClick: () => props.setResponseMess(props.user.name , props.context , props.kindOfMess),
@@ -36,7 +37,7 @@ function GuestChatScreen(props : IGuessChat){
     ];
 
     const redirectToDetailUser = () =>{
-        history.push("/personal/detail/1");
+        history.push("/personal/detail/" + props.id);
     }
 
     return (

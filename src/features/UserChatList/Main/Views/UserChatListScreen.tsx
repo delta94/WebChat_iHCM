@@ -9,6 +9,8 @@ import { connect } from 'react-redux';
 import { getConversationList } from '../../../../redux/Actions/ConversationList.action';
 import { useEffect } from 'react';
 import { IConversationState } from '../../../../redux/Reducers/ConversationList.reducer';
+import { useHistory } from 'react-router-dom';
+import { ENUM_KIND_OF_CONVERSATION } from '../../../../libraries/Constants/KindOfConversation';
 
 const iconsearch = require('../../../../libraries/Icons/iconsearch.svg').default;
 
@@ -24,6 +26,8 @@ function UserChatListScreen(props: any) {
 
   const { conversationList } = props;
 
+  const history = useHistory();
+
   const [activedUserChat , setActivedUserChat] = useState({
     isGroup:false,
     id: -1
@@ -32,7 +36,13 @@ function UserChatListScreen(props: any) {
   useEffect(() => {
     const id = 3;
     props.getConversationList(id);
-
+    const currentPathName = history.location.pathname;
+    const arrPath = currentPathName.split("/");
+    if(arrPath[1] === ENUM_KIND_OF_CONVERSATION.GROUP){
+      setUserChatIsAcTive(true , parseInt(arrPath[2]))
+    } else if(arrPath[1] === ENUM_KIND_OF_CONVERSATION.PERSONAL){
+      setUserChatIsAcTive(false , parseInt(arrPath[2]))
+    }
   }, [])
 
   const setUserChatIsAcTive = (isGroup:boolean , id:number) =>{

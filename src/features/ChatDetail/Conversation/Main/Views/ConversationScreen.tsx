@@ -3,7 +3,7 @@ import './ConversationScreen.css';
 import HeaderConversationScreen from '../../Header/Views/HeaderConversationScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
 import ChatInputScreen from '../../ChatInput/Main/Views/ChatInputScreen';
-import { IConversation } from '../Models/Conversation';
+import { IConversation, IConversationz } from '../Models/Conversation';
 import { useParams } from 'react-router-dom';
 
 const coversion: IConversation ={
@@ -167,17 +167,20 @@ const coversion: IConversation ={
     ]
 }
 
-function ConversationScreen(props: any){
-    
+function ConversationScreen(props: IConversationz){
     return (
         <div className="conversation-container">
             <HeaderConversationScreen
-            name={ coversion.userList[0].name }
-            avatar={ coversion.userList[0].avatar }
-            isOnline={ true }
+            name={ props.nameHeader }
+            avatar={ props.avatar }
+            isOnline={ props.isOnline }
+            eleOptionHeader={ props.eleOptionHeader }
             ></HeaderConversationScreen>
 
             <ChatListScreen
+            id={ props.id }
+            userList={ props.userList }
+            messageList={ props.messageList }
             ></ChatListScreen>
             
             <ChatInputScreen></ChatInputScreen>

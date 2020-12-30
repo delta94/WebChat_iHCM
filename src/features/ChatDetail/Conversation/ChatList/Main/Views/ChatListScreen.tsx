@@ -172,7 +172,7 @@ const conversations: IConversation ={
 }
 
 
-function ChatListScreen(){
+function ChatListScreen(props: any){
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [userid, setUserid] = useState<number>(1);
     
@@ -188,7 +188,7 @@ function ChatListScreen(){
         setLoading(true);
         setError(false);
 
-        const messageListz = conversations.messageList.slice(- pageNum * 3);
+        const messageListz = props.messageList.slice(- pageNum * 3);
         setMessageList(messageListz)
         setHasMore(messageListz.length > 0)
         setLoading(false)
@@ -218,7 +218,7 @@ function ChatListScreen(){
             observer.current.scrollTop = observer.current.scrollHeight;
         }
         return messageList.map((message: IMessage, index: number) =>{
-            const userTemp: IUser = findUserById(conversations.userList,message.userid);
+            const userTemp: IUser = findUserById(props.userList,message.userid);
             const isCurrent: boolean = userTemp.id === userid;
 
             let eleChildren: JSX.Element = <div></div>;
@@ -278,6 +278,7 @@ function ChatListScreen(){
             } else{
                 return <div ref={ index === 0 ? lastMessageRef : null } key={ index }>
                     <GuestChatScreen
+                        id={ props.id }
                         kindOfMess={ message.kindOfMess }
                         user={ userTemp } 
                         context={ message.context }

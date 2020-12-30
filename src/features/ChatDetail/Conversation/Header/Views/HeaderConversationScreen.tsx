@@ -6,31 +6,31 @@ import MainPopupScreen from '../../../../../libraries/Features/Popup/MainPopup/V
 import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
 import './HeaderConversationScreen.css';
 
-const iconcamera = require('./Icons/iconcamera.svg').default;
-const iconoffvolume = require('./Icons/iconoffvolume.svg').default;
-const iconvertical3dots = require('../../../../../libraries/Icons/iconvertical3dots.svg').default;
-const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').default;
-const icontrash = require('../../../../../libraries/Icons/icontrash.svg').default;
+// const iconcamera = require('./Icons/iconcamera.svg').default;
+// const iconoffvolume = require('./Icons/iconoffvolume.svg').default;
+// const iconvertical3dots = require('../../../../../libraries/Icons/iconvertical3dots.svg').default;
+// const iconsearch = require('../../../../../libraries/Icons/iconsearch.svg').default;
+// const icontrash = require('../../../../../libraries/Icons/icontrash.svg').default;
 
 function HeaderConversationScreen(props: any){
 
-    const listEles = [
-        {
-            onClick: null,
-            icon: iconsearch,
-            text: "Tìm kiếm"
-        },
-        {
-            onClick: null,
-            icon: iconoffvolume,
-            text: "Tắt thông báo"
-        },
-        {
-            onClick: null,
-            icon: icontrash,
-            text: "Xóa chat"
-        }
-      ];
+    // const listEles = [
+    //     {
+    //         onClick: null,
+    //         icon: iconsearch,
+    //         text: "Tìm kiếm"
+    //     },
+    //     {
+    //         onClick: null,
+    //         icon: iconoffvolume,
+    //         text: "Tắt thông báo"
+    //     },
+    //     {
+    //         onClick: null,
+    //         icon: icontrash,
+    //         text: "Xóa chat"
+    //     }
+    // ];
 
     return (
         <div className="headerconversation-container">
@@ -49,7 +49,7 @@ function HeaderConversationScreen(props: any){
                 </div>
             </div>
             <div className="headerconversation-right">
-                <TooltipScreen context="Gọi video">
+                {/* <TooltipScreen context="Gọi video">
                     <div>
                         <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
                     </div>
@@ -67,7 +67,10 @@ function HeaderConversationScreen(props: any){
                             </div>
                         </TooltipScreen>
                     </div>
-                </MainPopupScreen>
+                </MainPopupScreen> */}
+                {
+                    props.eleOptionHeader
+                }
             </div>
         </div>
     )

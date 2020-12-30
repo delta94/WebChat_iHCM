@@ -7,6 +7,9 @@ const iconwhitedownload = require("../../../Icons/iconwhitedownload.svg").defaul
 const iconleftarrow = require("../../../Icons/iconleftarrow2.svg").default;
 const iconrightarrow = require("../../../Icons/iconrightarrow2.svg").default;
 
+// const FileSaver = require('file-saver');
+
+
 // const miniImageList :IMiniImage[] =[
 //     {
 //         id:1,
@@ -86,45 +89,51 @@ function ImageOverlayScreen(props : IImageOverlay) {
 
     const { miniImageList , mainMiniImage } = props;
 
+
     useEffect(() =>{
         setMainImage(mainMiniImage);
+
     },[mainMiniImage])
 
     useEffect(() =>{
+        resizeByScreen();
+    },[])
+
+    useEffect(() =>{
+        window.addEventListener('resize', resizeByScreen);
+
+        return () => window.removeEventListener('resize', resizeByScreen);
+    },[])
+
+    useEffect(() =>{
+        window.addEventListener('keydown', setMiniImageByKeyBoardEvent);
+
+        return () => window.removeEventListener('keydown', setMiniImageByKeyBoardEvent);
+    })
+
+    const resizeByScreen = () =>{
         const windowWidth = window.innerWidth;
         if(windowWidth <= 1024){
             setAmountOfMiniImages(5)
         } else{
             setAmountOfMiniImages(12)
         }
-    },[])
+    }
 
-    useEffect(() =>{
-        window.addEventListener('resize', () =>{
-            const windowWidth = window.innerWidth;
-            if(windowWidth <= 1024){
-                setAmountOfMiniImages(5)
-            } else{
-                setAmountOfMiniImages(12)
-            }
-        });
-
-        return () => window.addEventListener('resize', () =>{
-            const windowWidth = window.innerWidth;
-            if(windowWidth <= 1024){
-                setAmountOfMiniImages(5)
-            } else{
-                setAmountOfMiniImages(12)
-            }
-            });
-    },[])
+    const setMiniImageByKeyBoardEvent = (e: KeyboardEvent) =>{
+        if(e.keyCode === 37){
+            setMiniImage(true)
+        }else if(e.keyCode === 39){
+            setMiniImage(false)
+        }
+    } 
 
     const setMiniImage = (isPrev : boolean) =>{
         if(mainImage.id){
             let tempid = 0;
             if(isPrev){
                 tempid = mainImage.id - 1;
-                tempid <= (numPage - 1) * amountOfMiniImages && setNumPage(prev => prev - 1);
+                tempid < (numPage - 1) * amountOfMiniImages && setNumPage(prev => prev - 1);
             } else{
                 tempid = mainImage.id + 1;
                 tempid > numPage * amountOfMiniImages && setNumPage(prev => prev + 1);
@@ -141,13 +150,16 @@ function ImageOverlayScreen(props : IImageOverlay) {
     }
 
     const downloadImage = () =>{
-        // const  link = document.createElement("a");
-        // link.download = "";
-        // link.href = mainImage.srcImage;
-        // link.click();
-        window.open(mainImage.srcImage, '_self');
+        var link = document.createElement("a");
+        // If you don't know the name or want to use
+        // the webserver default set name = ''
+        link.setAttribute('download', "123");
+        link.href = mainImage.srcImage;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
     }
- 
+                                                                                                                                                                                                            
     return (
         <div className="imageoverlay-container">
             <h4 className="imageoverlay-nameauthor app-mainfont">

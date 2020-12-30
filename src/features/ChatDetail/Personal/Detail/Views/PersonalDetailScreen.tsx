@@ -215,7 +215,7 @@ function PersonalDetailScreen(props : any) {
         name: "Trung Đức",
         title: "iSoft",
         srcImage: "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-        backPage: "/personal/1",
+        backPage: "/personal/2",
         eleOption: eleOption,
         eleSearch: eleSearch,
     }

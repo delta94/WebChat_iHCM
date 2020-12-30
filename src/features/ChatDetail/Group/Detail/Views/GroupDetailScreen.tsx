@@ -283,7 +283,7 @@ function GroupDetailScreen(props : any) {
       name: "Nhóm 1",
       title: "15 thành viên",
       srcImage: "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-      backPage: "/group/1",
+      backPage: "/group/2",
       eleOption: eleOption,
       eleSearch: eleSearch,
   }
