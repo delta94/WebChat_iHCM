@@ -7,7 +7,7 @@
 
 .body-left{
     position: relative;  
-    width: 4%;
+    width: 70px;
     height: 100%;
     transition: all 0.2s linear;
 }
@@ -43,8 +43,9 @@
     }
 
     .body-left{
-        height: 8%;
+        /* height: 8%; */
         width: 100%;
+        height: 50px;
     }
     
     .body-right--hasnavbar{
@@ -66,7 +67,8 @@
 
     .body-left{
         width: 100%;
-        height: 8%;
+        /* height: 8%; */
+        height: 50px;
     }
 
     .body-right--hasnavbar{
@@ -85,9 +87,9 @@
         height: 90%;
     }
    
-    .body-left{
+    /* .body-left{
         width: 5%;
-    }
+    } */
     
     .body-left--hide{
         height: 0% !important;
@@ -101,9 +103,9 @@
         height: 93%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 4%;
-    }
+    } */
 }
 
 @media only screen and (width: 1024px) {
@@ -111,9 +113,9 @@
         height: 93%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 6%;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1025px) {
@@ -121,21 +123,21 @@
         height: 93%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 4%;
-    }
+    } */
 }
 
 @media (min-width:1700px){   
-    .body-left{
+    /* .body-left{
         width: 3.3%;
-    }
+    } */
 }
   
   @media (min-width:2000px){   
-    .body-left{
+    /* .body-left{
         width: 2.8%;
-    }
+    } */
 }
   
 @media (min-width:2350px){   
@@ -143,9 +145,9 @@
         height: 96%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 2.2%;
-    }
+    } */
 }
   
 @media (min-width:4090px){   
@@ -153,9 +155,9 @@
         height: 96.4%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 1.8%;
-    }
+    } */
 }
   
 @media (min-width:5400px){   
@@ -163,9 +165,9 @@
         height: 96.8%;
     }
 
-    .body-left{
+    /* .body-left{
         width: 1.4%;
-    }
+    } */
 } 
 
 /* HEIGHT */
@@ -185,7 +187,8 @@
 
     .body-left{
         width: 100%;
-        height: 20%;
+        /* height: 20%; */
+        height: 50px;
     }
 }
 
@@ -197,7 +200,8 @@
 
     .body-left{
         width: 100%;
-        height: 18%;
+        /* height: 18%; */
+        height: 50px;
     }
 }
 
@@ -211,7 +215,8 @@
 
     .body-left{
         width: 100%;
-        height: 20%;
+        /* height: 20%; */
+        height: 50px;
     }
 }
 

@@ -21,7 +21,7 @@ function UserChatScreen(props : IConversationState) {
 
     props.setIsActive(props.isGroup , props.id);
   }
-
+ 
   return (
     <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"} onClick={ redirectToChatDetail }>
       <div className="userchat-image">
