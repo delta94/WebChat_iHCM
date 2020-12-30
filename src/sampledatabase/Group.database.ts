@@ -21,4 +21,11 @@ export const groupDatabase: IGroupDatabase[] = [
         userIdList:[3,2],
         messageIdList:[8,9],
     },
+    {
+        id:3,
+        name:"Hội người yêu chim",
+        avatar:'https://www.w3schools.com/w3images/avatar2.png',
+        userIdList:[3,2],
+        messageIdList:[8,9],
+    },
 ]
