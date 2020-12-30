@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATIONDETAIL } from '../../../../../libraries/Constants/KindOfConversationDetail';
 import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
@@ -82,6 +82,11 @@ const miniImageList :IMiniImage[] =[
       author:"Chi Chi556",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
+  {
+      id:14,
+      author:"Chi Chi556",
+      srcImage:"https://wallpaperaccess.com/full/629735.jpg",
+  },
 ]
 
 
@@ -92,6 +97,20 @@ function PersonalDetailScreen(props : any) {
       id:-1,
       author:"",
       srcImage:"",
+    })
+
+    const closeImageOverlayByEscKey = (e: KeyboardEvent) =>{
+      if(e.keyCode === 27){
+        setIsOpenOverlay(false);
+      }
+    }
+
+    useEffect(() =>{
+      window.addEventListener('keydown', closeImageOverlayByEscKey );
+
+      return() =>{
+        window.removeEventListener('keydown', closeImageOverlayByEscKey );
+      }
     })
     
     const toggleOverlay = (miniImage: IMiniImage) =>{
@@ -196,7 +215,7 @@ function PersonalDetailScreen(props : any) {
         name: "Trung Đức",
         title: "iSoft",
         srcImage: "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-        backPage: "/personal/1",
+        backPage: "/personal/2",
         eleOption: eleOption,
         eleSearch: eleSearch,
     }

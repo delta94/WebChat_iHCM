@@ -13,3 +13,13 @@ export interface IConversation{
     userList: IUser[],
     messageList: IMessage[]
 }
+
+export interface IConversationz{
+    id: number,
+    userList: IUser[],
+    messageList: IMessage[],
+    nameHeader: string,
+    avatar: string,
+    isOnline: boolean,
+    eleOptionHeader: React.ReactElement
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import NoChatScreen from '../../NoChat/Views/NoChatScreen';
 import './ChatDetailScreen.css';
 import {ChatDetailModel} from '../Models/ChatDetailModel';
-import ConversationScreen from '../../Conversation/Main/Views/ConversationScreen';
 import {
   Switch,
   Route
@@ -10,6 +9,8 @@ import {
 import CreateGroupScreen from '../../Group/Create/Main/Views/CreateGroupScreen';
 import GroupDetailScreen from '../../Group/Detail/Views/GroupDetailScreen';
 import PersonalDetailScreen from '../../Personal/Detail/Views/PersonalDetailScreen';
+import GroupConversationScreen from '../../Group/Conversation/Views/GroupConversationScreen';
+import PersonalConversationScreen from '../../Personal/Conversation/Views/PersonalConversationScreen';
 
 function ChatDetailScreen(props : ChatDetailModel) {
   return (
@@ -22,13 +23,16 @@ function ChatDetailScreen(props : ChatDetailModel) {
             <PersonalDetailScreen></PersonalDetailScreen>
           </Route>
           <Route path="/personal/:id">
-            <ConversationScreen></ConversationScreen>
+            <PersonalConversationScreen></PersonalConversationScreen>
           </Route>
           <Route path="/group/create">
             <CreateGroupScreen></CreateGroupScreen>
           </Route>
           <Route path="/group/detail/:id">
             <GroupDetailScreen></GroupDetailScreen>
+          </Route>
+          <Route path="/group/:id">
+            <GroupConversationScreen></GroupConversationScreen>
           </Route>
         </Switch>
     </div>

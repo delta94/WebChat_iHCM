@@ -13,6 +13,7 @@ import './GroupDetailScreen.css';
 import CustomBadgeScreen from '../../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen';
 import ImageOverlayScreen from '../../../../../libraries/Features/ImageOverlayFullScreen/Views/ImageOverlayScreen';
 import { IMiniImage } from '../../../../../libraries/Features/ImageOverlayFullScreen/Models/ImageOverlay';
+import { useEffect } from 'react';
 
 const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
 const iconaddmember = require("../../../../../libraries/Icons/iconaddmember.svg").default;
@@ -98,6 +99,20 @@ function GroupDetailScreen(props : any) {
     id:-1,
     author:"",
     srcImage:"",
+  })
+
+  const closeImageOverlayByEscKey = (e: KeyboardEvent) =>{
+    if(e.keyCode === 27){
+      setIsOpenOverlay(false);
+    }
+  }
+
+  useEffect(() =>{
+    window.addEventListener('keydown', closeImageOverlayByEscKey );
+
+    return() =>{
+      window.removeEventListener('keydown', closeImageOverlayByEscKey );
+    }
   })
 
   const onChangeActiveLi = (num: number) =>{
@@ -268,7 +283,7 @@ function GroupDetailScreen(props : any) {
       name: "Nhóm 1",
       title: "15 thành viên",
       srcImage: "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-      backPage: "/group/1",
+      backPage: "/group/2",
       eleOption: eleOption,
       eleSearch: eleSearch,
   }

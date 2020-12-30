@@ -7,6 +7,9 @@ const iconwhitedownload = require("../../../Icons/iconwhitedownload.svg").defaul
 const iconleftarrow = require("../../../Icons/iconleftarrow2.svg").default;
 const iconrightarrow = require("../../../Icons/iconrightarrow2.svg").default;
 
+// const FileSaver = require('file-saver');
+
+
 // const miniImageList :IMiniImage[] =[
 //     {
 //         id:1,
@@ -76,6 +79,8 @@ const iconrightarrow = require("../../../Icons/iconrightarrow2.svg").default;
 // ]
 
 function ImageOverlayScreen(props : IImageOverlay) {
+    const [amountOfMiniImages , setAmountOfMiniImages] = useState<number>(12);
+    const [numPage , setNumPage] = useState<number>(1);
     const [mainImage , setMainImage] = useState<IMiniImage>({
         id:-1,
         author:"",
@@ -84,17 +89,54 @@ function ImageOverlayScreen(props : IImageOverlay) {
 
     const { miniImageList , mainMiniImage } = props;
 
+
     useEffect(() =>{
-        setMainImage(mainMiniImage)
+        setMainImage(mainMiniImage);
+
     },[mainMiniImage])
+
+    useEffect(() =>{
+        resizeByScreen();
+    },[])
+
+    useEffect(() =>{
+        window.addEventListener('resize', resizeByScreen);
+
+        return () => window.removeEventListener('resize', resizeByScreen);
+    },[])
+
+    useEffect(() =>{
+        window.addEventListener('keydown', setMiniImageByKeyBoardEvent);
+
+        return () => window.removeEventListener('keydown', setMiniImageByKeyBoardEvent);
+    })
+
+    const resizeByScreen = () =>{
+        const windowWidth = window.innerWidth;
+        if(windowWidth <= 1024){
+            setAmountOfMiniImages(5)
+        } else{
+            setAmountOfMiniImages(12)
+        }
+    }
+
+    const setMiniImageByKeyBoardEvent = (e: KeyboardEvent) =>{
+        if(e.keyCode === 37){
+            setMiniImage(true)
+        }else if(e.keyCode === 39){
+            setMiniImage(false)
+        }
+    } 
 
     const setMiniImage = (isPrev : boolean) =>{
         if(mainImage.id){
             let tempid = 0;
             if(isPrev){
                 tempid = mainImage.id - 1;
+                tempid < (numPage - 1) * amountOfMiniImages && setNumPage(prev => prev - 1);
             } else{
                 tempid = mainImage.id + 1;
+                tempid > numPage * amountOfMiniImages && setNumPage(prev => prev + 1);
             }
 
             const tempMiniImage: IMiniImage = miniImageList.find((miniImage: IMiniImage) => miniImage.id === tempid) || {
@@ -108,13 +150,16 @@ function ImageOverlayScreen(props : IImageOverlay) {
     }
 
     const downloadImage = () =>{
-        // const  link = document.createElement("a");
-        // link.download = "";
-        // link.href = mainImage.srcImage;
-        // link.click();
-        window.open(mainImage.srcImage, '_self');
+        var link = document.createElement("a");
+        // If you don't know the name or want to use
+        // the webserver default set name = ''
+        link.setAttribute('download', "123");
+        link.href = mainImage.srcImage;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
     }
- 
+                                                                                                                                                                                                            
     return (
         <div className="imageoverlay-container">
             <h4 className="imageoverlay-nameauthor app-mainfont">
@@ -128,6 +173,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
                 mainImage.id > 1 && (
                     <div className="imageoverlay-leftarrow imageoverlay-arrow" onClick={ () =>{ setMiniImage(true) } }>
                         <img src={ iconleftarrow } alt="" />
+                        <div></div>
                     </div>
                 )
             }
@@ -135,6 +181,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
                 mainImage.id < miniImageList[miniImageList.length - 1].id && (
                     <div className="imageoverlay-rightarrow imageoverlay-arrow"  onClick={ () =>{ setMiniImage(false) } }>
                         <img src={ iconrightarrow } alt="" />
+                        <div></div>
                     </div>
                 )
             }
@@ -144,7 +191,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
             <div className="imageoverlay-miniimages">
                 {
                     miniImageList.map((miniImage:IMiniImage , index:number) =>(
-                        <img alt="" src={ miniImage.srcImage } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
+                        (index + 1 > (numPage - 1) * amountOfMiniImages && index + 1 <= numPage * amountOfMiniImages) && <img alt="" src={ miniImage.srcImage } key={ index } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
                     ))
                 }
             </div>
