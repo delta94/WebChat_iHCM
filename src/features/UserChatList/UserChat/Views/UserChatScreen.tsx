@@ -21,7 +21,7 @@ function UserChatScreen(props : IConversationState) {
 
     props.setIsActive(props.isGroup , props.id);
   }
-
+ 
   return (
     <div className={ props.isActive ? "userchat-container userchat-container-active" : "userchat-container"} onClick={ redirectToChatDetail }>
       <div className="userchat-image">
@@ -43,7 +43,7 @@ function UserChatScreen(props : IConversationState) {
           <span className="userchat-timeoflastmess app-mainfont">
             { props.timeToReadLastMess }
           </span>
-        </div>
+        {/* </div>
         {
           props.hasReadLastMess ? 
           (
@@ -55,7 +55,7 @@ function UserChatScreen(props : IConversationState) {
             <div className="userchat-context-bottom"> 
             <h3 className="userchat-contextoflastmess userchat-unreadcontext">{ props.lastMess }</h3> 
             <img src={ iconunread } className="userchat-icon-unread" alt="" />
-          </div>
+          </div> */}
           )
         }
 
