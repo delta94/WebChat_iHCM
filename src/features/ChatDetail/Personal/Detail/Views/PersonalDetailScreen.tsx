@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATIONDETAIL } from '../../../../../libraries/Constants/KindOfConversationDetail';
 import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
@@ -92,6 +92,20 @@ function PersonalDetailScreen(props : any) {
       id:-1,
       author:"",
       srcImage:"",
+    })
+
+    const closeImageOverlayByEscKey = (e: KeyboardEvent) =>{
+      if(e.keyCode === 27){
+        setIsOpenOverlay(false);
+      }
+    }
+
+    useEffect(() =>{
+      window.addEventListener('keydown', closeImageOverlayByEscKey );
+
+      return() =>{
+        window.removeEventListener('keydown', closeImageOverlayByEscKey );
+      }
     })
     
     const toggleOverlay = (miniImage: IMiniImage) =>{

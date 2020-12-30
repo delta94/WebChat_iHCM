@@ -13,6 +13,7 @@ import './GroupDetailScreen.css';
 import CustomBadgeScreen from '../../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen';
 import ImageOverlayScreen from '../../../../../libraries/Features/ImageOverlayFullScreen/Views/ImageOverlayScreen';
 import { IMiniImage } from '../../../../../libraries/Features/ImageOverlayFullScreen/Models/ImageOverlay';
+import { useEffect } from 'react';
 
 const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
 const iconaddmember = require("../../../../../libraries/Icons/iconaddmember.svg").default;
@@ -98,6 +99,20 @@ function GroupDetailScreen(props : any) {
     id:-1,
     author:"",
     srcImage:"",
+  })
+
+  const closeImageOverlayByEscKey = (e: KeyboardEvent) =>{
+    if(e.keyCode === 27){
+      setIsOpenOverlay(false);
+    }
+  }
+
+  useEffect(() =>{
+    window.addEventListener('keydown', closeImageOverlayByEscKey );
+
+    return() =>{
+      window.removeEventListener('keydown', closeImageOverlayByEscKey );
+    }
   })
 
   const onChangeActiveLi = (num: number) =>{

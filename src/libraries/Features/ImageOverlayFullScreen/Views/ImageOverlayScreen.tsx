@@ -144,7 +144,7 @@ function ImageOverlayScreen(props : IImageOverlay) {
             <div className="imageoverlay-miniimages">
                 {
                     miniImageList.map((miniImage:IMiniImage , index:number) =>(
-                        <img alt="" src={ miniImage.srcImage } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
+                        <img alt="" src={ miniImage.srcImage } key={ index } onClick={ () =>{ setMainImage(miniImage) }} className={ mainImage.id === miniImage.id ? "imageoverlay-miniimage--active" : ""}></img>
                     ))
                 }
             </div>
