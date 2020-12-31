@@ -1,7 +1,8 @@
 .chatinput-container{
   position: absolute;
   bottom: 0;
-  height: 8%;
+  /* height: 8%; */
+  height: 60px;
   width: 100%;
   padding: 0 0.6rem;
   display: flex;
@@ -79,63 +80,63 @@
 
 
 @media (min-width:1700px){   
-    .chatinput-container{
+    /* .chatinput-container{
         height: 7%;
-    }
+    } */
 }
   
   @media (min-width:2000px){   
-    .chatinput-container{
+    /* .chatinput-container{
         height: 6%;
-    }
+    } */
   }
   
   @media (min-width:2350px){   
-    .chatinput-container{
+    /* .chatinput-container{
         height: 5%;
-    }
+    } */
   }
   
   @media (min-width:4090px){   
-    .chatinput-container{
+    /* .chatinput-container{
         height: 4%;
-    }
+    } */
   }
   
   @media (min-width:5400px){   
-    .chatinput-container{
+    /* .chatinput-container{
         height: 3%;
-    }
+    } */
   }
 
   
   @media only screen and (min-height: 520px) and (max-height: 600px) {
-    .chatinput-container{
+    /* .chatinput-container{
       height: 10%;
-  }
+  } */
   }
 
   @media only screen and (min-height: 380px) and (max-height: 519px) {
-    .chatinput-container{
+    /* .chatinput-container{
       height: 13%;
-  }
+  } */
   }
   
   @media only screen and (min-height: 330px) and (max-height: 379px) {
-    .chatinput-container{
+    /* .chatinput-container{
       height: 16%;
-  }
+  } */
   }
   
   @media only screen and (min-height: 300px) and (max-height: 329px) {
-    .chatinput-container{
+    /* .chatinput-container{
       height: 19%;
-  }
+  } */
   }
   
   @media only screen and (max-height: 299px) {
-    .chatinput-container{
+    /* .chatinput-container{
       height: 36%;
-  }
+  } */
   }
 

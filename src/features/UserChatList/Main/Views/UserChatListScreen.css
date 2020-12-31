@@ -7,6 +7,8 @@
   flex-direction: column;
 }
 
+
+
 .userchatlist-bottom{
   /* position: absolute; */
   overflow: hidden;
@@ -54,22 +56,26 @@
   }
 
   .userchatlist-container{
-    width: 12%;
+    width: 56px;
+  }
+
+  .userchatlist-top{
+    height: 60px;
   }
 }
 
 
 @media only screen and (max-width: 600px) {
-  .userchatlist-container{
+  /* .userchatlist-container{
     width: 18%;
-  }
+  } */
 }
 
 
 @media only screen and (max-width: 300px) {
-  .userchatlist-container{
+  /* .userchatlist-container{
     width: 22%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 992px) {
