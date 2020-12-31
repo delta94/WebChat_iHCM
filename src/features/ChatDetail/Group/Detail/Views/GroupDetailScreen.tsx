@@ -24,67 +24,67 @@ const iconvertical3dots = require("../../../../../libraries/Icons/iconvertical3d
 
 const miniImageList :IMiniImage[] =[
   {
-      id:1,
+      index:1,
       author:"Trung Đức",
       srcImage:"https://i.pinimg.com/736x/26/da/78/26da780891a603e8f9793810350ac13a.jpg",
   },
   {
-      id:2,
+      index:2,
       author:"Chi Chi",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:3,
+      index:3,
       author:"Chi Chi",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:4,
+      index:4,
       author:"Chi Chi1",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:5,
+      index:5,
       author:"Chi Chi1",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:6,
+      index:6,
       author:"Chi Chi3",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:7,
+      index:7,
       author:"Chi Chi3",
       srcImage:"https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?auto=webp&s=8cafc04e8600b49eee044ec92d833b986e2c33d9",
   },
   {
-      id:8,
+      index:8,
       author:"Chi Chi3",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
   {
-      id:9,
+      index:9,
       author:"Chi Chi4",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
   {
-      id:10,
+      index:10,
       author:"Chi Chi5",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
   {
-      id:11,
+      index:11,
       author:"Chi Chi5",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
   {
-      id:12,
+      index:12,
       author:"Chi Chi55",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
   {
-      id:13,
+      index:13,
       author:"Chi Chi556",
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
@@ -96,7 +96,7 @@ function GroupDetailScreen(props : any) {
   const [activeLi , setActiveLi] = useState<number>(ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER);
   const [isOpenOverlay , setIsOpenOverlay] = useState<boolean>(false);
   const [mainImage , setMainImage] = useState<IMiniImage>({
-    id:-1,
+    index:-1,
     author:"",
     srcImage:"",
   })
@@ -283,7 +283,6 @@ function GroupDetailScreen(props : any) {
       name: "Nhóm 1",
       title: "15 thành viên",
       srcImage: "https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
-      backPage: "/group/2",
       eleOption: eleOption,
       eleSearch: eleSearch,
   }

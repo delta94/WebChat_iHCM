@@ -14,7 +14,7 @@ function HeaderConversationDetailScreen(props : IHeaderConversationDetail) {
   const history = useHistory();
 
   const redirectToConversation = () =>{
-    history.push(props.backPage);
+    history.goBack();
   }
 
   return (

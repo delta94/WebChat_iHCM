@@ -5,7 +5,7 @@ export interface IImageOverlay {
 }
 
 export interface IMiniImage{
-    id:number,
+    index:number,
     author: string,
     srcImage: string
 }
