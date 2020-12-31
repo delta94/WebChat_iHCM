@@ -31,7 +31,7 @@ function HeaderCreateGroupScreen() {
     }
 
     const redirectToConversation = () =>{
-      history.push("/");
+      history.goBack();
     }
 
     const srcIcon = pathFileList.length > 0 ? pathFileList[0] : iconaddavatar;
