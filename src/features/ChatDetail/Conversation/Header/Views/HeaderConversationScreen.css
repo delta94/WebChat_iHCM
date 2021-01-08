@@ -37,8 +37,13 @@
     justify-content: center;
 }
 
+.headerconversation-right .example-warper:hover img{
+    -webkit-filter: saturate(12); /* Safari 6.0 - 9.0 */
+    filter: saturate(12);
+}
+
 .headerconversation-right img{
-    margin: 0 0.3rem;
+    margin: 0 0.6rem;
 }
 
 

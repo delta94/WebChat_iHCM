@@ -81,6 +81,7 @@
     padding: 0.5rem;
     display: flex;
     background-color: white;
+    align-items: center;
 }
 
 .bodycreategroup-footer-selecteduserpanel{
@@ -92,7 +93,9 @@
     flex-wrap: nowrap;
 }
 
-.bodycreategroup-footer-selecteduserpanel .circleavatar-container{
+.bodycreategroup-footer-selecteduserpanel .circleavatar-container,
+.addmember-footer-selectedmember .circleavatar-container
+{
     margin-right: 0.5rem;
     flex: 0 0 42px;
 }

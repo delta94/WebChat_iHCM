@@ -6,6 +6,7 @@ import { IConversationState } from "../../../../redux/Reducers/ConversationList.
 import { useHistory } from "react-router-dom";
 import CustomBadgeScreen from "../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen";
 import { useLayoutEffect } from "react";
+import { useWindowSize } from "../../../../libraries/Hooks/useWindowSize";
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require("./Icons/iconunread.svg").default;
@@ -106,20 +107,6 @@ function UserChatScreen(props: IConversationState) {
       </div>
     </div>
   );
-}
-
-// resize screen
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener("resize", updateSize);
-    updateSize();
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
-  return size;
 }
 
 export default UserChatScreen;

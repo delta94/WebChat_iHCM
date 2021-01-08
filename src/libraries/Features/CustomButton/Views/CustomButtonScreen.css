@@ -1,12 +1,12 @@
 .custombutton-container{
   border-radius: 8px;
   outline: none;
-  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  cursor: pointer;
-  width: 100px;
 }
 
 .primary{

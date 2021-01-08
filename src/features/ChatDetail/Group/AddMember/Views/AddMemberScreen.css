@@ -1,20 +1,28 @@
 .addmember-container{
     width: 500px;
+    height: 550px;
+}
+
+.addmember-container--hasfooter{
     height: 600px;
 }
 
 .addmember-selectedmember{
     position: relative;
-    height: calc(100% - 54px);
     padding: 1rem 1rem 0 1rem;
-    border-bottom: 1px solid #E6E8EB;
+}
+
+.addmember-selectedmember--hasfooter{
+    height: calc(100% - 54px);
+ 
 }
 
 .addmember-selectedmember-main{
     position: relative;
-    height: calc(100% - 45px);
+    /* height: calc(100% - 45px); */
+    height: 480px;
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .addmember-footer{
@@ -27,11 +35,17 @@
     padding: 1rem;
 }
 
+.addmember-footer .custombutton-container{
+    margin-left: auto;
+}
+
 .addmember-footer-selectedmember{
-    max-width: 100%;
-    background-color: darkgreen;
+    width: 70%;
     display: flex;
-    overflow-x: scroll;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
 }
 
 
@@ -44,6 +58,20 @@
         height: 420px;
         width: 300px;
     }
+     
+    .addmember-container--hasfooter{
+        height: 460px;
+    }
+
+    .addmember-selectedmember-main{
+        height: 350px ; 
+    } 
+}
+
+@media only screen and (max-width: 414px) {
+    .addmember-footer-selectedmember{
+        width: 60%;
+    }
 }
 
 @media only screen  and (min-width: 321px) and (max-width: 413px) {
@@ -51,6 +79,14 @@
         height: 500px;
         width: 310px;
     }
+ 
+    .addmember-container--hasfooter{
+        height: 540px;
+    }
+
+    .addmember-selectedmember-main{
+        height: 420px ; 
+    } 
 }
 
 @media only screen and (min-width: 414px) and (max-width: 600px) {
@@ -58,16 +94,40 @@
         height: 560px;
         width: 380px;
     }
+   
+    .addmember-container--hasfooter{
+        height: 600px;
+    }
+
+    .addmember-selectedmember-main{
+        height: 470px ; 
+    } 
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .addmember-container{
         height: 700px;
     }
+
+    .addmember-container--hasfooter{
+        height: 750px;
+    }
+
+    .addmember-selectedmember-main{
+        height: 630px ; 
+    }
 }
 
 @media only screen  and (min-width: 769px) and (max-width: 1024px) {
     .addmember-container{
         height: 800px;
+    }
+    
+    .addmember-container--hasfooter{
+        height: 850px;
+    }
+
+    .addmember-selectedmember-main{
+        height: 730px ; 
     }
 }

@@ -10,7 +10,6 @@ const iconleftarrow = require("../../../../../libraries/Icons/iconleftarrow.svg"
 
 function HeaderConversationDetailScreen(props : IHeaderConversationDetail) {
   let { id } : any = useParams();
-  console.log(id);
   const history = useHistory();
 
   const redirectToConversation = () =>{
