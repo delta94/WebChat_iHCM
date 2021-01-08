@@ -21,5 +21,6 @@ export interface IConversationz{
     nameHeader: string,
     avatar: string,
     isOnline: boolean,
+    isGroup: boolean,
     eleOptionHeader: React.ReactElement
 }

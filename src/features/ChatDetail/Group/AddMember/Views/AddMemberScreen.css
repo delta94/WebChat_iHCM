@@ -1,0 +1,73 @@
+.addmember-container{
+    width: 500px;
+    height: 600px;
+}
+
+.addmember-selectedmember{
+    position: relative;
+    height: calc(100% - 54px);
+    padding: 1rem 1rem 0 1rem;
+    border-bottom: 1px solid #E6E8EB;
+}
+
+.addmember-selectedmember-main{
+    position: relative;
+    height: calc(100% - 45px);
+    width: 100%;
+    overflow: auto;
+}
+
+.addmember-footer{
+    position: absolute;
+    height: 54px; 
+    width: 100%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.addmember-footer-selectedmember{
+    max-width: 100%;
+    background-color: darkgreen;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+/* WIDTH */
+
+@media only screen and (max-width: 320px) {
+    .addmember-container{
+        height: 420px;
+        width: 300px;
+    }
+}
+
+@media only screen  and (min-width: 321px) and (max-width: 413px) {
+    .addmember-container{
+        height: 500px;
+        width: 310px;
+    }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 600px) {
+    .addmember-container{
+        height: 560px;
+        width: 380px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .addmember-container{
+        height: 700px;
+    }
+}
+
+@media only screen  and (min-width: 769px) and (max-width: 1024px) {
+    .addmember-container{
+        height: 800px;
+    }
+}
