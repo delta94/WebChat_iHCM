@@ -1,4 +1,4 @@
-/* .custominput-container input {
+.custominput-container input {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -12,7 +12,7 @@
 {
     outline: none;
     border: 1px solid #4080FF;
-} */
+}
 
 .custominput-container textarea {
     width: 100%;

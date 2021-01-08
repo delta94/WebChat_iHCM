@@ -34,25 +34,6 @@ function HeaderConversationScreen(props: any){
                 </div>
             </div>
             <div className="headerconversation-right">
-                {/* <TooltipScreen context="Gọi video">
-                    <div>
-                        <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
-                    </div>
-                </TooltipScreen>
-                <TooltipScreen context="Tìm kiếm">
-                    <div>
-                        <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
-                    </div>
-                </TooltipScreen>
-                <MainPopupScreen context={ <DetailPopupScreen listEles={ listEles }></DetailPopupScreen> }>
-                    <div>
-                        <TooltipScreen context="Chức năng khác">
-                            <div>
-                                <IconImageScreen src={ iconvertical3dots } alt="3 dots"></IconImageScreen>
-                            </div>
-                        </TooltipScreen>
-                    </div>
-                </MainPopupScreen> */}
                 {
                     props.eleOptionHeader
                 }

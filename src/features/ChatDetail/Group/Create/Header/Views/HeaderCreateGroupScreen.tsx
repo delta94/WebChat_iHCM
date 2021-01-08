@@ -40,7 +40,7 @@ function HeaderCreateGroupScreen() {
             <div className="headerconversationdetail-back">
                 <div onClick={ redirectToConversation }>
                     <img src={ iconleftarrow } alt="" ></img>
-                    Quay lại
+                    <span>Quay lại</span>
                 </div>
             </div>
             <h4>Tạo nhóm trò chuyện</h4>
@@ -52,12 +52,13 @@ function HeaderCreateGroupScreen() {
                 padding={ pathFileList.length > 0 ? "" : "1rem" } 
                 class={ pathFileList.length > 0 ? "headercreategroup-addedavatar" : "" } 
                 onClick={ handleFileSelect }
-
                 ></IconCirclePanel>
+                
                 <CustomInputScreen 
                 placeHolder="Nhập tên nhóm trò chuyện" 
                 class="" 
                 style={ styleCustomInput } 
+                isTextArea={ true }
                 isMultiline={ false }></CustomInputScreen>
             </div>
         </div>

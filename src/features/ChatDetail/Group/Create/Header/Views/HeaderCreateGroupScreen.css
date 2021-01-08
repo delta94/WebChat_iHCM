@@ -16,6 +16,10 @@
     margin-right: 1rem;
 }
 
+.headercreategroup-addavatarandname .custominput-container{
+    width: 260px;
+}
+
 .headercreategroup-container h4{
     position: absolute;
     top: 7%;
@@ -26,4 +30,16 @@
 
 .headercreategroup-addedavatar img{
     border-radius: 50%;
+}
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+
+/* WIDTH */
+
+@media only screen and (max-width: 768px) {
+
+    .headercreategroup-addavatarandname .custominput-container{
+        width: 200px;
+    }
 }

@@ -18,7 +18,8 @@ function AddMemberScreen(props : any) {
   return (
     <div className="addmember-container">
       <div className="addmember-selectedmember">
-        <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false }></CustomInputScreen>
+        <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false } isTextArea={ true }></CustomInputScreen>
+        
         <div className="addmember-selectedmember-main">
           <div className="bodycreategroup-main-body-selecteduserpanel">
             <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"

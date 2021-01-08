@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+.headerconversationdetail-back span{
+    margin-left: 0.4rem;
+}
+
 .headerconversationdetail-avatar{
     display: flex;
     flex-direction: column;

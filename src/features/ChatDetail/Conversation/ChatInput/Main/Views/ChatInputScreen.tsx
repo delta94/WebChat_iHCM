@@ -117,7 +117,7 @@ function ChatInputScreen(props: any){
             }
             <div className="chatinput-main">
                 <IconImageScreen src={ icongim } alt="gim" onClick={ handleFileSelect }></IconImageScreen>
-                <CustomInputScreen placeHolder="Nhập nội dung bình luận" class="" style={ styleCustomInput } setIsMultiline={ setIsMultilineText }  isMultiline={ true }></CustomInputScreen>
+                <CustomInputScreen placeHolder="Nhập nội dung bình luận" class="" style={ styleCustomInput } setIsMultiline={ setIsMultilineText } isMultiline={ true } isTextArea={ true }></CustomInputScreen>
                 <IconImageScreen src={ iconsubstract } alt="send data"></IconImageScreen>
             </div>
         </div>

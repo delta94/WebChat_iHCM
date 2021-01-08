@@ -144,6 +144,7 @@ function UserChatListScreen(props: any) {
           class="searchinput-container"
           placeHolder="Tìm kiếm cuộc trò chuyện"
           isMultiline={false}
+          isTextArea={ true }
         ></CustomInputScreen>
       </div>
       <div className="userchatlist-bottom">

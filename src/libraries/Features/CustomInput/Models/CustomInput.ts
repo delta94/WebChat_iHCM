@@ -1,6 +1,7 @@
 export interface  ICustomInput{
     placeHolder: string,
     class: string,
+    isTextArea:boolean,
     style:{
         backgroundImage?: string,
         backgroundPosition?: string,

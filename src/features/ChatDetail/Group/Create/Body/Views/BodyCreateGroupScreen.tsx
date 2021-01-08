@@ -61,7 +61,7 @@ function BodyCreateGroupScreen() {
       <div className={hasFooter ? "bodycreategroup-main bodycreategroup-main--hasfooter" : "bodycreategroup-main"}>
         <h4>Chọn thành viên</h4>
         <div className="bodycreategroup-main-body">
-          <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false }></CustomInputScreen>
+          <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false }  isTextArea={ true }></CustomInputScreen>
           <div className="bodycreategroup-main-body-selecteduser">
             <div className="bodycreategroup-main-body-selecteduserpanel">
               <CircleAvatarScreen src="https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg"

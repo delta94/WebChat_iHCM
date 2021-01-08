@@ -23,7 +23,7 @@ function HeaderConversationDetailScreen(props : IHeaderConversationDetail) {
         <div className="headerconversationdetail-back">
           <div onClick={ redirectToConversation }>
             <img src={ iconleftarrow } alt="" ></img>
-            Quay lại
+            <span>Quay lại</span>
           </div>
         </div>
         <div>
