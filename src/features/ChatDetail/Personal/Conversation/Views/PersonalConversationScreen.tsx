@@ -225,6 +225,7 @@ function PersonalConversationScreen(props : any) {
         nameHeader:"Trung Đức",
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,
+        isGroup:false,
         eleOptionHeader: eleOptionHeader,
         userList:[
             {

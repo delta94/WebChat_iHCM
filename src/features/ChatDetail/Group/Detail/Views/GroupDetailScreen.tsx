@@ -14,6 +14,7 @@ import CustomBadgeScreen from '../../../../../libraries/Features/CustomBadge/Vie
 import ImageOverlayScreen from '../../../../../libraries/Features/ImageOverlayFullScreen/Views/ImageOverlayScreen';
 import { IMiniImage } from '../../../../../libraries/Features/ImageOverlayFullScreen/Models/ImageOverlay';
 import { useEffect } from 'react';
+import AddMemberScreen from '../../AddMember/Views/AddMemberScreen';
 
 const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
 const iconaddmember = require("../../../../../libraries/Icons/iconaddmember.svg").default;
@@ -21,6 +22,7 @@ const iconsignoutgroup = require("../../../../../libraries/Icons/iconsignoutgrou
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 const icontrash = require("../../../../../libraries/Icons/icontrash.svg").default;
 const iconvertical3dots = require("../../../../../libraries/Icons/iconvertical3dots.svg").default;
+
 
 const miniImageList :IMiniImage[] =[
   {
@@ -89,8 +91,6 @@ const miniImageList :IMiniImage[] =[
       srcImage:"https://wallpaperaccess.com/full/629735.jpg",
   },
 ]
-
-
 
 function GroupDetailScreen(props : any) {
   const [activeLi , setActiveLi] = useState<number>(ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER);
@@ -244,6 +244,7 @@ function GroupDetailScreen(props : any) {
       <div className="popupsignoutgroup-container app-mainfont">
         <div className="popupsignoutgroup-text">
           <p>Bạn chắc chắn thực hiện hành động này ?</p>
+
         </div>
         <div className="popupsignoutgroup-button">
           <CustomButtonScreen onClick={ close } text={"Hủy"} class="default"></CustomButtonScreen> 
@@ -251,24 +252,30 @@ function GroupDetailScreen(props : any) {
         </div>
       </div>
     )
-}
+  }
+
+  const eleContent:React.ReactElement = (
+    <AddMemberScreen></AddMemberScreen>
+  );
 
   const eleOption: React.ReactElement = (
       <>
+        <ModalScreen headerContent={ "Thêm thành viên" } context={ eleContent } hasPadding={ false }>
           <div>
-              <IconCirclePanel srcIcon={ iconaddmember } class="" padding="0.8rem"></IconCirclePanel>
-              <p>Thêm thành viên</p>
+            <IconCirclePanel srcIcon={ iconaddmember } class="" padding="0.8rem"></IconCirclePanel>
+            <p>Thêm thành viên</p>
           </div>
+        </ModalScreen>
+        <div>
+            <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
+            <p>Thông báo</p>
+        </div>
+        <ModalScreen headerContent={"Xác nhận rời khỏi nhóm"} contextHasClose={ eleContextSignout } hasPadding={ false }>
           <div>
-              <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
-              <p>Thông báo</p>
+            <IconCirclePanel srcIcon={ iconsignoutgroup } class="" padding="0.8rem"></IconCirclePanel>
+            <p>Thoát nhóm</p>
           </div>
-          <ModalScreen headerContent={"Xác nhận rời khỏi nhóm"} contextHasClose={ eleContextSignout } hasPadding={ false }>
-            <div>
-              <IconCirclePanel srcIcon={ iconsignoutgroup } class="" padding="0.8rem"></IconCirclePanel>
-              <p>Thoát nhóm</p>
-            </div>
-          </ModalScreen>
+        </ModalScreen>
       </>
   );
 
