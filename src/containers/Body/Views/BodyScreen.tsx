@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './BodyScreen.css';
 import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
 import UserChatListScreen from '../../../features/UserChatList/Main/Views/UserChatListScreen';
@@ -6,16 +6,22 @@ import ChatDetailScreen from '../../../features/ChatDetail/Main/Views/ChatDetail
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import { useLayoutEffect } from 'react';
+import { useWindowSize } from '../../../libraries/Hooks/useWindowSize';
 
 function BodyScreen(props : any) {
   const { hasNavbar } = props;
   const [width, height] = useWindowSize();
 
+  const eleHeader: any = document.querySelector('.header-container');
+  const heightHeader = eleHeader ? eleHeader.offsetHeight : 50
+
+  const styleInline = {
+    height: height- heightHeader
+  }
 
   return (
     <Router>
-      <div className="body-container" style = {{height:height-50}}>
+      <div className="body-container" style = { styleInline }>
         <div className={ hasNavbar ? "body-left" : "body-left body-left--hide"}>
           <NavbarScreen></NavbarScreen>
         </div>
@@ -29,18 +35,5 @@ function BodyScreen(props : any) {
   );
 }
 
-// resize screen
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
 
 export default BodyScreen;

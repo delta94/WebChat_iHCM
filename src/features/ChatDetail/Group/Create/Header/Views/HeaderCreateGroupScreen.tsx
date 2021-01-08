@@ -7,6 +7,7 @@ import { buildFileSelector } from '../../../../../../libraries/Functions/BuildFi
 import './HeaderCreateGroupScreen.css';
 
 const iconleftarrow = require("../../../../../../libraries/Icons/iconleftarrow.svg").default;
+const iconwhiteaddavatar = require("../../../../../../libraries/Icons/iconwhiteaddavatar.svg").default;
 const iconaddavatar = require("./Icons/iconaddavatar.svg").default;
 
 const styleCustomInput = {
@@ -18,9 +19,11 @@ const styleCustomInput = {
 function HeaderCreateGroupScreen() {
     const history = useHistory();
     const [pathFileList , setPathFileList] = useState<string[]>([]);
+    const [hasHover , setHasHover] = useState<boolean>(false);
     
     function cb (pathFileListTemp: string[]){
         setPathFileList(pathFileListTemp);
+        setHasHover(true);
     }
 
     const fileSelector = buildFileSelector(false , cb);
@@ -45,14 +48,23 @@ function HeaderCreateGroupScreen() {
             </div>
             <h4>Tạo nhóm trò chuyện</h4>
             <div className="headercreategroup-addavatarandname">
-                <IconCirclePanel 
-                srcIcon={ srcIcon } 
-                width="60px" 
-                height="60px" 
-                padding={ pathFileList.length > 0 ? "" : "1rem" } 
-                class={ pathFileList.length > 0 ? "headercreategroup-addedavatar" : "" } 
-                onClick={ handleFileSelect }
-                ></IconCirclePanel>
+                <div className="headercreategroup-addedavatar">
+                    <IconCirclePanel 
+                    srcIcon={ srcIcon } 
+                    width="60px" 
+                    height="60px" 
+                    padding={ pathFileList.length > 0 ? "" : "1rem" } 
+                    class={ "" } 
+                    onClick={ handleFileSelect }
+                    ></IconCirclePanel>
+                    {
+                        hasHover && (
+                            <div className="headercreategroup-hoveraddedavatar" onClick={ handleFileSelect }>
+                                <img src={ iconwhiteaddavatar } alt=""/>
+                            </div>
+                        )
+                    }
+                </div>
                 
                 <CustomInputScreen 
                 placeHolder="Nhập tên nhóm trò chuyện" 

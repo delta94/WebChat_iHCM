@@ -48,9 +48,9 @@
         height: 50px;
     }
     
-    .body-right--hasnavbar{
+    /* .body-right--hasnavbar{
         height: 92%;
-    }
+    } */
 
     .body-left--hide{
         height: 0% !important;
@@ -71,9 +71,9 @@
         height: 50px;
     }
 
-    .body-right--hasnavbar{
+    /* .body-right--hasnavbar{
         height: 94%;
-    }
+    } */
 
     .body-left--hide{
         height: 0% !important;

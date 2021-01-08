@@ -14,7 +14,9 @@ body {
   height: 100vh;
 }
 
-.app-mainfont{
+.app-mainfont,
+.tooltip-container
+{
   font-family: Roboto;
   font-style: normal;
   /* font-weight: bold; */
@@ -22,13 +24,20 @@ body {
   color: #1A2948;
 }
 
+.tooltip-container
+{
+  font-size: 14px;
+}
+
+
 input[placeholder] { text-overflow: ellipsis; }
 
 
 /* ------------------------------------------------ CUSTOM SCROLL ----------------------- */
 /* width */
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.5rem;
+  height: 0.3rem;
 }
 
 /* Track */

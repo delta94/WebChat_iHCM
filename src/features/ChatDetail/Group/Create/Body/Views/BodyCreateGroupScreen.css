@@ -38,6 +38,11 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.bodycreategroup-main-body-selecteduserpanel:hover{
+    background-color:#EEF0F7;
 }
 
 .bodycreategroup-main-body-selecteduserpanel p{
@@ -79,30 +84,21 @@
 }
 
 .bodycreategroup-footer-selecteduserpanel{
-    width: 80%;
-    /* background-color: blueviolet; */
+    width: 70%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    overflow: overlay;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
 }
 
 .bodycreategroup-footer-selecteduserpanel .circleavatar-container{
     margin-right: 0.5rem;
+    flex: 0 0 42px;
 }
 
 .bodycreategroup-footer button{
     margin-left: auto;
-    /* background: #115DD3;
-    border-radius: 8px;
-    outline: none;
-    padding: 0 1.2rem;
-    color: #fff;
-    border: 1px solid white;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px; */
 }
 
 
@@ -147,6 +143,10 @@
     .headercreategroup-addavatarandname .iconcirclepanel-container{
         width: 55px !important;
         height: 55px !important;
+    }
+      
+    .bodycreategroup-footer-selecteduserpanel{
+        width: 50%;
     }
 }
 

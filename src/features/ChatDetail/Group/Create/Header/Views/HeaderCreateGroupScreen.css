@@ -32,6 +32,31 @@
     border-radius: 50%;
 }
 
+.headercreategroup-addedavatar{
+    position: relative;
+}
+
+.headercreategroup-hoveraddedavatar{
+    position: absolute;
+    top: 0;
+    height: 0;
+    background-color: rgb(63, 17, 17);
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headercreategroup-hoveraddedavatar:hover{
+    opacity: 0.6;
+}
+
+
+
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 
 
@@ -40,6 +65,6 @@
 @media only screen and (max-width: 768px) {
 
     .headercreategroup-addavatarandname .custominput-container{
-        width: 200px;
+        width: 180px;
     }
 }
