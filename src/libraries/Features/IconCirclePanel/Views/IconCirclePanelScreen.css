@@ -1,6 +1,8 @@
+@import url("../../../Styles/Variables.css");
+
 .iconcirclepanel-container{
   border-radius: 50%;
-  background-color: #F2F3F4;
+  background-color: var(--color-background2);
   display: flex;
   cursor: pointer;
 }

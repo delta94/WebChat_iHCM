@@ -1,3 +1,5 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .nochat-container{
   position: absolute;
   width: 100%;
@@ -19,7 +21,7 @@
   font-size: 18px;
   line-height: 23px;
   padding: 1rem;
-  color: #4D5971;
+  color: var(--color-text--gray);
 }
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */

@@ -1,3 +1,5 @@
+@import url("../../../../../libraries/Styles/Variables.css");
+
 .detailpopup-detail{
     list-style: none;
 
@@ -11,7 +13,7 @@
 }
 
 .detailpopup-detail li:hover{
-    background-color: #EEF0F7;
+    background-color: var(--color-item--active);
 }
 
 .detailpopup-detail li span{
@@ -19,12 +21,12 @@
     font-size: 14px;
     line-height: 21px;
 
-    color: #1A2948;
+    color: var(--color-text--dark);
 }
 
 .detailpopup-header{
     display: flex;
-    border-bottom: 1px solid #E6E8EB;
+    border-bottom: 1px solid var(--color-main-border);
     padding: 0.4rem 0.6rem;
     align-items: center;
 }
@@ -38,12 +40,12 @@
     font-size: 16px;
     line-height: 23px;
  
-    color: #1A2948;
+    color: var(--color-text--dark);
 }
 
 .detailpopup-header-right span{
     font-size: 14px;
     line-height: 21px;
     
-    color: #4D5971;
+    color: var(--color-text--gray);
 }

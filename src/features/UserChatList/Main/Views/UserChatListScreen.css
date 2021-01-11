@@ -1,7 +1,9 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .userchatlist-container{
   width: 380px;
   height: 100%;
-  border-right: 1px solid #E6E8EB;
+  border-right: 1px solid var(--color-main-border);
   /* position: relative; */
   display: flex;
   flex-direction: column;

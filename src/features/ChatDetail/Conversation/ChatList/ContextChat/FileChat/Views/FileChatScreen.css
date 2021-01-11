@@ -1,5 +1,7 @@
+@import url("../../../../../../../libraries/Styles/Variables.css");
+
 .filechat-container{
-    background: #EEF0F7;
+    background: var(--color-item--active);
     mix-blend-mode: normal;
     border: 1px solid #B3B8C2;
     box-sizing: border-box;

@@ -1,5 +1,7 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .modal-container {
-  background-color: #ffffff;
+  background-color:  var(--color-background);
   border-radius: 8px;
   max-width: 500px;
 }
@@ -23,7 +25,7 @@
 }
 
 .modal-header-bottomborder{
-  border-bottom: 1px solid #E6E8EB;
+  border-bottom: 1px solid var(--color-main-border);
 }
 
 .modal-header-content{
@@ -31,7 +33,7 @@
   font-size: 18px;
   line-height: 30px;
 
-  color: #1A2948;
+  color: var(--color-text--dark);
 }
 
 .modal-content-container{

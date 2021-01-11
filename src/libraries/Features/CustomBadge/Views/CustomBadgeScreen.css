@@ -1,3 +1,5 @@
+@import url("../../../Styles/Variables.css");
+
 .custombadge-container{
     padding: 4px;
     font-weight: 500;
@@ -5,7 +7,7 @@
     /* line-height: 19px;  */
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background: #4080FF;
+    color: var(--color-background);
+    background: var(--color-main2);
     border-radius: 4.5px;
 }

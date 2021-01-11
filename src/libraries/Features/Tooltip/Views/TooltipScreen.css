@@ -1,11 +1,13 @@
+@import url("../../../Styles/Variables.css");
+
 .tooltip-container{
-    background-color: #1A2948;
+    background-color: var(--color-text--dark);
     padding: 0.5rem;
     color: #E5E9F2;
     border-radius: 6px;
 }
 
 .popup-arrow {
-    color: #1A2948;
+    color: var(--color-text--dark);
 }
 

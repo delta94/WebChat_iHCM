@@ -1,3 +1,5 @@
+@import url("../../../../../../libraries/Styles/Variables.css");
+
 .chatinput-container{
   position: absolute;
   bottom: 0;
@@ -6,7 +8,7 @@
   width: 100%;
   padding: 0 0.6rem;
   display: flex;
-  border-top: 1px solid #E6E8EB;
+  border-top: 1px solid var(--color-main-border);
   background-color: #fff;
 }
 
@@ -28,14 +30,14 @@
 .chatinput-responseMess .app-mainfont{
   font-size: 12px;
   line-height: 18px;
-  color: #4D5971;
+  color: var(--color-text--gray);
 }
 
 .chatinput-responseMess-username{
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: #4D5971;
+  color: var(--color-text--gray);
 }
 
 .chatinput-responseMess-context{

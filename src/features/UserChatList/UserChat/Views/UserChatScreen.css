@@ -1,3 +1,5 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .userchat-container{
     display: flex;
     align-items: center;
@@ -5,13 +7,11 @@
     padding: 10px;
 }
 
-.userchat-container-active{
-    background-color: #EEF0F7;
+.userchat-container-active,
+.userchat-container:hover{
+    background-color: var(--color-item--active);
 }
 
-.userchat-container:hover{
-    background-color: #EEF0F7;
-}
 
 .userchat-image{
     /* width: 16%; */
@@ -57,7 +57,7 @@
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
-    color: #667085;
+    color: var(--color-text--lightgray);
     overflow:hidden;
     width: 200px;
     white-space: nowrap; 
@@ -67,7 +67,7 @@
 
 .userchat-unreadcontext{
     font-weight: bold;
-    color: #1A2948;
+    color: var(--color-text--dark);
 }
 
 .userchat-username .userchat-unreadcontext{

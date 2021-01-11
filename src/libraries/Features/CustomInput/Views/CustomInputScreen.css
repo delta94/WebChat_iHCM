@@ -1,3 +1,5 @@
+@import url("../../../Styles/Variables.css");
+
 .custominput-container input {
     width: 100%;
     box-sizing: border-box;
@@ -11,14 +13,14 @@
 .custominput-container input:hover
 {
     outline: none;
-    border: 1px solid #4080FF;
+    border: 1px solid var(--color-main2);
 }
 
 .custominput-container textarea {
     width: 100%;
     box-sizing: border-box;
     /* border: 1px solid #ccc; */
-    border: 1px solid #E6E8EB;
+    border: 1px solid var(--color-main-border);
     /* border-radius: 6px; */
     /* font-size: 14px; */
     font-family: 'Roboto';
@@ -43,7 +45,7 @@ textarea::placeholder {
 .custominput-container textarea:hover
 {
     outline: none;
-    border: 1px solid #4080FF;
+    border: 1px solid var(--color-main2);
 }
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */

@@ -1,3 +1,5 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .imageoverlay-container{
     height: 100%;
     width: 100%;
@@ -5,7 +7,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #1A2948;
+    background-color: var(--color-text--dark);
 }
 
 .imageoverlay-container img{
@@ -20,7 +22,7 @@
     font-size: 18px;
     line-height: 30px;
 
-    color: #FFFFFF;
+    color:  var(--color-background);
 }
 
 .imageoverlay-cancel{

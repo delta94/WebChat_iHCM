@@ -1,3 +1,5 @@
+@import url("../../../../../libraries/Styles/Variables.css");
+
 .headerconversationdetail-container{
     position: relative;
     width: 100%;
@@ -42,13 +44,13 @@
     font-size: 18px;
     line-height: 27px;
     text-align: center;
-    color: #1A2948;
+    color: var(--color-text--dark);
 }
 
 .headerconversationdetail-avatar span{
     font-size: 12px;
     line-height: 18px;
-    color: #667085;
+    color: var(--color-text--lightgray);
 }
 
 .headerconversationdetail-avatar-image{
@@ -70,7 +72,7 @@
     font-size: 13px;
     line-height: 20px;
     text-align: center;
-    color: #4D5971;
+    color: var(--color-text--gray);
 }
 
 .headerconversationdetail-option .iconcirclepanel-container{

@@ -1,7 +1,9 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .navbar-container{
   width: 100%;
   height: 100%;
-  background: #115DD3;
+  background: var(--color-main);
   border-radius: 0px 32px 0px 0px;
 }
 
@@ -19,7 +21,7 @@
 .brownnoti-container{
   /* Neutral/ Porcelain */
   padding: 0.7rem;
-  background: #F2F3F4;
+  background: var(--color-background2);
   border-radius: 8px;
   display: inline-block;
   margin-right: 1rem;
@@ -44,7 +46,7 @@
 @media only screen and (max-width: 768px) {
   .navbar-container{
     /* position: absolute; */
-    background: #115DD3;
+    /* background: #115DD3; */
     border-radius: 0;
     display: flex;
   }

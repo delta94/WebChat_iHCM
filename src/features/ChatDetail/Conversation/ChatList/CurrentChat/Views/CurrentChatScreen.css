@@ -1,3 +1,5 @@
+@import url("../../../../../../libraries/Styles/Variables.css");
+
 .currentchat-container{
   width: 70%;
   margin: 0.2rem 0;
@@ -5,29 +7,24 @@
 }
 
 .currentchat-context{
-  background: #4080FF;
+  background: var(--color-main2);
   border-radius: 1rem 1rem 0 1rem;
   padding: 0.7rem;
   overflow: auto;
 }
-/* 
-.currentchat-container .filechat-container{
-  background: #4080FF;
-  color: #fff !important;
-} */
 
 
 .currentchat-context .chat-time{
   font-size: 12px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: var(--color-background);
   opacity: 0.6;
 }
 
 .currentchat-context span:first-child{
   font-size: 14px;
   line-height: 21px;
-  color: #FFFFFF;
+  color: var(--color-background);
   /* mix-blend-mode: normal; */
   opacity: 0.95;
 }

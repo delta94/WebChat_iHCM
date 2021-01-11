@@ -1,3 +1,5 @@
+@import url("../../../../../../libraries/Styles/Variables.css");
+
 .guestchat-container{
     display: flex;
     width: 80%;
@@ -37,7 +39,7 @@
 }
 
 .guestchat-context{
-    background: #F2F3F4;
+    background: var(--color-background2);
     border-radius: 1rem 1rem 1rem 0;
     padding: 0.7rem;
     font-size: 14px;

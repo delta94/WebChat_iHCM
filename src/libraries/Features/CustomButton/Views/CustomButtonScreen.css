@@ -1,3 +1,5 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .custombutton-container{
   border-radius: 8px;
   outline: none;
@@ -10,15 +12,15 @@
 }
 
 .primary{
-  background: #115DD3;
+  background: var(--color-main);
   color: #fff;
   border: 1px solid white;
 }
 
 .default{
   background: white;
-  color: #808999;;
-  border: 1px solid #808999;;
+  color: #808999;
+  border: 1px solid #808999;
 }
 
 
