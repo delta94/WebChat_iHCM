@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserChatScreen.css";
-import { IUserChat } from "../Models/UserChatModel";
 import CircleAvatarScreen from "../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen";
 import { IConversationState } from "../../../../redux/Reducers/ConversationList.reducer";
 import { useHistory } from "react-router-dom";
 import CustomBadgeScreen from "../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen";
-import { useLayoutEffect } from "react";
 import { useWindowSize } from "../../../../libraries/Hooks/useWindowSize";
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;

@@ -1,4 +1,4 @@
-import React , { useEffect, useRef } from 'react';
+import React , { useEffect } from 'react';
 import CircleAvatarScreen from '../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconImageScreen from '../../../libraries/Features/IconImage/Views/IconImageScreen';
 import DetailPopupScreen from '../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
@@ -15,7 +15,7 @@ const icon9dots = require('./Icons/icon9dots.svg').default;
 const iconmain = require('./Icons/iconmain.svg').default;
 
 function HeaderScreen(props : any) {
-  const eleRef = useRef<HTMLDivElement>(null);
+
   const { currentUser } = props;
 
   useEffect(() => {
@@ -77,7 +77,7 @@ function HeaderScreen(props : any) {
 
   return (
     <div className="header-container">
-      <IconImageScreen src={ icon9dots } class="header-icon-9dots" alt="9 dots" onClick={ props.toggleNavbar }></IconImageScreen>
+      <IconImageScreen src={ icon9dots } class="header-icon-9dots" alt="9 dots"></IconImageScreen>
       <IconImageScreen src={ iconmain } class="header-icon-main" alt="9 dots" ></IconImageScreen>
       <div className="header-icon-avatar">
       <MainPopupScreen context={ eleDetailPopup }>
@@ -89,6 +89,7 @@ function HeaderScreen(props : any) {
             height={'36px'}
             alt={"avatar"}
             class={""}
+            hasCursor={ true }
           ></CircleAvatarScreen>
         </div>
 

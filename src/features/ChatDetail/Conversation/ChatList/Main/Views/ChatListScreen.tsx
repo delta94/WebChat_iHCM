@@ -8,7 +8,8 @@ import { ENUM_KIND_OF_MESSAGE } from '../../../../../../libraries/Constants/Kind
 import FileChatScreen from '../../ContextChat/FileChat/Views/FileChatScreen';
 import TextChatScreen from '../../ContextChat/TextChat/Views/TextChatScreen';
 import ImageChatScreen from '../../ContextChat/ImageChat/Views/ImageChatScreen';
-import SystemChatScreen from '../../ContextChat/SystemChat/Views/SystemChatScreen';
+import GroupNotiChatScreen from '../../ContextChat/GroupNotiChat/Views/GroupNotiChatScreen';
+import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 
 function ChatListScreen(props: any){
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -144,7 +145,50 @@ function ChatListScreen(props: any){
                         {
                             showAllMessages()
                         }
-                        <SystemChatScreen></SystemChatScreen>
+                        <GroupNotiChatScreen 
+                        status={ 1 } 
+                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
+                        username={ "Ngọc Dung"}
+                        ></GroupNotiChatScreen>
+                        <GroupNotiChatScreen 
+                        status={ 2 } 
+                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
+                        username={ "Ngọc Dung"}
+                        ></GroupNotiChatScreen>
+                        <GroupNotiChatScreen 
+                        status={ 3 } 
+                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
+                        username={ "Ngọc Dung"}
+                        ></GroupNotiChatScreen>
+                        <div className="chatlist-usersviewed">
+                            <CircleAvatarScreen
+                                width="24px"
+                                height="24px"
+                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
+                                alt={ "" }
+                                class=""
+                                isOnline={ false }
+                                onClick={ null }
+                            ></CircleAvatarScreen>
+                            <CircleAvatarScreen
+                                width="24px"
+                                height="24px"
+                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
+                                alt={ "" }
+                                class=""
+                                isOnline={ false }
+                                onClick={ null }
+                            ></CircleAvatarScreen>
+                            <CircleAvatarScreen
+                                width="24px"
+                                height="24px"
+                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
+                                alt={ "" }
+                                class=""
+                                isOnline={ false }
+                                onClick={ null }
+                            ></CircleAvatarScreen>
+                        </div>
                     </div>
 
                 )

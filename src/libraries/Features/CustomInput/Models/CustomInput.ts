@@ -10,5 +10,6 @@ export interface  ICustomInput{
         fontSize: string,
     },
     setIsMultiline?: any
-    isMultiline: boolean
+    isMultiline: boolean,
+    onChange?: any,
 }

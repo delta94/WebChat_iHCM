@@ -221,7 +221,7 @@ function PersonalConversationScreen(props : any) {
     );
 
     const conversationz: IConversationz = {
-        id:2,
+        id:1,
         nameHeader:"Trung Đức",
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,

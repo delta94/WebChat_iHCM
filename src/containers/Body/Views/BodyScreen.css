@@ -7,9 +7,9 @@
 
 .body-left{
     position: relative;  
-    width: 70px;
+    width: 64px;
     height: 100%;
-    transition: all 0.2s linear;
+    /* transition: all 0.2s linear; */
 }
 
 .body-left--hide{
