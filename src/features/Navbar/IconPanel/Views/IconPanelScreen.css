@@ -1,3 +1,5 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .navbar-iconpanel-container{
   display: flex;        
   justify-content: center;
@@ -5,21 +7,11 @@
   cursor: pointer;
   height: 100%;
   padding: 0.8rem;
+  position: relative;
 }
 .navbar-iconpanel-container:hover{
-  background-color: #0151CD;
+  background-color: var(--color-main4);
 }
-
-/* .navbar-container .navbar-iconpanel-container:first-child{
-  margin-top: 1.8rem;
-} */
-
-/* .navbar-container .navbar-iconpanel-container:last-child{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-} */
 
 .navbar-iconpanel-icon{
   background-repeat: no-repeat;
@@ -28,22 +20,31 @@
 }
 
 .navbar-iconpanel-container--active{
-  background-color: #0151CD;
-  border-left: 3px solid #FF7F08;
+  background-color: var(--color-main4);
+  border-left: 3px solid var(--color-main3);
 }
 
 .navbar-container div{
   flex: 1;
 }
 
+/* .navbar-iconpanel--hasnoti{
+  position: absolute;
+  top: 24%;
+  background-color:var(--color-main3);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+} */
+
 
 @media only screen and (max-width:768px){   
 
 
   .navbar-iconpanel-container--active{
-    background-color: #0151CD;
+    background-color: var(--color-main4);
     border-left: none;
-    border-bottom: 3px solid #FF7F08;
+    border-bottom: 3px solid var(--color-main3);
   } 
 
   .navbar-iconpanel-container{
@@ -54,11 +55,10 @@
 
 @media only screen and (max-height:520px){   
 
-
   .navbar-iconpanel-container--active{
-    background-color: #0151CD;
+    background-color: var(--color-main4);
     border-left: none;
-    border-bottom: 3px solid #FF7F08;
+    border-bottom: 3px solid var(--color-main3);;
   } 
 
   .navbar-iconpanel-container{

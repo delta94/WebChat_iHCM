@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import DetailPopupScreen from '../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
@@ -17,11 +17,15 @@ const iconintroduction = require('../../../../../libraries/Icons/iconintroductio
 
 
 function GroupConversationScreen(props : any) {
-
+    const [hasSearch , setHasSearch] = useState<boolean>(false);
     const history = useHistory();
 
     const redirectToGroupDetail = () =>{
         history.push("/group/detail/" + conversationz.id)
+    }
+
+    const onSearch = () =>{
+        setHasSearch(prev => !prev)
     }
 
     const listEles = [
@@ -56,7 +60,7 @@ function GroupConversationScreen(props : any) {
         <>
             <TooltipScreen context="Tìm kiếm">
                 <div>
-                    <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
+                    <IconImageScreen src={ iconsearch } alt="search" onClick={ onSearch }></IconImageScreen>
                 </div>
             </TooltipScreen>
             <MainPopupScreen context={ <DetailPopupScreen listEles={ listEles }></DetailPopupScreen> }>
@@ -77,6 +81,8 @@ function GroupConversationScreen(props : any) {
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,
         isGroup:true,
+        hasSearch: hasSearch,
+        onSearch:onSearch,
         eleOptionHeader: eleOptionHeader,
         userList:[
             {

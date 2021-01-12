@@ -71,7 +71,7 @@ function BodyCreateGroupScreen() {
       <div className={hasFooter ? "bodycreategroup-main bodycreategroup-main--hasfooter" : "bodycreategroup-main"}>
         <h4>Chọn thành viên</h4>
         <div className="bodycreategroup-main-body">
-          <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false }  isTextArea={ true }></CustomInputScreen>
+          <CustomInputScreen style={ styleCustomInput } hasClearText={ true } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false }  isTextArea={ true }></CustomInputScreen>
           <div className="bodycreategroup-main-body-selecteduser">
 
             <div className="bodycreategroup-main-body-selecteduserpanel" onClick={ () => { setSelectedUser(1) } }>

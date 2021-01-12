@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { ICustomInput } from '../Models/CustomInput';
 import './CustomInputScreen.css';
 
+const icondelete = require("../../../Icons/icondelete.svg").default;
+
 function CustomInputScreen(props : ICustomInput) {
   const [value , setValue] = useState("");
   const textAreaRef = useRef<HTMLTextAreaElement >(null);
@@ -24,12 +26,29 @@ function CustomInputScreen(props : ICustomInput) {
       }
     }
   }
+
+  const changeValue2 = (e: any) =>{
+    props.onChange && props.onChange(e);
+    const value = e.target.value;
+    setValue(value);
+  }
+
+  const clearText = () =>{
+    setValue("");
+  }
+
+
   return (
     <div className={ "custominput-container " + props.class}>
       {
         props.isTextArea ?
-        <input type="text" multiple={true} placeholder={ props.placeHolder } onChange={ (e: ChangeEvent<any>) => props.onChange && props.onChange(e) }style={ props.style }/> :
+        <input type="text" multiple={true} placeholder={ props.placeHolder } value={ value } onChange={ (e: ChangeEvent<any>) => changeValue2(e) }style={ props.style }/> :
         <textarea placeholder={ props.placeHolder } style={ props.style } ref={textAreaRef} rows={1} onChange={ (e: ChangeEvent<Element>) => changeValue(e)}></textarea>
+      }
+      {
+        props.hasClearText && (
+          <img src={ icondelete } alt="" onClick={ clearText } className="custominput-icon-cleartext"/>
+        )
       }
     </div>
   );

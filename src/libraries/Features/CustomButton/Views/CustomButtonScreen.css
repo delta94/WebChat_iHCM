@@ -13,14 +13,20 @@
 
 .primary{
   background: var(--color-main);
-  color: #fff;
-  border: 1px solid white;
+  color: var(--color-background);
+  border: 1px solid var(--color-background);
 }
 
 .default{
   background: white;
-  color: #808999;
-  border: 1px solid #808999;
+  color: var(--color-text-lightgray2);
+  border: 1px solid var(--color-text-lightgray2);
+}
+
+.secondary{
+  background: white;
+  color: var(--color-main2);
+  border: none;
 }
 
 

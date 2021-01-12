@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState } from 'react';
 import IconImageScreen from '../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import DetailPopupScreen from '../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
 import MainPopupScreen from '../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
@@ -14,7 +14,11 @@ const icontrash = require('../../../../../libraries/Icons/icontrash.svg').defaul
 const iconcamera = require('../../../../../libraries/Icons/iconcamera.svg').default;
 
 function PersonalConversationScreen(props : any) {
-
+    const [hasSearch , setHasSearch] = useState<boolean>(false);
+    
+    const onSearch = () =>{
+        setHasSearch(prev => !prev)
+    }
 
     const listEles = [
         {
@@ -38,7 +42,7 @@ function PersonalConversationScreen(props : any) {
         <>
             <TooltipScreen context="Gọi video">
                 <div>
-                    <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
+                    <IconImageScreen src={ iconcamera } alt="camera" onClick={ onSearch }></IconImageScreen>
                 </div>
             </TooltipScreen>
             <TooltipScreen context="Tìm kiếm">
@@ -64,6 +68,8 @@ function PersonalConversationScreen(props : any) {
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,
         isGroup:true,
+        hasSearch: hasSearch,
+        onSearch:onSearch,
         eleOptionHeader: eleOptionHeader,
         userList:[
             {

@@ -2,13 +2,13 @@ import React, { useState , useEffect , useRef , ChangeEvent } from 'react';
 import HeaderScreen from '../../Header/Views/HeaderScreen';
 import UserChatScreen from '../../UserChat/Views/UserChatScreen';
 import './UserChatListScreen.css';
-import NoUserChatFound from '../../NoUserChatFound/Views/NoUserChatFound';
 import CustomInputScreen from '../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import { connect } from 'react-redux';
 import { getConversationList } from '../../../../redux/Actions/ConversationList.action';
 import { IConversationState } from '../../../../redux/Reducers/ConversationList.reducer';
 import { useHistory } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATION } from '../../../../libraries/Constants/KindOfConversation';
+import DataNotFoundScreen from '../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 
 const iconsearch = require("../../../../libraries/Icons/iconsearch.svg").default;
 
@@ -130,7 +130,7 @@ function UserChatListScreen(props: any) {
 
   const ShowConversationList = () => {
     if (conversationList.length === 0) {
-      return <NoUserChatFound></NoUserChatFound>;
+      return <DataNotFoundScreen isPosition={ true }></DataNotFoundScreen>;
     }
     return conversationList.map(
       (conversationState: IConversationState, idx: number) => (
@@ -165,6 +165,7 @@ function UserChatListScreen(props: any) {
           isMultiline={false}
           isTextArea={ true }
           onChange={ onChange }
+          hasClearText={ true }
         ></CustomInputScreen>
       </div>
       <div className="userchatlist-bottom">

@@ -71,7 +71,9 @@ function HeaderCreateGroupScreen() {
                 class="" 
                 style={ styleCustomInput } 
                 isTextArea={ true }
-                isMultiline={ false }></CustomInputScreen>
+                isMultiline={ false }
+                hasClearText={ true }
+                ></CustomInputScreen>
             </div>
         </div>
     );

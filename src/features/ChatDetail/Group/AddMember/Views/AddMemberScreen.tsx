@@ -68,7 +68,7 @@ function AddMemberScreen(props : any) {
   return (
     <div className={ hasFooter ? "addmember-container addmember-container--hasfooter" : "addmember-container"}>
       <div className={ hasFooter ? "addmember-selectedmember addmember-selectedmember--hasfooter" : "addmember-selectedmember"} >
-        <CustomInputScreen style={ styleCustomInput } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false } isTextArea={ true }></CustomInputScreen>
+        <CustomInputScreen style={ styleCustomInput } hasClearText={ true } placeHolder="Nhập tên người cần tìm kiếm" class="" isMultiline={ false } isTextArea={ true }></CustomInputScreen>
         
         <div className="addmember-selectedmember-main">
 

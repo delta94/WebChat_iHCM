@@ -1,17 +1,20 @@
-@import url("../../../../libraries/Styles/Variables.css");
+@import url("../../../Styles/Variables.css");
 
-.nouserchatfound-container{
+.datanotfound-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    position: absolute;
-    top: 0;
     width: 100%;
 }
 
-.nouserchatfound-container h4{
+.datanotfound-container--isposition{
+    position: absolute;
+    top: 0;
+}
+
+.datanotfound-container h4{
     margin-top:1rem;
     font-weight: 500;
     font-size: 18px;
@@ -21,7 +24,7 @@
     color: var(--color-text--gray);
 }
 
-.nouserchatfound-icon{
+.datanotfound-icon{
     width:180px;
     height:160px;
     background-repeat: no-repeat;
@@ -29,13 +32,13 @@
 
 
 @media only screen and (max-height:510px){ 
-    .nouserchatfound-container{
+    .datanotfound-container{
         position: initial;
     }
 }
 
 @media only screen and (max-width:860px){ 
-    .nouserchatfound-container{
+    .datanotfound-container{
         display: none;
     }
 }

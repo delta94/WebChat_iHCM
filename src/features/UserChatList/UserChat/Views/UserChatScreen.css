@@ -43,7 +43,7 @@
     font-size: 14px;
     line-height: 21px;
     margin-left: auto;
-    color: #808999;
+    color: var(--color-text-lightgray2);
 }
 
 .userchat-context-bottom{

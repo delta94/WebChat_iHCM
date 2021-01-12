@@ -14,6 +14,10 @@
   flex-flow: column nowrap; 
 }
 
+.chatlist-container--hassearch{
+  top: 120px;
+}
+
 .chatlist-loader{
   margin: auto;
 }
@@ -47,5 +51,5 @@
   align-items: center;
   justify-content: center;
 
-  color: #FFFFFF;
+  color: var(--color-background);
 }

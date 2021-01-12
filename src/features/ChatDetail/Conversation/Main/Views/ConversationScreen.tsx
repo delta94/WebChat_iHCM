@@ -16,12 +16,15 @@ function ConversationScreen(props: IConversationz){
             eleOptionHeader={ props.eleOptionHeader }
             id={ props.id }
             isGroup={ props.isGroup }
+            hasSearch={ props.hasSearch }
+            onSearch={ props.onSearch }
             ></HeaderConversationScreen>
 
             <ChatListScreen
             id={ props.id }
             userList={ props.userList }
             messageList={ props.messageList }
+            hasSearch={ props.hasSearch }
             ></ChatListScreen>
             
             <ChatInputScreen></ChatInputScreen>

@@ -12,6 +12,8 @@ function IconPanelScreen(props : IconPanelModel) {
         "navbar-iconpanel-container"}
       >
         <IconImageScreen src={ props.srcImg } alt="" class="navbar-iconpanel-icon"></IconImageScreen>
+        {/* <div className="navbar-iconpanel--hasnoti"></div> */}
+
       </div>
     </TooltipScreen>
 

@@ -10,6 +10,7 @@ import TextChatScreen from '../../ContextChat/TextChat/Views/TextChatScreen';
 import ImageChatScreen from '../../ContextChat/ImageChat/Views/ImageChatScreen';
 import GroupNotiChatScreen from '../../ContextChat/GroupNotiChat/Views/GroupNotiChatScreen';
 import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
+import DataNotFoundScreen from '../../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 
 function ChatListScreen(props: any){
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -172,7 +173,7 @@ function ChatListScreen(props: any){
     }
 
     return (
-        <div className="chatlist-container" ref={ chatlistRef }>
+        <div className={ props.hasSearch ? "chatlist-container chatlist-container--hassearch" : "chatlist-container"} ref={ chatlistRef }>
             {
                 isLoading ? (
                     <div className="chatlist-loader">
@@ -193,6 +194,7 @@ function ChatListScreen(props: any){
 
                 )
             }
+            {/* <DataNotFoundScreen isPosition={ false }></DataNotFoundScreen> */}
         </div>
     )
 }

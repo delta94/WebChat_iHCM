@@ -1,15 +1,31 @@
 @import url("../../../../../libraries/Styles/Variables.css");
 
 .headerconversation-container{
+    border-bottom: 1px solid var(--color-main-border);
+}
+
+.headerconversation-main{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-main-border);
-    /* height: 10%; */
     height: 60px;
     padding: 0 1rem;
     justify-content: space-between;
 }
 
+.headerconversation-search{
+    padding: 0 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerconversation-search .custominput-container{
+    width: 99%;
+}
+
+.headerconversation-container--hassearch{
+    height: 120px;
+}
 
 .headerconversation-left{
     display: flex;
