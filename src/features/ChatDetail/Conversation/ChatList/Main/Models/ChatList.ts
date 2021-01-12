@@ -12,6 +12,13 @@ export interface IMessage{
     kindOfMess:number, // 0: text , 1 : image , 2: file , 3: link
     context: string,
     datetime: string,
+    isGroupNoti:boolean,
+    groupNoti:{
+        status:number,
+        username:string,
+        imgSrc:string
+    },
+    useridHaveRead:number[],
 }
 
 export interface IConversation{

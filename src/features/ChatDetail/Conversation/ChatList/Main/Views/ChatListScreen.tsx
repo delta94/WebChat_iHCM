@@ -27,7 +27,7 @@ function ChatListScreen(props: any){
         setLoading(true);
         setError(false);
 
-        const messageListz = props.messageList.slice(- pageNum * 3);
+        const messageListz = props.messageList.slice(- pageNum * 10);
         setMessageList(messageListz)
         setHasMore(messageListz.length > 0)
         setLoading(false)
@@ -52,83 +52,124 @@ function ChatListScreen(props: any){
         }
     })
     
-    const showAllMessages = useCallback(() :any =>{
+    const showAllMessages = () =>{
         if(observer.current){
             observer.current.scrollTop = observer.current.scrollHeight;
         }
         return messageList.map((message: IMessage, index: number) =>{
-            const userTemp: IUser = findUserById(props.userList,message.userid);
-            const isCurrent: boolean = userTemp.id === userid;
-
-            let eleChildren: JSX.Element = <div></div>;
-
-            switch (message.kindOfMess) {
-                case ENUM_KIND_OF_MESSAGE.TEXT:
-                    eleChildren = (
-                        <TextChatScreen
-                        isCurrent={ isCurrent }
-                        context={ message.context }
-                        datetime={ message.datetime }
-                        ></TextChatScreen>
-                    )
-
-                    break;
-                case ENUM_KIND_OF_MESSAGE.FILE:
-                    eleChildren = (
-                        <FileChatScreen
-                        isFile={ true }
-                        isCurrent={ isCurrent }
-                        context={ message.context }
-                        datetime={ message.datetime }
-                        ></FileChatScreen>
-                    )
-
-                    break;
-                case ENUM_KIND_OF_MESSAGE.IMAGE:
-                    eleChildren = (
-                        <ImageChatScreen
-                        isCurrent={ isCurrent }
-                        context={ message.context }
-                        datetime={ message.datetime }
-                        ></ImageChatScreen>
-                    )
-
-                    break;
-                case ENUM_KIND_OF_MESSAGE.LINK:
-                    eleChildren = (
-                        <FileChatScreen
-                        isFile={ false }
-                        isCurrent={ isCurrent }
-                        context={ message.context }
-                        datetime={ message.datetime }
-                        ></FileChatScreen>
-                    )
-                    break;
-            
-                default:
-                    return <div></div>;
-            }
-
-            if(isCurrent){
-                return <CurrentChatScreen key={ index } ref={ index === 0 ? lastMessageRef : null }>
-                    { eleChildren }
-                </CurrentChatScreen>
-
+            if(message.isGroupNoti){
+                return <GroupNotiChatScreen 
+                status={ message.groupNoti.status } 
+                imgSrc={ message.groupNoti.imgSrc }
+                username={ message.groupNoti.username }
+                ></GroupNotiChatScreen>
             } else{
-                return <div ref={ index === 0 ? lastMessageRef : null } key={ index }>
-                    <GuestChatScreen
-                        id={ props.id }
-                        kindOfMess={ message.kindOfMess }
-                        user={ userTemp } 
-                        context={ message.context }
-                    >
+                const userTemp: IUser = findUserById(props.userList,message.userid);
+                const isCurrent: boolean = userTemp.id === userid;
+    
+                let eleChildren: JSX.Element = <div></div>;
+    
+                switch (message.kindOfMess) {
+                    case ENUM_KIND_OF_MESSAGE.TEXT:
+                        eleChildren = (
+                            <TextChatScreen
+                            isCurrent={ isCurrent }
+                            context={ message.context }
+                            datetime={ message.datetime }
+                            ></TextChatScreen>
+                        )
+    
+                        break;
+                    case ENUM_KIND_OF_MESSAGE.FILE:
+                        eleChildren = (
+                            <FileChatScreen
+                            isFile={ true }
+                            isCurrent={ isCurrent }
+                            context={ message.context }
+                            datetime={ message.datetime }
+                            ></FileChatScreen>
+                        )
+    
+                        break;
+                    case ENUM_KIND_OF_MESSAGE.IMAGE:
+                        eleChildren = (
+                            <ImageChatScreen
+                            isCurrent={ isCurrent }
+                            context={ message.context }
+                            datetime={ message.datetime }
+                            ></ImageChatScreen>
+                        )
+    
+                        break;
+                    case ENUM_KIND_OF_MESSAGE.LINK:
+                        eleChildren = (
+                            <FileChatScreen
+                            isFile={ false }
+                            isCurrent={ isCurrent }
+                            context={ message.context }
+                            datetime={ message.datetime }
+                            ></FileChatScreen>
+                        )
+                        break;
+                
+                    default:
+                        return <div></div>;
+                }
+    
+                if(isCurrent){
+                    return <CurrentChatScreen key={ index } ref={ index === 0 ? lastMessageRef : null }>
                         { eleChildren }
-                    </GuestChatScreen>
-                </div>
-
+                    </CurrentChatScreen>
+    
+                } else{
+                    return <div ref={ index === 0 ? lastMessageRef : null } key={ index }>
+                        <GuestChatScreen
+                            id={ props.id }
+                            kindOfMess={ message.kindOfMess }
+                            user={ userTemp } 
+                            context={ message.context }
+                        >
+                            { eleChildren }
+                        </GuestChatScreen>
+                    </div>
+    
+                }
             }
         })
-    },[messageList , userid]);
+    };
+
+    const showUsersHaveRead = () =>{
+        const useridHaveReadList = messageList[messageList.length - 1].useridHaveRead;
+        return <div className="chatlist-usersviewed">
+                    {
+                        useridHaveReadList.map((userid:number , index:number) =>{
+                            if(index < 3){
+                                const userTemp: IUser = findUserById(props.userList,userid);
+                                return <CircleAvatarScreen
+                                    width=""
+                                    height=""
+                                    src={ userTemp.avatar }
+                                    alt={ "" }
+                                    class="chatlist-userhasread"
+                                    isOnline={ false }
+                                    onClick={ null }
+                                ></CircleAvatarScreen>
+                            }
+                            return <></>;
+                        })
+                    }
+                    {
+                        useridHaveReadList.length > 3 && (
+                            <div className="chatlist-userhasread chatlist-moreusershaveread app-mainfont">
+                                <span>
+                                    +
+                                    { useridHaveReadList.length - 3 }
+                                </span>
+                            </div>
+                        )
+                    }
+                </div>
+    }
 
     return (
         <div className="chatlist-container" ref={ chatlistRef }>
@@ -145,50 +186,9 @@ function ChatListScreen(props: any){
                         {
                             showAllMessages()
                         }
-                        <GroupNotiChatScreen 
-                        status={ 1 } 
-                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
-                        username={ "Ngọc Dung"}
-                        ></GroupNotiChatScreen>
-                        <GroupNotiChatScreen 
-                        status={ 2 } 
-                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
-                        username={ "Ngọc Dung"}
-                        ></GroupNotiChatScreen>
-                        <GroupNotiChatScreen 
-                        status={ 3 } 
-                        imgSrc={"https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg"}
-                        username={ "Ngọc Dung"}
-                        ></GroupNotiChatScreen>
-                        <div className="chatlist-usersviewed">
-                            <CircleAvatarScreen
-                                width="24px"
-                                height="24px"
-                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
-                                alt={ "" }
-                                class=""
-                                isOnline={ false }
-                                onClick={ null }
-                            ></CircleAvatarScreen>
-                            <CircleAvatarScreen
-                                width="24px"
-                                height="24px"
-                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
-                                alt={ "" }
-                                class=""
-                                isOnline={ false }
-                                onClick={ null }
-                            ></CircleAvatarScreen>
-                            <CircleAvatarScreen
-                                width="24px"
-                                height="24px"
-                                src={ "https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-520-couple-avatar-boy-avatar-little-dinosaur-cartoon-cute-image_1263411.jpg" }
-                                alt={ "" }
-                                class=""
-                                isOnline={ false }
-                                onClick={ null }
-                            ></CircleAvatarScreen>
-                        </div>
+                        {
+                            showUsersHaveRead()
+                        }
                     </div>
 
                 )

@@ -1,19 +1,40 @@
-.nouserchatfound-icon{
-    width:190px;
-    height:183px;
-    background-repeat: no-repeat;
-
-}
+@import url("../../../../libraries/Styles/Variables.css");
 
 .nouserchatfound-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: inherit;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
-@media only screen and (max-width:767px){ 
+.nouserchatfound-container h4{
+    margin-top:1rem;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    text-align: center;
+    color: var(--color-text--gray);
+}
+
+.nouserchatfound-icon{
+    width:180px;
+    height:160px;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-height:510px){ 
+    .nouserchatfound-container{
+        position: initial;
+    }
+}
+
+@media only screen and (max-width:860px){ 
     .nouserchatfound-container{
         display: none;
     }

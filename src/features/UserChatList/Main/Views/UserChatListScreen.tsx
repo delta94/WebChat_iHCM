@@ -20,71 +20,69 @@ const styleCustomInput = {
   fontSize: "1rem",
 };
 
+const conversationList: IConversationState[] = [
+  {
+    avatar: "https://www.w3schools.com/w3images/avatar2.png",
+    hasReadLastMess: false,
+    id: 1,
+    isActive: false,
+    isGroup: false,
+    isOnline: true,
+    lastMess:
+      "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+    name: "Trung Đức",
+    setIsActive: null,
+    timeToReadLastMess: "09:09",
+  },
+  {
+    avatar: "https://www.w3schools.com/w3images/avatar2.png",
+    hasReadLastMess: false,
+    id: 2,
+    isActive: false,
+    isGroup: true,
+    isOnline: false,
+    lastMess:
+      "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+    name: "Hội người yêu chim",
+    setIsActive: null,
+    timeToReadLastMess: "09:09",
+  },
+  {
+    avatar: "https://www.w3schools.com/w3images/avatar2.png",
+    hasReadLastMess: true,
+    id: 3,
+    isActive: false,
+    isGroup: true,
+    isOnline: true,
+    lastMess:
+      "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+    name: "Hội người yêu chim",
+    setIsActive: null,
+    timeToReadLastMess: "09:09",
+  },
+  {
+    avatar: "https://www.w3schools.com/w3images/avatar2.png",
+    hasReadLastMess: true,
+    id: 4,
+    isActive: false,
+    isGroup: false,
+    isOnline: true,
+    lastMess:
+      "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+    name: "Trung Đức",
+    setIsActive: null,
+    timeToReadLastMess: "09:09",
+  },
+];
+
 function UserChatListScreen(props: any) {
   const typingTimeoutRef = useRef<any>(null);
   const [query , setQuery] = useState<string>("");
-
-  const conversationList = [
-    {
-      avatar: "https://www.w3schools.com/w3images/avatar2.png",
-      hasReadLastMess: false,
-      id: 1,
-      isActive: false,
-      isGroup: false,
-      isOnline: true,
-      lastMess:
-        "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
-      name: "Trung Đức",
-      setIsActive: null,
-      timeToReadLastMess: "09:09",
-    },
-    {
-      avatar: "https://www.w3schools.com/w3images/avatar2.png",
-      hasReadLastMess: false,
-      id: 2,
-      isActive: false,
-      isGroup: true,
-      isOnline: false,
-      lastMess:
-        "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
-      name: "Hội người yêu chim",
-      setIsActive: null,
-      timeToReadLastMess: "09:09",
-    },
-    {
-      avatar: "https://www.w3schools.com/w3images/avatar2.png",
-      hasReadLastMess: true,
-      id: 3,
-      isActive: false,
-      isGroup: true,
-      isOnline: true,
-      lastMess:
-        "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
-      name: "Hội người yêu chim",
-      setIsActive: null,
-      timeToReadLastMess: "09:09",
-    },
-    {
-      avatar: "https://www.w3schools.com/w3images/avatar2.png",
-      hasReadLastMess: true,
-      id: 4,
-      isActive: false,
-      isGroup: false,
-      isOnline: true,
-      lastMess:
-        "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
-      name: "Trung Đức",
-      setIsActive: null,
-      timeToReadLastMess: "09:09",
-    },
-  ];
-
-  const history = useHistory();
-
   const [activedUserChat , setActivedUserChat] = useState({
     isGroup:false,
     id: -1
-  })
+  });
+  const history = useHistory();
 
   useEffect(() => {
     const id = 3;
@@ -130,7 +128,7 @@ function UserChatListScreen(props: any) {
     });
   };
 
-  const ShowConversationList = (conversationList: IConversationState[]) => {
+  const ShowConversationList = () => {
     if (conversationList.length === 0) {
       return <NoUserChatFound></NoUserChatFound>;
     }
@@ -170,7 +168,9 @@ function UserChatListScreen(props: any) {
         ></CustomInputScreen>
       </div>
       <div className="userchatlist-bottom">
-        {ShowConversationList(conversationList)}
+        {
+          ShowConversationList()
+        }
       </div>
     </div>
   );
