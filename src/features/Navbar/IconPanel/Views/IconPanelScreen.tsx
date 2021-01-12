@@ -10,6 +10,7 @@ function IconPanelScreen(props : IconPanelModel) {
       <div className={ props.isActive ? 
         "navbar-iconpanel-container navbar-iconpanel-container--active" : 
         "navbar-iconpanel-container"}
+        onClick={ props.onClick }
       >
         <IconImageScreen src={ props.srcImg } alt="" class="navbar-iconpanel-icon"></IconImageScreen>
         {/* <div className="navbar-iconpanel--hasnoti"></div> */}

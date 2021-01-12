@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import TooltipScreen from '../../../../libraries/Features/Tooltip/Views/TooltipScreen';
+import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
 import './HeaderScreen.css';
 
 const iconpenedit = require('./Icons/iconpenedit.svg').default;

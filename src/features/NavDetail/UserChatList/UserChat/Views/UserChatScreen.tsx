@@ -1,10 +1,10 @@
 import React from "react";
 import "./UserChatScreen.css";
-import CircleAvatarScreen from "../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen";
-import { IConversationState } from "../../../../redux/Reducers/ConversationList.reducer";
+import CircleAvatarScreen from "../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen";
+import { IConversationState } from "../../../../../redux/Reducers/ConversationList.reducer";
 import { useHistory } from "react-router-dom";
-import CustomBadgeScreen from "../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen";
-import { useWindowSize } from "../../../../libraries/Hooks/useWindowSize";
+import CustomBadgeScreen from "../../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen";
+import { useWindowSize } from "../../../../../libraries/Hooks/useWindowSize";
 
 // const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require("./Icons/iconunread.svg").default;

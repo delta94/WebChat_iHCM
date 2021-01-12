@@ -1,0 +1,6 @@
+export const ENUM_KIND_OF_ICONPANEL = {
+    MESSAGES:1,
+    FRIENDS:2,
+    NOTI:3,
+    QUESTIONS:4,
+}

@@ -2,15 +2,15 @@ import React, { useState , useEffect , useRef , ChangeEvent } from 'react';
 import HeaderScreen from '../../Header/Views/HeaderScreen';
 import UserChatScreen from '../../UserChat/Views/UserChatScreen';
 import './UserChatListScreen.css';
-import CustomInputScreen from '../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
+import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import { connect } from 'react-redux';
-import { getConversationList } from '../../../../redux/Actions/ConversationList.action';
-import { IConversationState } from '../../../../redux/Reducers/ConversationList.reducer';
+import { getConversationList } from '../../../../../redux/Actions/ConversationList.action';
+import { IConversationState } from '../../../../../redux/Reducers/ConversationList.reducer';
 import { useHistory } from 'react-router-dom';
-import { ENUM_KIND_OF_CONVERSATION } from '../../../../libraries/Constants/KindOfConversation';
-import DataNotFoundScreen from '../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
+import { ENUM_KIND_OF_CONVERSATION } from '../../../../../libraries/Constants/KindOfConversation';
+import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 
-const iconsearch = require("../../../../libraries/Icons/iconsearch.svg").default;
+const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
 const styleCustomInput = {
   backgroundImage: `url('${iconsearch}')`,
@@ -155,7 +155,7 @@ function UserChatListScreen(props: any) {
   };
 
   return (
-    <div className="userchatlist-container">
+    <>
       <div className="userchatlist-top">
         <HeaderScreen></HeaderScreen>
         <CustomInputScreen
@@ -173,7 +173,7 @@ function UserChatListScreen(props: any) {
           ShowConversationList()
         }
       </div>
-    </div>
+    </>
   );
 }
 

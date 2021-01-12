@@ -1,3 +1,5 @@
+@import url("../../../libraries/Styles/Variables.css");
+
 .body-container{
     position: relative;
     width: 100%;
@@ -25,6 +27,14 @@
     display: flex;
 }
 
+.body-right-information{
+    width: 380px;
+    height: 100%;
+    border-right: 1px solid var(--color-main-border);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 
@@ -33,6 +43,12 @@
 @media only screen and (max-width: 129px) {
     .body-container{
         display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .body-right-information{
+        width: 60px !important;
     }
 }
 
@@ -47,17 +63,12 @@
         width: 100%;
         height: 50px;
     }
-    
-    /* .body-right--hasnavbar{
-        height: 92%;
-    } */
 
     .body-left--hide{
         height: 0% !important;
         opacity: 0;
     }
 }
-
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .body-container{
