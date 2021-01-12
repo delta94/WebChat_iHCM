@@ -1,0 +1,16 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
+.body-right-information{
+    width: 380px;
+    height: 100%;
+    border-right: 1px solid var(--color-main-border);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .body-right-information{
+        width: 60px !important;
+    }
+}

@@ -11,6 +11,7 @@ const ModalScreen = (props: IModal) => (
     modal
     nested
     className="modal"
+    position={['right center', 'bottom center', 'left center', 'top center']}
   >
     {(close:any) => (
       <div className="modal-container">

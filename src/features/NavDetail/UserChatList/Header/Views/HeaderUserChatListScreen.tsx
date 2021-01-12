@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
-import './HeaderScreen.css';
+import './HeaderUserChatListScreen.css';
 
 const iconpenedit = require('./Icons/iconpenedit.svg').default;
 
-function HeaderScreen() {
+function HeaderUserChatListScreen() {
   const history = useHistory();
 
   const redirectToCreateGroup = () =>{
@@ -22,4 +22,4 @@ function HeaderScreen() {
   );
 }
 
-export default HeaderScreen;
+export default HeaderUserChatListScreen;

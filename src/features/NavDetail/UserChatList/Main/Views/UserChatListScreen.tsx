@@ -1,5 +1,5 @@
 import React, { useState , useEffect , useRef , ChangeEvent } from 'react';
-import HeaderScreen from '../../Header/Views/HeaderScreen';
+import HeaderUserChatListScreen from '../../Header/Views/HeaderUserChatListScreen';
 import UserChatScreen from '../../UserChat/Views/UserChatScreen';
 import './UserChatListScreen.css';
 import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
@@ -157,7 +157,7 @@ function UserChatListScreen(props: any) {
   return (
     <>
       <div className="userchatlist-top">
-        <HeaderScreen></HeaderScreen>
+        <HeaderUserChatListScreen></HeaderUserChatListScreen>
         <CustomInputScreen
           style={styleCustomInput}
           class="searchinput-container"

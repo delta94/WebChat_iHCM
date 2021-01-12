@@ -32,10 +32,10 @@ function NavbarScreen(props: any) {
       <IconPanelScreen isActive={ activedIcon === ENUM_KIND_OF_ICONPANEL.MESSAGES } srcImg={ iconmessage } contextToolTip={"Trò chuyện"} onClick={ () =>{setActivedIcon(ENUM_KIND_OF_ICONPANEL.MESSAGES)} }></IconPanelScreen>
       <IconPanelScreen isActive={ activedIcon === ENUM_KIND_OF_ICONPANEL.FRIENDS } srcImg={ iconfriend } contextToolTip={"Bạn bè"} onClick={ () =>{setActivedIcon(ENUM_KIND_OF_ICONPANEL.FRIENDS)} }></IconPanelScreen>
       {/* <ModalScreen headerContent={ "Cài đặt thông báo" } context={ eleContext } hasPadding={ true }>
-        <div>
-          <IconPanelScreen isActive={false} srcImg={ iconwhitenoti } contextToolTip={"Thông báo"}></IconPanelScreen>
-        </div>
-      </ModalScreen> */}
+            <div>
+              <IconPanelScreen isActive={false} srcImg={ iconwhitenoti } contextToolTip={"Thông báo"}></IconPanelScreen>
+            </div>
+          </ModalScreen> */}
       <IconPanelScreen isActive={ activedIcon === ENUM_KIND_OF_ICONPANEL.NOTI } srcImg={ iconwhitenoti } contextToolTip={"Thông báo"} onClick={ () =>{setActivedIcon(ENUM_KIND_OF_ICONPANEL.NOTI)} }></IconPanelScreen> 
       <div className="navbar-iconpanel-last">
         <IconPanelScreen isActive={ activedIcon === ENUM_KIND_OF_ICONPANEL.QUESTIONS } srcImg={ iconquestion } contextToolTip={"Giải đáp"} onClick={ () =>{setActivedIcon(ENUM_KIND_OF_ICONPANEL.QUESTIONS)} }></IconPanelScreen>

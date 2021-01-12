@@ -1,0 +1,31 @@
+import React from 'react';
+import './NavDetailScreen.css';
+import { INavDetail } from '../Models/NavDetail';
+import { ENUM_KIND_OF_ICONPANEL } from '../../../../libraries/Constants/KindOfIconPanel';
+import UserChatListScreen from '../../UserChatList/Main/Views/UserChatListScreen';
+import NotificationScreen from '../../Noti/Main/Views/NotificationScreen';
+
+function NavDetailScreen(props: INavDetail) {
+
+  const { activedIcon } = props;
+  const eleInfor = () =>{
+    switch (activedIcon) {
+      case ENUM_KIND_OF_ICONPANEL.MESSAGES:
+        return <UserChatListScreen></UserChatListScreen>
+      case ENUM_KIND_OF_ICONPANEL.FRIENDS:
+        return <></>
+      case ENUM_KIND_OF_ICONPANEL.NOTI:
+        return <NotificationScreen></NotificationScreen>
+    }
+  }
+  return (
+    <div className="body-right-information">
+      {
+        eleInfor()
+      }
+    </div>
+  );
+
+}
+
+export default NavDetailScreen;

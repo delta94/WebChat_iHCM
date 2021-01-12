@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './BodyScreen.css';
 import NavbarScreen from './../../../features/Navbar/Main/Views/NavbarScreen'
-import UserChatListScreen from '../../../features/NavDetail/UserChatList/Main/Views/UserChatListScreen';
+// import UserChatListScreen from '../../../features/NavDetail/UserChatList/Main/Views/UserChatListScreen';
 import ChatDetailScreen from '../../../features/ChatDetail/Main/Views/ChatDetailScreen';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
 import { useWindowSize } from '../../../libraries/Hooks/useWindowSize';
 import { ENUM_KIND_OF_ICONPANEL } from '../../../libraries/Constants/KindOfIconPanel';
+import NavDetailScreen from '../../../features/NavDetail/Main/Views/NavDetailScreen';
 
 function BodyScreen(props : any) {
   const [activedIcon , setActivedIcon] = useState(ENUM_KIND_OF_ICONPANEL.MESSAGES);
@@ -29,10 +30,8 @@ function BodyScreen(props : any) {
           <NavbarScreen activedIcon={ activedIcon } setActivedIcon={ setActivedIcon }></NavbarScreen>
         </div>
         <div className={ hasNavbar ? "body-right--hasnavbar body-right" : "body-right"}>
-          <div className="body-right-information">
-            <UserChatListScreen></UserChatListScreen>
-          </div>
 
+          <NavDetailScreen  activedIcon={ activedIcon }></NavDetailScreen>
           <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
         </div>
       </div>
