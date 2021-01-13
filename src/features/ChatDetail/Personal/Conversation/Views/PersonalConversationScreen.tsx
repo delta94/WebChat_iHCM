@@ -42,12 +42,12 @@ function PersonalConversationScreen(props : any) {
         <>
             <TooltipScreen context="Gọi video">
                 <div>
-                    <IconImageScreen src={ iconcamera } alt="camera" onClick={ onSearch }></IconImageScreen>
+                    <IconImageScreen src={ iconcamera } alt="camera"></IconImageScreen>
                 </div>
             </TooltipScreen>
             <TooltipScreen context="Tìm kiếm">
                 <div>
-                    <IconImageScreen src={ iconsearch } alt="search"></IconImageScreen>
+                    <IconImageScreen src={ iconsearch } alt="search" onClick={ onSearch }></IconImageScreen>
                 </div>
             </TooltipScreen>
             <MainPopupScreen context={ <DetailPopupScreen listEles={ listEles }></DetailPopupScreen> }>

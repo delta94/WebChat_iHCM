@@ -9,6 +9,7 @@ import { IConversationState } from '../../../../../redux/Reducers/ConversationLi
 import { useHistory } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATION } from '../../../../../libraries/Constants/KindOfConversation';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
+import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/KindOfNotFoundIcon';
 
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
@@ -75,6 +76,7 @@ const conversationList: IConversationState[] = [
   },
 ];
 
+
 function UserChatListScreen(props: any) {
   const typingTimeoutRef = useRef<any>(null);
   const [query , setQuery] = useState<string>("");
@@ -130,7 +132,7 @@ function UserChatListScreen(props: any) {
 
   const ShowConversationList = () => {
     if (conversationList.length === 0) {
-      return <DataNotFoundScreen isPosition={ true }></DataNotFoundScreen>;
+      return <DataNotFoundScreen text={"Không tìm thấy kết quả"} icon={ ENUM_KIND_OF_NOTFOUNDICON.DATA } isPosition={ true }></DataNotFoundScreen>;
     }
     return conversationList.map(
       (conversationState: IConversationState, idx: number) => (

@@ -3,7 +3,7 @@ import './NavDetailScreen.css';
 import { INavDetail } from '../Models/NavDetail';
 import { ENUM_KIND_OF_ICONPANEL } from '../../../../libraries/Constants/KindOfIconPanel';
 import UserChatListScreen from '../../UserChatList/Main/Views/UserChatListScreen';
-import NotificationScreen from '../../Noti/Main/Views/NotificationScreen';
+import NotificationScreen from '../../NotiList/Main/Views/NotificationListScreen';
 
 function NavDetailScreen(props: INavDetail) {
 

@@ -1,32 +1,49 @@
 import React from 'react';
 import DetailPopupScreen from '../../../../../libraries/Features/Popup/DetailPopup/Views/DetailPopupScreen';
 import MainPopupScreen from '../../../../../libraries/Features/Popup/MainPopup/Views/MainPopupScreen';
+import ToggleSwitchScreen from '../../../../../libraries/Features/ToggleSwitch/Views/ToggleSwitchScreen';
 import TooltipScreen from '../../../../../libraries/Features/Tooltip/Views/TooltipScreen';
-import NoNotificationScreen from '../../NoNoti/Views/NoNotificationScreen';
-import './NotificationScreen.css';
+import './HeaderNotificationListScreen.css';
 
 const iconvertical3dots = require('../../../../../libraries/Icons/iconvertical3dots.svg').default;
 const icontrash = require('../../../../../libraries/Icons/icontrash.svg').default;
 const iconsetting = require('../../../../../libraries/Icons/iconsetting.svg').default;
 const iconconfirm = require('../../../../../libraries/Icons/iconconfirm.svg').default;
+const iconbrownnoti = require('../../../../../libraries/Icons/iconbrownnoti.svg').default;
 
-function NotificationScreen(props: any) {
+function HeaderNotificationListScreen(props: any) {
+
+    const eleContext = (
+        <div className="userchatlist-header-container">
+            <div className="brownnoti-container">
+                <img src={ iconbrownnoti }  alt=""></img>
+            </div>
+            <div className="app-mainfont">
+                <h4>Thông báo</h4>
+                <span>Tất cả các thông báo</span>
+            </div>
+            <ToggleSwitchScreen></ToggleSwitchScreen>
+        </div>
+    );
 
     const listEles = [
         {
             onClick: null,
             icon: iconconfirm,
-            text: "Đã đọc tất cả"
+            text: "Đã đọc tất cả",
+            eleContext: null,
         },
         {
             onClick: null,
             icon: iconsetting,
-            text: "Cài đặt"
+            text: "Cài đặt",
+            eleContext: eleContext,
         },
         {
             onClick: null,
             icon: icontrash,
-            text: "Xóa tất cả"
+            text: "Xóa tất cả",
+            eleContext: eleContext,
         },
       ];
 
@@ -43,16 +60,13 @@ function NotificationScreen(props: any) {
                             </TooltipScreen>
                         </div>
                     </MainPopupScreen>
-
                 </div>
-            </div>
-
-            <div className="notification-bottom">
-
             </div>
         </>
     );
 
 }
 
-export default NotificationScreen;
+export default HeaderNotificationListScreen;
+
+
