@@ -19,8 +19,7 @@ function DataNotFoundScreen(props : IDataNotFound) {
       case ENUM_KIND_OF_NOTFOUNDICON.NOTI:
         return iconnotfoundnoti;
       case ENUM_KIND_OF_NOTFOUNDICON.MESSAGE:
-        return iconnotfoundmessage;
-        
+        return iconnotfoundmessage;   
     }
   }
 

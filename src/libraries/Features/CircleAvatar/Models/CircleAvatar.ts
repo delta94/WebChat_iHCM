@@ -9,5 +9,6 @@ export interface ICircleAvatar{
     canRomove?:boolean,
     onRemove?:any,
     onClick?:any,
-    ref?:any
+    ref?:any,
+    notiIcon?:any,
 }

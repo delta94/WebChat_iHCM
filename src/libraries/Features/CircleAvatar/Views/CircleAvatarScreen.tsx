@@ -25,6 +25,7 @@ function CircleAvatarScreen(props : ICircleAvatar) {
                                 <img src={ iconcancel } alt="" />
                               </div>  
         }
+        { props.notiIcon && <img className="circleavatar-online" src={ props.notiIcon } alt="" /> }
       </div> 
     </>
   );

@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import CustomBadgeScreen from "../../../../../libraries/Features/CustomBadge/Views/CustomBadgeScreen";
 import { useWindowSize } from "../../../../../libraries/Hooks/useWindowSize";
 
-// const iconuseronline = require('./Icons/iconuseronline.svg').default;
 const iconunread = require("./Icons/iconunread.svg").default;
 
 function UserChatScreen(props: IConversationState) {
@@ -24,29 +23,22 @@ function UserChatScreen(props: IConversationState) {
   };
 
   const renderUserImage = () => {
+    let widthAva="48px";
+    let heightAva="48px";
     if (width < 768) {
-      return (
-        <CircleAvatarScreen
-          class=""
-          width="40px"
-          height="40px"
-          src={props.avatar}
-          alt="avatar"
-          isOnline={props.isOnline}
-        />
-      );
-    } else {
-      return (
-        <CircleAvatarScreen
-          class=""
-          width="48px"
-          height="48px"
-          src={props.avatar}
-          alt="avatar"
-          isOnline={props.isOnline}
-        />
-      );
+      widthAva="40px";
+      heightAva="40px";
     }
+    return (
+      <CircleAvatarScreen
+        class=""
+        width={ widthAva }
+        height={ heightAva }
+        src={props.avatar}
+        alt="avatar"
+        isOnline={props.isOnline}
+      />
+    );
   };
 
   return (
@@ -59,15 +51,9 @@ function UserChatScreen(props: IConversationState) {
       onClick={redirectToChatDetail}
     >
       <div className="userchat-image">
-        {/* <CircleAvatarScreen 
-          class=""
-          width="48px"
-          height="48px"
-          src={ props.avatar }
-          alt="avatar"
-          isOnline={ props.isOnline }
-        ></CircleAvatarScreen> */}
-        {renderUserImage()}
+        {
+          renderUserImage()
+        }
       </div>
       <div className="userchat-context">
         <div className="userchat-context-top">
@@ -92,7 +78,7 @@ function UserChatScreen(props: IConversationState) {
         </div>
         {props.hasReadLastMess ? (
           <div className="userchat-context-bottom">
-            <h3 className="userchat-contextoflastmess">{props.lastMess}</h3>
+            <h3 className="userchat-contextoflastmess">{ props.lastMess }</h3>
           </div>
         ) : (
           <div className="userchat-context-bottom">

@@ -1,0 +1,29 @@
+@import url("../../../../../libraries/Styles/Variables.css");
+
+.notification-context {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 0.4rem;
+}
+
+.notification-container{
+    height: 95px;
+}
+
+.notification-context p{
+    font-weight: 700;
+    color: #1A2948;
+    display: inline-block;
+}
+
+.notification-context span{
+    color: #4D5971;
+}
+
+.notification-time{
+
+    font-size: 14px;
+    line-height: 21px;
+    color: #808999;
+}
+
