@@ -11,5 +11,14 @@
     --color-text--lightgray:#667085;
     --color-text--lightgray2:#808999;
     --color-main-border:#E6E8EB;
+} 
 
-}   
+:root{
+    --height-header-conversationdetail: 60px;
+    --height-notification-container: 90px;
+}
+
+:root{
+    --width-navbardetail: 380px;
+    --width-navbar: 64px;
+}

@@ -47,12 +47,9 @@
     display: none;
   }
 
-  /* .userchatlist-container{
-    width: 60px;
-  } */
 
   .userchatlist-top{
-    min-height: 60px !important;
+    min-height: var(--height-header-conversationdetail) !important;
   }
 }
 

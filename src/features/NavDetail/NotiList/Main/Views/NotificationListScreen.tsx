@@ -9,36 +9,36 @@ import './NotificationListScreen.css';
 const notiList: INotification[] = [
     {
         avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
-        time: "2020-10-20T02:10:46.000Z",
+        time: "2021-01-13T07:10:46.000Z",
         isActive: true,
         status:1,
         username:"Trung Đức",
         context:""
     },
-    // {
-    //     avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
-    //     time: "2020-10-21 01:10:40",
-    //     isActive: false,
-    //     status:2,
-    //     username:"Trung Đức",
-    //     context:"Nhóm hội người yêu chim quý Cổ Nhuế Bắc Từ Liêm Hà Nội"
-    // },
-    // {
-    //     avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
-    //     time: "2020-10-21 01:10:40",
-    //     isActive: false,
-    //     status:3,
-    //     username:"Trung Đức",
-    //     context:""
-    // },
-    // {
-    //     avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
-    //     time: "2020-10-21 01:10:40",
-    //     isActive: true,
-    //     status:4,
-    //     username:"Trung Đức",
-    //     context:"Hello cả nhà"
-    // },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: false,
+        status:2,
+        username:"Trung Đức",
+        context:"Nhóm hội người yêu chim quý Cổ Nhuế Bắc Từ Liêm Hà Nội"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: false,
+        status:3,
+        username:"Trung Đức",
+        context:""
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
 ]
 
 
@@ -58,7 +58,7 @@ function NotificationListScreen(props: any) {
 
     return (
         <>
-            <div className="userchatlist-top">
+            <div className="userchatlist-top headernoti-container">
                 <HeaderNotificationListScreen></HeaderNotificationListScreen>
             </div>
 

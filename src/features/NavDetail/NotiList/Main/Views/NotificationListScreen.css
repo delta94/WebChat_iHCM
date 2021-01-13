@@ -1,0 +1,5 @@
+@import url("../../../../../libraries/Styles/Variables.css");
+
+.headernoti-container{
+    min-height: var(--height-header-conversationdetail);
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ENUM_KIND_OF_NOTIFICATION } from '../../../../../libraries/Constants/KindOfNotification';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
+import { decodeHTML } from '../../../../../libraries/Functions/DecodeHTML';
 import { useWindowSize } from '../../../../../libraries/Hooks/useWindowSize';
 import { getTimePeriod, INotification } from '../Models/Notification';
 import './NotificationScreen.css';
@@ -13,16 +14,18 @@ const iconnotireply = require("./Icons/iconnotireply.svg").default;
 function NotificationScreen(props: INotification) {
     const [width, height] = useWindowSize();
 
-    const context = () =>{
+    function context ():string{
         switch (props.status) {
             case ENUM_KIND_OF_NOTIFICATION.REPLY:
-                return "đã trả lời bình luận của bạn trong " + props.context;
+                return "đã trả lời bình luận của bạn trong &#8243; " + props.context +" &#8243;";
             case ENUM_KIND_OF_NOTIFICATION.KICKED:
-                return "đã xóa bạn khỏi nhóm chat " + props.context;
+                return "đã xóa bạn khỏi nhóm chat &#8243; " + props.context +" &#8243;";
             case ENUM_KIND_OF_NOTIFICATION.LIKE:
                 return "đã tương tác bình luận của bạn ";
             case ENUM_KIND_OF_NOTIFICATION.TAG:
                 return "đã nhắc bạn trong một bình luận ";
+            default:
+                return "";
         }
     }
 
@@ -78,7 +81,7 @@ function NotificationScreen(props: INotification) {
                     <div className="notification-context">
                         <p>{ props.username }</p>
                         {" "}
-                        <span>{ context() }</span>
+                        <span>{ decodeHTML(context()) }</span>
                     </div>
                     <span className="notification-time">
                         { getTimePeriod(props.time) } 

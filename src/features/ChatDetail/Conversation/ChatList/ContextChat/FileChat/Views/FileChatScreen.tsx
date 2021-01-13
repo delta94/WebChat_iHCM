@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import IconImageScreen from '../../../../../../../libraries/Features/IconImage/Views/IconImageScreen';
 import { IFileChat } from '../Models/FileChat';
 import './FileChatScreen.css';
-import {getLinkPreview} from 'link-preview-js';
 
 const iconlink = require('./Icons/iconlink.svg').default;
 const icondownload = require('./Icons/icondownload.svg').default;

@@ -9,7 +9,7 @@
 
 .body-left{
     position: relative;  
-    width: 64px;
+    width: var(--width-navbar);
     height: 100%;
     /* transition: all 0.2s linear; */
 }

@@ -1,7 +1,9 @@
+@import url("../../../../libraries/Styles/Variables.css");
+
 .chatdetail-container{
   position: relative;
   height: 100%;
-  width: calc(100% - 380px);
+  width: calc(100% - var(--width-navbardetail));
   left: 0;
 }
 

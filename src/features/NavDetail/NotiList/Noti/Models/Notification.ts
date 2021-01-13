@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export interface INotification{
     avatar: string,
     time: string,
@@ -8,12 +10,21 @@ export interface INotification{
 }
 
 export function getTimePeriod(time:string){
-    const lastTime = Date.parse(time);
-    const now = Date.now();
-    const getDaysDiffBetweenDates = (now - lastTime) / (1000 * 3600 * 24);
-    // if(getDaysDiffBetweenDates > 1){
-    //     return
-    // }
-    console.log(Math.floor(getDaysDiffBetweenDates));
-    return "5h trước"
+    const lastTime = moment(time);
+    const  now = moment();
+    console.log("Locale:" + now.locale());
+    const duration = moment.duration(now.diff(lastTime));
+
+    const daysBetween2Dates = duration.asDays();
+    if(daysBetween2Dates >= 1){
+        return lastTime.format('L');
+    }
+    const hour = Math.floor(duration.asHours());
+    if(hour < 1)
+    {
+        const minutes = Math.floor(duration.asMinutes());
+
+        return minutes + " phút trước";
+    }
+    return hour +"h trước";
 }

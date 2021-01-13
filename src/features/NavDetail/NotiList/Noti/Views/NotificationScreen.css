@@ -4,26 +4,40 @@
     font-size: 16px;
     line-height: 23px;
     margin-bottom: 0.4rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
 }
 
 .notification-container{
-    height: 95px;
+    height: var(--height-notification-container);
 }
 
 .notification-context p{
     font-weight: 700;
-    color: #1A2948;
+    color: var(--color-text--dark);
     display: inline-block;
 }
 
 .notification-context span{
-    color: #4D5971;
+    color: var(--color-text--gray);
 }
 
 .notification-time{
 
     font-size: 14px;
     line-height: 21px;
-    color: #808999;
+    color: var(--color-text--lightgray2);
+}
+
+/* ------------------------------------------------ RESPONSIVE ----------------------- */
+
+/* WIDTH */
+
+@media only screen and (max-width: 768px) {
+    .notification-container{
+        height: 50px;
+    }
 }
 
