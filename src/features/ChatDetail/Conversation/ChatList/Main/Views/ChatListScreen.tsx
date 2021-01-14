@@ -180,7 +180,7 @@ function ChatListScreen(props: any){
                         <LoadingSpinnerScreen></LoadingSpinnerScreen>
                     </div>
                 ) : (
-                    <div>
+                    <div className="chatlist-main">
                         {
                             loading && <h3>Loading ...</h3>
                         }

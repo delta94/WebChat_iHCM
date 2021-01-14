@@ -99,17 +99,17 @@
   } */
 }
 
-@media only screen and (min-height: 330px) and (max-height: 379px) {
+/* @media only screen and (min-height: 330px) and (max-height: 379px) {
   .chatdetail-container {
-    width: 88%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-height: 300px) and (max-height: 329px) {
   .chatdetail-container {
-    width: 90%;
+    width: 100%;
   }
-}
+} */
 
 @media only screen and (max-height: 299px) {
   /* .chatdetail-container{
