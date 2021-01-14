@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/KindOfNotFoundIcon';
 import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
+import SkeletonNavbarDetailScreen from '../../../../../libraries/Features/SkeletonNavbarDetail/Views/SkeletonNavbarDetailScreen';
 import { IFriend } from '../../Friend/Models/Friend';
 import FriendScreen from '../../Friend/Views/FriendScreen';
 
@@ -191,20 +192,29 @@ const getFriends = async (page: number) =>{
     for (let index = (page - 1)* 10; index < length; index++) {
         await result.push(friendList[index]);
     }
-    await timeout(1e3);
+    await timeout(4e3);
+
     return result;
 }
 
 function FriendListScreen(props: any) {
     const [query , setQuery] = useState<string>("");
+    const [hasSkeleton, setHasSkeleton] = useState<boolean>(false);
     const [page, setPage] = useState<number>(1);
     const [friends, setFriends] = useState<IFriend[]>([]);
     const typingTimeoutRef = useRef<any>(null);
 
     useEffect(() => {
+
         const loadUsers = async () => {
-          const newFriends = await getFriends(page);
-          setFriends((prev) => [...prev, ...newFriends]);
+            if((page - 1) * 10 <= friendList.length){
+                console.log(page);
+                page > 1 && setHasSkeleton(true);
+                const newFriends = await getFriends(page);
+                setFriends((prev) => [...prev, ...newFriends]);
+                page > 1 && setHasSkeleton(false);
+            }
+
         };
     
         loadUsers();
@@ -224,7 +234,7 @@ function FriendListScreen(props: any) {
         const { scrollTop, clientHeight, scrollHeight } = event.currentTarget;
     
         if (scrollHeight - scrollTop <= (clientHeight + 2)) {
-          setPage(prev => prev + 1);
+            setPage(prev => prev + 1);
         }
       };
 
@@ -263,6 +273,15 @@ function FriendListScreen(props: any) {
             <div className="userchatlist-bottom" onScroll={ handleScroll }>
                 {
                     showFriendList()
+                }
+                {
+                    hasSkeleton && (
+                        <>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                        </>
+
+                    )
                 }
             </div>
         </>
