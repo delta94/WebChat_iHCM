@@ -175,6 +175,62 @@ const friendList: IFriend[] = [
         isOnline:true,
         context:"iSoft"
     },
+    {
+        id:23,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 111",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:24,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 111",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:26,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 111",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:27,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 27",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:28,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 27",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:29,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 29",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:30,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 30",
+        isOnline:true,
+        context:"iSoft"
+    },
+    {
+        id:31,
+        avatar:"https://www.w3schools.com/w3images/avatar2.png",
+        name:"Quang Huy 31",
+        isOnline:true,
+        context:"iSoft"
+    },
 ];
 
 function timeout(ms: any) {
@@ -208,8 +264,8 @@ function FriendListScreen(props: any) {
 
         const loadUsers = async () => {
             if((page - 1) * 10 <= friendList.length){
-                console.log(page);
                 page > 1 && setHasSkeleton(true);
+                console.log(page);
                 const newFriends = await getFriends(page);
                 setFriends((prev) => [...prev, ...newFriends]);
                 page > 1 && setHasSkeleton(false);
@@ -232,6 +288,9 @@ function FriendListScreen(props: any) {
 
     const handleScroll = (event: any) => {
         const { scrollTop, clientHeight, scrollHeight } = event.currentTarget;
+        if(friends.length === 0){
+            return;
+        }
     
         if (scrollHeight - scrollTop <= (clientHeight + 2)) {
             setPage(prev => prev + 1);
@@ -239,17 +298,17 @@ function FriendListScreen(props: any) {
       };
 
     const showFriendList = () =>{
-        if (friends.length === 0) {
-            return <DataNotFoundScreen text={"Không tìm thấy kết quả"} icon={ ENUM_KIND_OF_NOTFOUNDICON.DATA } isPosition={ true }></DataNotFoundScreen>;
-          }
-          return friends.map(
+        // if (friends.length === 0) {
+        //     return <DataNotFoundScreen text={"Không tìm thấy kết quả"} icon={ ENUM_KIND_OF_NOTFOUNDICON.DATA } isPosition={ true }></DataNotFoundScreen>;
+        // }
+        return friends.map(
             (friend: IFriend, idx: number) => (
                 <FriendScreen
                 key={ idx }
                 {...friend}
                 ></FriendScreen>
             )
-          );
+        );
     }
 
     return (
@@ -275,10 +334,26 @@ function FriendListScreen(props: any) {
                     showFriendList()
                 }
                 {
-                    hasSkeleton && (
+                    ((page - 1) * 10 <= friendList.length) && (
                         <>
                             <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
                             <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                        </>
+
+                    )
+                }
+                {
+                    (page === 1 && friends.length === 0) && (
+                        <>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+
                         </>
 
                     )
