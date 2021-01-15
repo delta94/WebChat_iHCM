@@ -162,7 +162,7 @@ function UserChatListScreen(props: any) {
         <HeaderUserChatListScreen></HeaderUserChatListScreen>
         <CustomInputScreen
           style={styleCustomInput}
-          class="searchinput-container"
+          class="searchinput-container step1"
           placeHolder="Tìm kiếm cuộc trò chuyện"
           isMultiline={false}
           isTextArea={ true }

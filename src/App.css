@@ -30,6 +30,11 @@ body {
   font-size: 14px;
 }
 
+.react-joyride__spotlight{
+  background-color:#fff !important;
+  opacity: 0.6 !important;
+}
+
 
 input[placeholder] { text-overflow: ellipsis; }
 

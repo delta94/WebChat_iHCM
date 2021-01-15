@@ -32,7 +32,7 @@ function HeaderConversationScreen(props: any){
     return (
         <div className={ hasSearch ? "headerconversation-container headerconversation-container--hassearch" : "headerconversation-container"}>
             <div className="headerconversation-main">
-                <div className="headerconversation-left">
+                <div className="headerconversation-left step2">
                     <CircleAvatarScreen
                     hasCursor={ true }
                     onClick={ redirectToDetail }

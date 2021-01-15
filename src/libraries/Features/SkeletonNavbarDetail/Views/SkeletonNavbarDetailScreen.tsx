@@ -28,20 +28,20 @@ function SkeletonNavbarDetailScreen(props: any) {
     <div
       className={"userchat-container" }
     >
-      <div className="userchat-image">
+      <div className="userchat-image2">
         <Skeleton borderRadius={25} />
       </div>
       <div className="userchat-context">
         <div className="userchat-context-top">
           <span
-            className={ "userchat-username app-mainfont userchat-unreadcontext" }
+            className={ "userchat-username2" }
           >
-<Skeleton borderRadius={25} />
+            <Skeleton borderRadius={25} />
           </span>
         </div>
         <div className="userchat-context-bottom">
             <h3 className="userchat-contextoflastmess">
-            <Skeleton borderRadius={25} />
+              <Skeleton borderRadius={25} />
             </h3>
           </div>
       </div>
