@@ -12,7 +12,7 @@ function NavDetailScreen(props: INavDetail) {
   const eleInfor = () =>{
     switch (activedIcon) {
       case ENUM_KIND_OF_ICONPANEL.MESSAGES:
-        return <UserChatListScreen></UserChatListScreen>
+        return <UserChatListScreen setGuidedTourIsRunning={ props.setGuidedTourIsRunning }></UserChatListScreen>
       case ENUM_KIND_OF_ICONPANEL.FRIENDS:
         return <FriendListScreen></FriendListScreen>
       case ENUM_KIND_OF_ICONPANEL.NOTI:

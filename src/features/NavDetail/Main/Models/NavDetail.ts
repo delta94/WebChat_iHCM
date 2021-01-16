@@ -1,3 +1,4 @@
 export interface INavDetail{
-    activedIcon: number
+    activedIcon: number,
+    setGuidedTourIsRunning: any
 }

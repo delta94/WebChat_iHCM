@@ -1,0 +1,24 @@
+.datetime-container{
+    margin:10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datetime-container h4{
+    position: relative;
+    top: 50%;
+}
+
+.datetime-container h4:after{
+    content: "";
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transform: translate(-50%);
+}
+

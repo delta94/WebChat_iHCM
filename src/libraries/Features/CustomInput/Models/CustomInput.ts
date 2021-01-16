@@ -12,5 +12,6 @@ export interface  ICustomInput{
     setIsMultiline?: any
     isMultiline: boolean,
     onChange?: any,
+    onClick?: any,
     hasClearText?:boolean,
 }

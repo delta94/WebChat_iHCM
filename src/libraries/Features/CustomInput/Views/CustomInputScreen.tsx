@@ -42,7 +42,7 @@ function CustomInputScreen(props : ICustomInput) {
     <div className={ "custominput-container " + props.class}>
       {
         props.isTextArea ?
-        <input type="text" multiple={true} placeholder={ props.placeHolder } value={ value } onChange={ (e: ChangeEvent<any>) => changeValue2(e) }style={ props.style }/> :
+        <input type="text" multiple={true} placeholder={ props.placeHolder } value={ value } onClick={ props.onClick } onChange={ (e: ChangeEvent<any>) => changeValue2(e) }style={ props.style }/> :
         <textarea placeholder={ props.placeHolder } style={ props.style } ref={textAreaRef} rows={1} onChange={ (e: ChangeEvent<Element>) => changeValue(e)}></textarea>
       }
       {

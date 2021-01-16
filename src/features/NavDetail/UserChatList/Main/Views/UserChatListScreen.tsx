@@ -167,6 +167,7 @@ function UserChatListScreen(props: any) {
           isMultiline={false}
           isTextArea={ true }
           onChange={ onChange }
+          onClick={ () => props.setGuidedTourIsRunning(false) }
           hasClearText={ true }
         ></CustomInputScreen>
       </div>

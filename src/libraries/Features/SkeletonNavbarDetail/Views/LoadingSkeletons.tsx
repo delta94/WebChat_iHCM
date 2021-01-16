@@ -5,9 +5,9 @@ const SkeletonPulse = styled.div`
     display: inline-block;
     height: 100%;
     width: 100%;
-    background: linear-gradient(-90deg, #ded3d3  0%, #F8F8F8 50%, #F0F0F0 100%);
+    background: linear-gradient(-90deg,#f3e8e8 0%,#f5f1f1 50%,#F0F0F0 100%);
     background-size: 400% 400%;
-    animation: pulse 1.2s ease-in-out infinite;
+    animation: pulse 4s ease-in-out infinite;
     border-radius: ${(props: any) =>
         `${props.borderRadius}px` || "0px"};
     @keyframes pulse {

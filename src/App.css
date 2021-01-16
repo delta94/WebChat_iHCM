@@ -17,7 +17,8 @@ body {
 }
 
 .app-mainfont,
-.tooltip-container
+.tooltip-container,
+.react-joyride__tooltip
 {
   font-family: Roboto;
   font-style: normal;
@@ -31,8 +32,19 @@ body {
 }
 
 .react-joyride__spotlight{
-  background-color:#fff !important;
+  background-color: var(--color-background) !important;
   opacity: 0.6 !important;
+}
+
+button[aria-label="Tiếp theo"],
+button[aria-label="Cuối cùng"] 
+{
+  background-color:var(--color-main) !important;
+}
+
+button[aria-label="Trở lại"]
+{
+  color:var(--color-main) !important;
 }
 
 

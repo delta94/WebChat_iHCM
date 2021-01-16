@@ -30,8 +30,7 @@ function BodyScreen(props : any) {
           <NavbarScreen activedIcon={ activedIcon } setActivedIcon={ setActivedIcon }></NavbarScreen>
         </div>
         <div className={ hasNavbar ? "body-right--hasnavbar body-right" : "body-right"}>
-
-          <NavDetailScreen  activedIcon={ activedIcon }></NavDetailScreen>
+          <NavDetailScreen  activedIcon={ activedIcon } setGuidedTourIsRunning={ props.setGuidedTourIsRunning}></NavDetailScreen>
           <ChatDetailScreen hasChat={ true }></ChatDetailScreen>
         </div>
       </div>
