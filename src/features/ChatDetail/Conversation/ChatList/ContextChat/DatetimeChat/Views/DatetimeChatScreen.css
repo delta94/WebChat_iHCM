@@ -1,24 +1,19 @@
 .datetime-container{
-    margin:10px 0;
+    margin: 30px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.datetime-container h4{
-    position: relative;
-    top: 50%;
+.datetime-line{
+    height: 1px;
+    background-color:var(--color-main-border);
+    width: 35%;
 }
 
-.datetime-container h4:after{
-    content: "";
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0%;
-    transform: translate(-50%);
+.datetime-container span{
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-text--lightgray2);
 }
-

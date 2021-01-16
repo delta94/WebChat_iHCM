@@ -63,7 +63,7 @@ function HeaderConversationScreen(props: any){
                             placeHolder="Tìm kiếm cuộc trò chuyện"
                             isMultiline={false}
                             isTextArea={ true }
-                            onChange={ null }
+                            onChange={ (e:any) =>{ props.setQuery(e.target.value)} }
                             hasClearText={ true }
                         ></CustomInputScreen>
                         <CustomButtonScreen text="Đóng" onClick={ onSearch } class="secondary"></CustomButtonScreen>

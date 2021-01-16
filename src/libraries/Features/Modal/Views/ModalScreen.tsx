@@ -8,6 +8,7 @@ const icondelete = require("../../../../libraries/Icons/icondelete.svg").default
 const ModalScreen = (props: IModal) => (
   <Popup
     trigger={props.children}
+    open={ props.open }
     modal
     nested
     className="modal"

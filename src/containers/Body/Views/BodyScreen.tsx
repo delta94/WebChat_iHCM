@@ -21,8 +21,6 @@ function BodyScreen(props : any) {
     height: height- heightHeader
   }
 
-
-
   return (
     <Router>
       <div className="body-container" style = { styleInline }>

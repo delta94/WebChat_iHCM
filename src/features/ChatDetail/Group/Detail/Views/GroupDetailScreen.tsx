@@ -260,7 +260,7 @@ function GroupDetailScreen(props : any) {
 
   const eleOption: React.ReactElement = (
       <>
-        <ModalScreen headerContent={ "Thêm thành viên" } context={ eleContent } hasPadding={ false }>
+        <ModalScreen open={ false } headerContent={ "Thêm thành viên" } context={ eleContent } hasPadding={ false }>
           <div>
             <IconCirclePanel srcIcon={ iconaddmember } class="" padding="0.8rem"></IconCirclePanel>
             <p>Thêm thành viên</p>
@@ -270,7 +270,7 @@ function GroupDetailScreen(props : any) {
             <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
             <p>Thông báo</p>
         </div>
-        <ModalScreen headerContent={"Xác nhận rời khỏi nhóm"} contextHasClose={ eleContextSignout } hasPadding={ false }>
+        <ModalScreen  open={ false } headerContent={"Xác nhận rời khỏi nhóm"} contextHasClose={ eleContextSignout } hasPadding={ false }>
           <div>
             <IconCirclePanel srcIcon={ iconsignoutgroup } class="" padding="0.8rem"></IconCirclePanel>
             <p>Thoát nhóm</p>

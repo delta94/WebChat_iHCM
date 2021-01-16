@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ConversationScreen.css';
 import HeaderConversationScreen from '../../Header/Views/HeaderConversationScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
@@ -7,6 +7,8 @@ import { IConversationz } from '../Models/Conversation';
 
 
 function ConversationScreen(props: IConversationz){
+    const [query , setQuery] = useState("");
+
     return (
         <div className="conversation-container">
             <HeaderConversationScreen
@@ -18,6 +20,7 @@ function ConversationScreen(props: IConversationz){
             isGroup={ props.isGroup }
             hasSearch={ props.hasSearch }
             onSearch={ props.onSearch }
+            setQuery={ setQuery }
             ></HeaderConversationScreen>
 
             <ChatListScreen
@@ -25,6 +28,7 @@ function ConversationScreen(props: IConversationz){
             userList={ props.userList }
             messageList={ props.messageList }
             hasSearch={ props.hasSearch }
+            query={ query }
             ></ChatListScreen>
             
             <ChatInputScreen></ChatInputScreen>

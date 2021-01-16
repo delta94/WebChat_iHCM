@@ -10,7 +10,7 @@ function DetailPopupScreen(props : any){
         return listEles.map((ele:any , index:number) =>{
             if(ele.eleContext){
 
-                return  <ModalScreen headerContent={ "Cài đặt thông báo" } context={ ele.eleContext } hasPadding={ true }>
+                return  <ModalScreen  open={ false } headerContent={ "Cài đặt thông báo" } context={ ele.eleContext } hasPadding={ true }>
                             <li onClick={ ele.onClick }>
                                 <IconImageScreen src={ ele.icon } alt="replay" class={""}></IconImageScreen>
                                 <span className="app-mainfont">

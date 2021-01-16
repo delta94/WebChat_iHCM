@@ -28,12 +28,14 @@
     --fontsize-default: 14px;
     --fontsize-default2: 16px;
     --fontsize-default3: 12px;
+    --fontsize-default4: 18px;
 }
 
 :root{
     --lineheight-default: 21px;
     --lineheight-default2: 23px;
     --lineheight-default3: 18px;
+    --lineheight-default4: 27px;
 }
 
 :root{

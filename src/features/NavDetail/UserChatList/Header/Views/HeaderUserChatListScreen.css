@@ -7,8 +7,8 @@
 }
 
 .userchatlist-header-container h4{
-  font-size: 18px;
-  line-height: 27px;
+  font-size: var(--fontsize-default4);
+  line-height: var(--lineheight-default4);
 }
 
 .userchatlist-icon-penedit{

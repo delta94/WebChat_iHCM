@@ -3,10 +3,11 @@ import './DatetimeChatScreen.css';
 
 function DatetimeChatScreen(props : any){
 
-
     return (
         <div className="datetime-container">
-            <h4>Hôm qua 05:30PM</h4>
+            <div className="datetime-line"></div>
+            <span>Hôm qua 05:30PM</span>
+            <div className="datetime-line"></div>
         </div>
     )
 }

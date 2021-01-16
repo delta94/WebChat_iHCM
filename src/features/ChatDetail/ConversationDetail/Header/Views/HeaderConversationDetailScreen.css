@@ -41,8 +41,8 @@
 
 .headerconversationdetail-avatar h4{
     font-weight: var(--fontweight-default2);
-    font-size: 18px;
-    line-height: 27px;
+    font-size: var(--fontsize-default4);
+    line-height: var(--lineheight-default4);
     text-align: center;
     color: var(--color-text--dark);
 }

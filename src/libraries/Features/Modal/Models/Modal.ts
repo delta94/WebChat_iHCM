@@ -3,5 +3,6 @@ export interface IModal {
     children: React.ReactElement,
     context?: React.ReactElement
     contextHasClose?: any,
-    hasPadding: boolean
+    hasPadding: boolean,
+    open: boolean,
 }

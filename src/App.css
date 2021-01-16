@@ -38,7 +38,44 @@ button[aria-label="Trở lại"]
 }
 
 
-input[placeholder] { text-overflow: ellipsis; }
+input[placeholder] { 
+  text-overflow: ellipsis; 
+}
+
+.videocall-container{
+  width: 360px;
+  padding: 1rem;
+}
+
+.videocall-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videocall-top h4{
+  margin-top: 1rem;
+  font-weight: var(--fontweight-default2);
+  font-size: var(--fontsize-default4);
+  line-height: var(--lineheight-default4);
+}
+
+.videocall-top p{
+  font-size: var(--fontsize-default3);
+  line-height: var(--lineheight-default3);
+  color: var(--color-text--lightgray);
+}
+
+.videocall-bottom{
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.videocall-bottom button{
+  margin: 0 0.5rem;
+}
 
 
 /* ------------------------------------------------ CUSTOM SCROLL ----------------------- */
