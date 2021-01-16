@@ -16,9 +16,9 @@
 
 .datanotfound-container h4{
     margin-top:1rem;
-    font-weight: 500;
+    font-weight: var(--fontweight-default2);
     font-size: 18px;
-    line-height: 23px;
+    line-height: var(--lineheight-default2);
     text-align: center;
     color: var(--color-text--gray);
 }

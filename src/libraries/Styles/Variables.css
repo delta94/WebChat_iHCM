@@ -16,9 +16,35 @@
 :root{
     --height-header-conversationdetail: 60px;
     --height-notification-container: 90px;
+    --height-skeleton-navbardetail: 21px;
 }
 
 :root{
     --width-navbardetail: 380px;
     --width-navbar: 64px;
+}
+
+:root{
+    --fontsize-default: 14px;
+    --fontsize-default2: 16px;
+    --fontsize-default3: 12px;
+}
+
+:root{
+    --lineheight-default: 21px;
+    --lineheight-default2: 23px;
+    --lineheight-default3: 18px;
+}
+
+:root{
+    --fontfamily-default: Roboto;
+}
+
+:root{
+    --fontstyle-default: normal;
+}
+
+:root{
+    --fontweight-default: normal;
+    --fontweight-default2: 500;
 }

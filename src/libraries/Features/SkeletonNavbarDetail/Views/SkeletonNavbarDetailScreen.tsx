@@ -1,52 +1,74 @@
 import React from "react";
+import { ENUM_KIND_OF_ICONPANEL } from "../../../Constants/KindOfIconPanel";
 import { Skeleton } from "./LoadingSkeletons";
-
+import './SkeletonNavbarDetailScreen.css';
 
 function SkeletonNavbarDetailScreen(props: any) {
-//   const [width, height] = useWindowSize();
+  const { iconpanel } = props;
 
-    // const renderUserImage = () => {
-    //     let widthAva="48px";
-    //     let heightAva="48px";
-    //     if (width < 768) {
-    //     widthAva="40px";
-    //     heightAva="40px";
-    //     }
-    //     return (
-    //         <CircleAvatarScreen
-    //             class=""
-    //             width={ widthAva }
-    //             height={ heightAva }
-    //             src={props.avatar}
-    //             alt="avatar"
-    //             isOnline={props.isOnline}
-    //         />
-    //     );
-    // };
+  const showUserChatContext = () => {
+    if(iconpanel === ENUM_KIND_OF_ICONPANEL.NOTI){
+      return (
+        <div>
+          <div className="notification-context2">
+            <Skeleton borderRadius={25} />
+          </div>
+          <span className="notification-time2">
+            <Skeleton borderRadius={25} />
+          </span>
+        </div>
+      )
+    } else{
+      return (
+        <>
+          <div className="userchat-context-top">
+            <span className={ "userchat-username2" }>
+              <Skeleton borderRadius={25} />
+            </span>
+            {
+              iconpanel === ENUM_KIND_OF_ICONPANEL.MESSAGES && (
+                <>
+                  <span className="userchat-groupchat2">
+                    <Skeleton borderRadius={25} />
+                  </span>
+                  <span className="userchat-timeoflastmess2">
+                    <Skeleton borderRadius={25} />
+                  </span>
+                </>
+              )
+            }
+          </div>
+          <div className="userchat-context-bottom">
+            <h3 className="userchat-contextoflastmess">
+              <Skeleton borderRadius={25} />
+            </h3>
+            {
+              iconpanel === ENUM_KIND_OF_ICONPANEL.MESSAGES && (
+                <div className="userchat-icon-unread2">
+                  <Skeleton borderRadius={25} />
+                </div>
+              )
+            }
+          </div>
+        </>
+      ) 
+    }
+  }
 
   return (
-    <div
-      className={"userchat-container" }
-    >
+    <div className={iconpanel === ENUM_KIND_OF_ICONPANEL.NOTI ? "userchat-container notification-container" : "userchat-container" }>
       <div className="userchat-image2">
         <Skeleton borderRadius={25} />
       </div>
       <div className="userchat-context">
-        <div className="userchat-context-top">
-          <span
-            className={ "userchat-username2" }
-          >
-            <Skeleton borderRadius={25} />
-          </span>
-        </div>
-        <div className="userchat-context-bottom">
-            <h3 className="userchat-contextoflastmess">
-              <Skeleton borderRadius={25} />
-            </h3>
-          </div>
+        {
+          showUserChatContext()
+        }
       </div>
     </div>
-  );
+);
+  
 }
 
 export default SkeletonNavbarDetailScreen;
+

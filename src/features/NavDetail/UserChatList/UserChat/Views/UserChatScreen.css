@@ -12,17 +12,11 @@
     background-color: var(--color-item--active);
 }
 
-
 .userchat-image{
     /* width: 16%; */
     padding-right: 12px;
 }
 
-.userchat-image2{
-    margin-right: 12px;
-    width: 48px;
-    height: 48px;
-}
 
 .userchat-context-top{
     margin-bottom: 4px;
@@ -30,33 +24,20 @@
     align-items: center;
 }
 
-.userchat-context-top{
-
-}
-
 .userchat-context{
     width:84%;
 }
 
 .userchat-username{
-    font-size: 16px;
-    line-height: 23px;
+    font-size: var(--fontsize-default2);
+    line-height: var(--lineheight-default2);
 }
-
-.userchat-username2{
-    width: 100px;
-    height: 21px;
-}
-
 
 .userchat-groupchat{
     margin-left: 0.5rem;
 }
 
 .userchat-timeoflastmess{
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
     margin-left: auto;
     color: var(--color-text-lightgray2);
 }
@@ -67,11 +48,6 @@
 }
 
 .userchat-contextoflastmess{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
     color: var(--color-text--lightgray);
     overflow:hidden;
     width: 200px;
@@ -86,13 +62,8 @@
 }
 
 .userchat-username .userchat-unreadcontext{
-    font-size: 16px;
-    line-height: 23px;
-}
-
-.userchat-contextoflastmess .userchat-unreadcontext{
-    font-size: 14px;
-    line-height: 21px;
+    font-size: var(--fontsize-default2);
+    line-height: var(--lineheight-default2);
 }
 
 .userchat-icon-unread{
@@ -100,6 +71,8 @@
     height: 16px;
     background-repeat: no-repeat;
 }
+
+
 
 /* ------------------------------------------------ RESPONSIVE ----------------------- */
 

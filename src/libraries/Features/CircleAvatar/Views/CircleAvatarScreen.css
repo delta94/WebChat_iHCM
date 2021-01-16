@@ -1,3 +1,5 @@
+@import url("../../../Styles/Variables.css");
+
 .circleavatar-container{
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -16,7 +18,7 @@
     position: absolute;
     top: 2%;
     right: -2%;
-    background-color: white;
+    background-color: var(--color-background);
     cursor: pointer;
     display: flex;
     justify-content: center;

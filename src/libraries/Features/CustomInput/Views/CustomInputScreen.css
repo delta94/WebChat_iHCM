@@ -19,7 +19,7 @@
     box-sizing: border-box;
     border: 1px solid #ccc;
 
-    background-color: white;
+    background-color: var(--color-background);
     background-repeat: no-repeat;
 }
 
@@ -37,9 +37,9 @@
     border: 1px solid var(--color-main-border);
     /* border-radius: 6px; */
     /* font-size: 14px; */
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     
-    background-color: white;
+    background-color: var(--color-background);
     /* background-image: url('../../../../libraries/Icons/iconsearch.svg');
     background-position: right; */
     background-repeat: no-repeat;
@@ -64,31 +64,26 @@ textarea::placeholder {
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 .custominput-container textarea::placeholder {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
     color: #B3B8C2;
 }
 
 /* Internet Explorer 10-11 */
-.custominput-container textarea:-ms-input-placeholder  {
+/* .custominput-container textarea:-ms-input-placeholder  {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: var(--fontsize-default);
     line-height: 21px;
-}
+} */
 
 /* Microsoft Edge */
-.custominput-container textarea::-ms-input-placeholder {
+/* .custominput-container textarea::-ms-input-placeholder {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: var(--fontsize-default);
     line-height: 21px;
-}
+} */
   
 
 

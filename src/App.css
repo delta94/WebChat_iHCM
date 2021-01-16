@@ -6,34 +6,24 @@
   box-sizing: border-box;
 }
 
-
 html,
 body {
-  height: 100%;
-}
-
-.container{
-  height: 100vh;
-}
-
-.app-mainfont,
-.tooltip-container,
-.react-joyride__tooltip
-{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+  height: 100% ;
+  font-size: var(--fontsize-default);
+  line-height: var(--lineheight-default);
+  font-family: var(--fontfamily-default);
+  font-style: var(--fontstyle-default);
+  font-weight: var(--fontweight-default);
   color: var(--color-text--dark);
-}
-
-.tooltip-container
-{
-  font-size: 14px;
 }
 
 .react-joyride__spotlight{
   background-color: var(--color-background) !important;
   opacity: 0.6 !important;
+}
+
+#react-joyride-step-0 span[x-placement="center"]{
+  display: none !important;
 }
 
 button[aria-label="Tiếp theo"],

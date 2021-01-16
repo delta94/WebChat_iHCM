@@ -28,15 +28,15 @@
 }
 
 .chatinput-responseMess .app-mainfont{
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--fontsize-default3);
+  line-height: var(--lineheight-default3);
   color: var(--color-text--gray);
 }
 
 .chatinput-responseMess-username{
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
+  font-weight: var(--fontweight-default2);
+  font-size: var(--fontsize-default3);
+  line-height: var(--lineheight-default3);
   color: var(--color-text--gray);
 }
 

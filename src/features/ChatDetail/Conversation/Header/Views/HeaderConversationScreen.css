@@ -42,11 +42,8 @@
 }
 
 .headerconversation-context span{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 18px;  
+    font-size: var(--fontsize-default3);
+    line-height: var(--lineheight-default3);
     color: var(--color-text--lightgray);
 }
 

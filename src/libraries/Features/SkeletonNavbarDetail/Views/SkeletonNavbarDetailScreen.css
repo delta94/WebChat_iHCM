@@ -1,0 +1,40 @@
+.notification-context2 {
+    width: 160px;
+    height: var(--height-skeleton-navbardetail);
+}
+
+.notification-time2{
+    display: block;
+    margin-top: 0.6rem;
+    width: 60px;
+    height: var(--height-skeleton-navbardetail);
+}
+
+.userchat-icon-unread2{
+    width: var(--height-skeleton-navbardetail);
+    height: var(--height-skeleton-navbardetail);
+    /* margin-left: auto; */
+}
+
+.userchat-timeoflastmess2{
+    width: 40px;
+    height: var(--height-skeleton-navbardetail);
+    margin-left: auto;
+}
+
+.userchat-image2{
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+}
+
+.userchat-username2{
+    width: 100px;
+    height: var(--height-skeleton-navbardetail);
+}
+
+.userchat-groupchat2{
+    width: 30px;
+    height: var(--height-skeleton-navbardetail);
+    margin-left: 0.5rem;
+}

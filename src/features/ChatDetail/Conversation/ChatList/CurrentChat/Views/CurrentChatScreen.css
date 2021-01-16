@@ -15,17 +15,14 @@
 
 
 .currentchat-context .chat-time{
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--fontsize-default3);
+  line-height: var(--lineheight-default3);
   color: var(--color-background);
   opacity: 0.6;
 }
 
 .currentchat-context span:first-child{
-  font-size: 14px;
-  line-height: 21px;
   color: var(--color-background);
-  /* mix-blend-mode: normal; */
   opacity: 0.95;
 }
 

@@ -21,12 +21,6 @@
 }
 
 .groupnotichat-content-username{
-    font-weight: 500;
+    font-weight: var(--fontweight-default2);
     color: #33415C !important;
-}
-
-.groupnotichat-content span{
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--color-text-lightgray2);
 }

@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ENUM_KIND_OF_ICONPANEL } from '../../../../../libraries/Constants/KindOfIconPanel';
 import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/KindOfNotFoundIcon';
 import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
@@ -7,7 +8,6 @@ import { IFriend } from '../../Friend/Models/Friend';
 import FriendScreen from '../../Friend/Views/FriendScreen';
 
 import './FriendListScreen.css';
-
 
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
@@ -260,6 +260,8 @@ function FriendListScreen(props: any) {
     const [friends, setFriends] = useState<IFriend[]>([]);
     const typingTimeoutRef = useRef<any>(null);
 
+    const iconpanel = ENUM_KIND_OF_ICONPANEL.MESSAGES;
+
     useEffect(() => {
 
         const loadUsers = async () => {
@@ -336,8 +338,8 @@ function FriendListScreen(props: any) {
                 {
                     ((page - 1) * 10 <= friendList.length) && (
                         <>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
                         </>
 
                     )
@@ -345,15 +347,14 @@ function FriendListScreen(props: any) {
                 {
                     (page === 1 && friends.length === 0) && (
                         <>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-                            <SkeletonNavbarDetailScreen></SkeletonNavbarDetailScreen>
-
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
                         </>
 
                     )
