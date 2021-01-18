@@ -12,7 +12,6 @@ import GroupNotiChatScreen from '../../ContextChat/GroupNotiChat/Views/GroupNoti
 import CircleAvatarScreen from '../../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import DataNotFoundScreen from '../../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 import DatetimeChatScreen from '../../ContextChat/DatetimeChat/Views/DatetimeChatScreen';
-import MessageFoundScreen from '../../ContextChat/MessageFound/Views/MessageFoundScreen';
 
 function ChatListScreen(props: any){
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -187,20 +186,13 @@ function ChatListScreen(props: any){
                             loading && <h3>Loading ...</h3>
                         }
                         {
-                            !props.query && showAllMessages()
+                            showAllMessages()
                         }
                         {
-                            !props.query && <DatetimeChatScreen></DatetimeChatScreen>
+                            <DatetimeChatScreen></DatetimeChatScreen>
                         }
                         {
-                            !props.query && showUsersHaveRead()
-                        }
-                        {
-                            props.query && (
-                                <div>
-                                    <MessageFoundScreen></MessageFoundScreen>
-                                </div>
-                            )
+                            showUsersHaveRead()
                         }
                     </div>
 

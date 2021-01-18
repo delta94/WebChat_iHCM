@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ConversationScreen.css';
 import HeaderConversationScreen from '../../Header/Views/HeaderConversationScreen'
 import ChatListScreen from '../../ChatList/Main/Views/ChatListScreen';
 import ChatInputScreen from '../../ChatInput/Main/Views/ChatInputScreen';
 import { IConversationz } from '../Models/Conversation';
-
+import SearchChatScreen from '../../ChatList/SearchChat/Views/SearchChatScreen';
 
 function ConversationScreen(props: IConversationz){
     const [query , setQuery] = useState("");
+
+    const { hasSearch } = props;
+
+    useEffect(() => {
+        !hasSearch && setQuery("");
+    },[hasSearch])
 
     return (
         <div className="conversation-container">
@@ -18,16 +24,14 @@ function ConversationScreen(props: IConversationz){
             eleOptionHeader={ props.eleOptionHeader }
             id={ props.id }
             isGroup={ props.isGroup }
-            hasSearch={ props.hasSearch }
+            hasSearch={ hasSearch }
             onSearch={ props.onSearch }
             setQuery={ setQuery }
             ></HeaderConversationScreen>
 
             {
                 props.hasSearch && (
-                    <div className="searchmessage-container">
-                        Huy
-                    </div>
+                    <SearchChatScreen query={ query }></SearchChatScreen>
                 )
             }
 
@@ -36,7 +40,6 @@ function ConversationScreen(props: IConversationz){
             userList={ props.userList }
             messageList={ props.messageList }
             hasSearch={ props.hasSearch }
-            query={ query }
             ></ChatListScreen>
             
             <ChatInputScreen></ChatInputScreen>

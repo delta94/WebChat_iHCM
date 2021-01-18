@@ -234,10 +234,7 @@ const friendList: IFriend[] = [
     },
 ];
 
-
-
 const getFriends = async (page: number) =>{
-
     let result:any[] = [];
     
     let length = friendList.length;
@@ -258,7 +255,7 @@ function FriendListScreen(props: any) {
     const [friends, setFriends] = useState<IFriend[]>([]);
     const typingTimeoutRef = useRef<any>(null);
 
-    const iconpanel = ENUM_KIND_OF_ICONPANEL.MESSAGES;
+    const iconpanel = ENUM_KIND_OF_ICONPANEL.FRIENDS;
 
     useEffect(() => {
 
@@ -316,13 +313,13 @@ function FriendListScreen(props: any) {
                 </div>
 
                 <CustomInputScreen
-                style={styleCustomInput}
-                class="searchinput-container"
-                placeHolder="Nhập thành viên cần tìm kiếm"
-                isMultiline={false}
-                isTextArea={ true }
-                onChange={ onChange }
-                hasClearText={ true }
+                    style={styleCustomInput}
+                    class="searchinput-container"
+                    placeHolder="Nhập thành viên cần tìm kiếm"
+                    isMultiline={false}
+                    isTextArea={ true }
+                    onChange={ onChange }
+                    hasClearText={ true }
                 ></CustomInputScreen>
             </div>
 

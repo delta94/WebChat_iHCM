@@ -78,13 +78,13 @@ function UserChatScreen(props: IConversationState) {
         </div>
         {props.hasReadLastMess ? (
           <div className="userchat-context-bottom">
-            <h3 className="userchat-contextoflastmess">{ props.lastMess }</h3>
+            <h4 className="userchat-contextoflastmess">{ props.lastMess }</h4>
           </div>
         ) : (
           <div className="userchat-context-bottom">
-            <h3 className="userchat-contextoflastmess userchat-unreadcontext">
+            <h4 className="userchat-contextoflastmess userchat-unreadcontext">
               {props.lastMess}
-            </h3>
+            </h4>
             <img src={iconunread} className="userchat-icon-unread" alt="" />
           </div>
         )}

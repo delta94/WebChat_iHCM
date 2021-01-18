@@ -48,6 +48,9 @@
 }
 
 .userchat-contextoflastmess{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
     color: var(--color-text--lightgray);
     overflow:hidden;
     width: 200px;

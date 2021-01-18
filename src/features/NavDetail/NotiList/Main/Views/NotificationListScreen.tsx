@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { ENUM_KIND_OF_ICONPANEL } from '../../../../../libraries/Constants/KindOfIconPanel';
 import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/KindOfNotFoundIcon';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
+import SkeletonNavbarDetailScreen from '../../../../../libraries/Features/SkeletonNavbarDetail/Views/SkeletonNavbarDetailScreen';
+import { sleep } from '../../../../../libraries/Functions/Sleep';
 import HeaderNotificationListScreen from '../../Header/Views/HeaderNotificationListScreen';
 import { INotification } from '../../Noti/Models/Notification';
 import NotificationScreen from '../../Noti/Views/NotificationScreen';
@@ -39,16 +42,123 @@ const notiList: INotification[] = [
         username:"Trung Đức",
         context:"Hello cả nhà"
     },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
+    {
+        avatar: "https://i.pinimg.com/736x/27/bc/7b/27bc7b1d116c83824fbdf4547308a296.jpg",
+        time: "2020-10-21 01:10:40",
+        isActive: true,
+        status:4,
+        username:"Trung Đức",
+        context:"Hello cả nhà"
+    },
 ]
 
 
 function NotificationListScreen(props: any) {
+    const [notiListz, setNotiListz] = useState<INotification[]>([]);
+
+    const iconpanel = ENUM_KIND_OF_ICONPANEL.NOTI;
+
+    useEffect(() => {
+        (async () =>{
+            await sleep(4e3);
+            setNotiListz(notiList);
+        })()
+
+    }, []);
     
     const showNotiList = () =>{
-        if(notiList.length <= 0){
-            return <DataNotFoundScreen text={"Bạn chưa có thông báo"} icon={ ENUM_KIND_OF_NOTFOUNDICON.NOTI } isPosition={ false }></DataNotFoundScreen>;
-        }
-        return notiList.map(
+        // if(notiListz.length <= 0){
+        //     return <DataNotFoundScreen text={"Bạn chưa có thông báo"} icon={ ENUM_KIND_OF_NOTFOUNDICON.NOTI } isPosition={ false }></DataNotFoundScreen>;
+        // }
+        return notiListz.map(
             (noti: INotification, idx: number) => (
                 <NotificationScreen {...noti}></NotificationScreen>
             )
@@ -63,7 +173,24 @@ function NotificationListScreen(props: any) {
             </div>
 
             <div className="userchatlist-bottom">
-                { showNotiList() }
+                { 
+                    showNotiList() 
+                }
+                {
+                    (notiListz.length === 0) && (
+                        <>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                            <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                        </>
+
+                    )
+                }
             </div>
         </>
     );

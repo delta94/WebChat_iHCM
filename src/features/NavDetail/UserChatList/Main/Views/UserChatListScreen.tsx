@@ -10,6 +10,9 @@ import { useHistory } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATION } from '../../../../../libraries/Constants/KindOfConversation';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/KindOfNotFoundIcon';
+import { sleep } from '../../../../../libraries/Functions/Sleep';
+import { ENUM_KIND_OF_ICONPANEL } from '../../../../../libraries/Constants/KindOfIconPanel';
+import SkeletonNavbarDetailScreen from '../../../../../libraries/Features/SkeletonNavbarDetail/Views/SkeletonNavbarDetailScreen';
 
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
@@ -84,7 +87,19 @@ function UserChatListScreen(props: any) {
     isGroup:false,
     id: -1
   });
+  const [conversationListz, setConversationListz] = useState<IConversationState[]>([]);
+
   const history = useHistory();
+
+  const iconpanel = ENUM_KIND_OF_ICONPANEL.MESSAGES;
+
+  useEffect(() => {
+    (async () =>{
+        await sleep(4e3);
+        setConversationListz(conversationList);
+    })()
+
+}, []);
 
   useEffect(() => {
     const id = 3;
@@ -131,10 +146,10 @@ function UserChatListScreen(props: any) {
   };
 
   const ShowConversationList = () => {
-    if (conversationList.length === 0) {
-      return <DataNotFoundScreen text={"Không tìm thấy kết quả"} icon={ ENUM_KIND_OF_NOTFOUNDICON.DATA } isPosition={ true }></DataNotFoundScreen>;
-    }
-    return conversationList.map(
+    // if (conversationListz.length === 0) {
+    //   return <DataNotFoundScreen text={"Không tìm thấy kết quả"} icon={ ENUM_KIND_OF_NOTFOUNDICON.DATA } isPosition={ true }></DataNotFoundScreen>;
+    // }
+    return conversationListz.map(
       (conversationState: IConversationState, idx: number) => (
         <UserChatScreen
           key={idx}
@@ -174,6 +189,21 @@ function UserChatListScreen(props: any) {
       <div className="userchatlist-bottom">
         {
           ShowConversationList()
+        }
+          {
+            (conversationListz.length === 0) && (
+              <>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>                            
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+                  <SkeletonNavbarDetailScreen iconpanel={ iconpanel }></SkeletonNavbarDetailScreen>
+              </>
+            )
         }
       </div>
     </>

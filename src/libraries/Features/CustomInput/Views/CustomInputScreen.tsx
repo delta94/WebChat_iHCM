@@ -47,7 +47,7 @@ function CustomInputScreen(props : ICustomInput) {
         <textarea placeholder={ props.placeHolder } style={ props.style } ref={textAreaRef} rows={1} onChange={ (e: ChangeEvent<Element>) => changeValue(e)}></textarea>
       }
       {
-        props.hasClearText && (
+        (props.hasClearText && value) && (
           <img src={ icondelete } alt="" onClick={ (e:any) =>{ clearText(e)} } className="custominput-icon-cleartext"/>
         )
       }
