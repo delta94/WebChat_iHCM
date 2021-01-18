@@ -175,7 +175,7 @@ function ChatListScreen(props: any){
     }
 
     return (
-        <div className={ props.hasSearch ? "chatlist-container chatlist-container--hassearch" : "chatlist-container"} ref={ chatlistRef }>
+        <div className={ props.hasSearch ? "chatlist-container chatlist-container--hassearch" : "chatlist-container"} ref={ chatlistRef }>            
             {
                 isLoading ? (
                     <div className="chatlist-loader">

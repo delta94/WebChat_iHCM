@@ -23,6 +23,14 @@ function ConversationScreen(props: IConversationz){
             setQuery={ setQuery }
             ></HeaderConversationScreen>
 
+            {
+                props.hasSearch && (
+                    <div className="searchmessage-container">
+                        Huy
+                    </div>
+                )
+            }
+
             <ChatListScreen
             id={ props.id }
             userList={ props.userList }

@@ -78,8 +78,8 @@ const eleContextSignout = (close: any) => {
 function App() {
   const btnRef = useRef<any>(null)
   const [hasNavbar , setHasNavbar] = useState<boolean>(true);
-  const [hasModal , setHasModal] = useState<boolean>(true);
-  const [guidedTourIsRunning , setGuidedTourIsRunning] = useState<boolean>(false);
+  const [hasModal , setHasModal] = useState<boolean>(false);
+  const [guidedTourIsRunning , setGuidedTourIsRunning] = useState<boolean>(true);
   
   useEffect(() => {
     if(hasModal){

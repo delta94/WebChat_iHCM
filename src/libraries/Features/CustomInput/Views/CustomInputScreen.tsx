@@ -33,7 +33,8 @@ function CustomInputScreen(props : ICustomInput) {
     setValue(value);
   }
 
-  const clearText = () =>{
+  const clearText = (e: any) =>{
+    props.onChange && props.onChange(e);
     setValue("");
   }
 
@@ -47,7 +48,7 @@ function CustomInputScreen(props : ICustomInput) {
       }
       {
         props.hasClearText && (
-          <img src={ icondelete } alt="" onClick={ clearText } className="custominput-icon-cleartext"/>
+          <img src={ icondelete } alt="" onClick={ (e:any) =>{ clearText(e)} } className="custominput-icon-cleartext"/>
         )
       }
     </div>

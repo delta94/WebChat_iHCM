@@ -4,6 +4,7 @@ import { ENUM_KIND_OF_NOTFOUNDICON } from '../../../../../libraries/Constants/Ki
 import CustomInputScreen from '../../../../../libraries/Features/CustomInput/Views/CustomInputScreen';
 import DataNotFoundScreen from '../../../../../libraries/Features/DataNotFound/Views/DataNotFoundScreen';
 import SkeletonNavbarDetailScreen from '../../../../../libraries/Features/SkeletonNavbarDetail/Views/SkeletonNavbarDetailScreen';
+import { sleep } from '../../../../../libraries/Functions/Sleep';
 import { IFriend } from '../../Friend/Models/Friend';
 import FriendScreen from '../../Friend/Views/FriendScreen';
 
@@ -233,9 +234,7 @@ const friendList: IFriend[] = [
     },
 ];
 
-function timeout(ms: any) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+
 
 const getFriends = async (page: number) =>{
 
@@ -248,14 +247,13 @@ const getFriends = async (page: number) =>{
     for (let index = (page - 1)* 10; index < length; index++) {
         await result.push(friendList[index]);
     }
-    await timeout(4e3);
+    await sleep(4e3);
 
     return result;
 }
 
 function FriendListScreen(props: any) {
     const [query , setQuery] = useState<string>("");
-    const [hasSkeleton, setHasSkeleton] = useState<boolean>(false);
     const [page, setPage] = useState<number>(1);
     const [friends, setFriends] = useState<IFriend[]>([]);
     const typingTimeoutRef = useRef<any>(null);
@@ -266,11 +264,8 @@ function FriendListScreen(props: any) {
 
         const loadUsers = async () => {
             if((page - 1) * 10 <= friendList.length){
-                page > 1 && setHasSkeleton(true);
-                console.log(page);
                 const newFriends = await getFriends(page);
                 setFriends((prev) => [...prev, ...newFriends]);
-                page > 1 && setHasSkeleton(false);
             }
 
         };
