@@ -13,6 +13,7 @@ import './PersonalDetailScreen.css';
 
 const iconvideocall = require("../../../../../libraries/Icons/iconvideocall.svg").default;
 const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
+const iconturnoffnoti = require("../../../../../libraries/Icons/iconturnoffnoti.svg").default;
 const iconbrownmessage = require("../../../../../libraries/Icons/iconbrownmessage.svg").default;
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 
@@ -93,6 +94,7 @@ const miniImageList :IMiniImage[] =[
 function PersonalDetailScreen(props : any) {
     const [activeLi , setActiveLi] = useState<number>(ENUM_KIND_OF_CONVERSATIONDETAIL.IMAGE);
     const [isOpenOverlay , setIsOpenOverlay] = useState<boolean>(false);
+    const [iconnoti , setIconnoti] = useState(iconbrownnoti);
     const [mainImage , setMainImage] = useState<IMiniImage>({
       index:-1,
       author:"",
@@ -116,6 +118,14 @@ function PersonalDetailScreen(props : any) {
     const toggleOverlay = (miniImage: IMiniImage) =>{
       setIsOpenOverlay(prev => !prev);
       setMainImage(miniImage);
+    }
+
+    const toggleNoti = ()=>{
+      if(iconnoti === iconbrownnoti){
+        setIconnoti(iconturnoffnoti)
+      } else{
+        setIconnoti(iconbrownnoti)
+      }
     }
 
     const onChangeActiveLi = (num: number) =>{
@@ -201,7 +211,7 @@ function PersonalDetailScreen(props : any) {
                 <p>Gọi video</p>
             </div>
             <div>
-              <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
+              <IconCirclePanel srcIcon={ iconnoti } class="" padding="0.8rem" onClick={ toggleNoti }></IconCirclePanel>
               <p>Thông báo</p>
             </div>
         </>

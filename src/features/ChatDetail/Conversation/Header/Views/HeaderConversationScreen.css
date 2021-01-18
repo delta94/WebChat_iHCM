@@ -53,8 +53,8 @@
 }
 
 .headerconversation-right .example-warper:hover img{
-    -webkit-filter: saturate(12); /* Safari 6.0 - 9.0 */
-    filter: saturate(12);
+    -webkit-filter: invert(58%) sepia(75%) saturate(4471%) hue-rotate(162deg) brightness(95%) contrast(103%); /* Safari 6.0 - 9.0 */
+    filter: invert(58%) sepia(75%) saturate(4471%) hue-rotate(162deg) brightness(95%) contrast(103%);
 }
 
 .headerconversation-right img{

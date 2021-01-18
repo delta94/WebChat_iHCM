@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { ENUM_KIND_OF_CONVERSATIONDETAIL } from '../../../../../libraries/Constants/KindOfConversationDetail';
 import CircleAvatarScreen from '../../../../../libraries/Features/CircleAvatar/Views/CircleAvatarScreen';
 import IconCirclePanel from '../../../../../libraries/Features/IconCirclePanel/Views/IconCirclePanelScreen';
@@ -17,12 +16,12 @@ import { useEffect } from 'react';
 import AddMemberScreen from '../../AddMember/Views/AddMemberScreen';
 
 const iconbrownnoti = require("../../../../../libraries/Icons/iconbrownnoti.svg").default;
+const iconturnoffnoti = require("../../../../../libraries/Icons/iconturnoffnoti.svg").default;
 const iconaddmember = require("../../../../../libraries/Icons/iconaddmember.svg").default;
 const iconsignoutgroup = require("../../../../../libraries/Icons/iconsignoutgroup.svg").default;
 const iconsearch = require("../../../../../libraries/Icons/iconsearch.svg").default;
 const icontrash = require("../../../../../libraries/Icons/icontrash.svg").default;
 const iconvertical3dots = require("../../../../../libraries/Icons/iconvertical3dots.svg").default;
-
 
 const miniImageList :IMiniImage[] =[
   {
@@ -95,6 +94,7 @@ const miniImageList :IMiniImage[] =[
 function GroupDetailScreen(props : any) {
   const [activeLi , setActiveLi] = useState<number>(ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER);
   const [isOpenOverlay , setIsOpenOverlay] = useState<boolean>(false);
+  const [iconnoti , setIconnoti] = useState(iconbrownnoti);
   const [mainImage , setMainImage] = useState<IMiniImage>({
     index:-1,
     author:"",
@@ -122,6 +122,14 @@ function GroupDetailScreen(props : any) {
   const toggleOverlay = (miniImage: IMiniImage) =>{
     setIsOpenOverlay(prev => !prev);
     setMainImage(miniImage);
+  }
+
+  const toggleNoti = ()=>{
+    if(iconnoti === iconbrownnoti){
+      setIconnoti(iconturnoffnoti)
+    } else{
+      setIconnoti(iconbrownnoti)
+    }
   }
 
   const showMainBody = () =>{
@@ -198,7 +206,6 @@ function GroupDetailScreen(props : any) {
               <FileChatScreen isFile={ false } isCurrent={ true } context="https://morioh.com/p/b82afe6648dd" datetime=""></FileChatScreen>
             </div>
           )
-      
         default:
           break;
       }
@@ -206,31 +213,31 @@ function GroupDetailScreen(props : any) {
 
   const eleUl = (
       <ul className="bodyconversationdetail-main-header-li--small">
-          <li 
-          className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER ? "bodyconversationdetail-main-header-li--active" : "" } 
-          onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER) } }
-          >
+        <li 
+        className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER ? "bodyconversationdetail-main-header-li--active" : "" } 
+        onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.MEMBER) } }
+        >
           Thành viên
-          </li>
-          <li 
-          className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.IMAGE ? "bodyconversationdetail-main-header-li--active" : "" } 
-          onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.IMAGE) } }
-          >
+        </li>
+        <li 
+        className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.IMAGE ? "bodyconversationdetail-main-header-li--active" : "" } 
+        onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.IMAGE) } }
+        >
           Hình ảnh
-          </li>
+        </li>
 
-          <li 
-          className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.FILE ? "bodyconversationdetail-main-header-li--active" : "" } 
-          onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.FILE) } }
-          >
+        <li 
+        className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.FILE ? "bodyconversationdetail-main-header-li--active" : "" } 
+        onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.FILE) } }
+        >
           Tài liệu
-          </li>
-          <li 
-          className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.LINK ? "bodyconversationdetail-main-header-li--active" : "" } 
-          onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.LINK) } }
-          >
+        </li>
+        <li 
+        className={ activeLi === ENUM_KIND_OF_CONVERSATIONDETAIL.LINK ? "bodyconversationdetail-main-header-li--active" : "" } 
+        onClick={ () => { onChangeActiveLi(ENUM_KIND_OF_CONVERSATIONDETAIL.LINK) } }
+        >
           Link
-          </li>
+        </li>
     </ul>
   )
 
@@ -267,7 +274,7 @@ function GroupDetailScreen(props : any) {
           </div>
         </ModalScreen>
         <div>
-            <IconCirclePanel srcIcon={ iconbrownnoti } class="" padding="0.8rem"></IconCirclePanel>
+            <IconCirclePanel srcIcon={ iconnoti } class="" padding="0.8rem" onClick={ toggleNoti }></IconCirclePanel>
             <p>Thông báo</p>
         </div>
         <ModalScreen  open={ false } headerContent={"Xác nhận rời khỏi nhóm"} contextHasClose={ eleContextSignout } hasPadding={ false }>

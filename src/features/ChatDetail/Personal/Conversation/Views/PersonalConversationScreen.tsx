@@ -67,7 +67,7 @@ function PersonalConversationScreen(props : any) {
         nameHeader:"Nhóm hyperlogy",
         avatar:"https://cactusthemes.com/blog/wp-content/uploads/2018/01/tt_avatar_small.jpg",
         isOnline:true,
-        isGroup:true,
+        isGroup:false,
         hasSearch: hasSearch,
         onSearch:onSearch,
         eleOptionHeader: eleOptionHeader,
