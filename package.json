@@ -13,6 +13,7 @@
     "@types/requirejs": "^2.1.32",
     "@types/styled-components": "^5.1.7",
     "moment": "^2.29.1",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-joyride": "^2.3.0",
